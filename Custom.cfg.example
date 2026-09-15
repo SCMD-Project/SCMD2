@@ -1,0 +1,13 @@
+// SCMD 2.0 user custom command slots.
+// Copy this file to Custom.cfg and edit it.
+// Example:
+// alias scmd_custom1 "say hello"
+
+// alias scmd_custom1 ""
+// alias scmd_custom2 ""
+// alias scmd_custom3 ""
+// alias scmd_custom4 ""
+// alias scmd_custom5 ""
+// alias scmd_custom6 ""
+// alias scmd_custom7 ""
+// alias scmd_custom8 ""
