@@ -57,7 +57,10 @@ jobs:
       - name: Build pinned toolchain
         run: |
           Set-Location toolchain
-          ./scripts/build.ps1 -Config Release
+          # -NoTest: we only need the scmdc/scmdsim binaries; the 0.10.0-era
+          # ctest set predates CI and has at least one runner-incompatible
+          # test (sim_execifexists_missing_is_nonfatal).
+          ./scripts/build.ps1 -Config Release -NoTest
           & dist/release/scmdc.exe --version
 
       - name: Build SCMD2
