@@ -1,0 +1,151 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      toolchain_tag:
+        description: 'Toolchain release tag for the canary build (default: latest release)'
+        required: false
+        default: ''
+  schedule:
+    # Daily canary: build SCMD2 with the latest toolchain release to collect
+    # migration readiness data for #1. Failures are informational.
+    - cron: '41 3 * * *'
+
+permissions:
+  contents: read
+
+env:
+  # Pinned compiler: scmdc 0.10.0 = last 0.10.0 commit of SCMD-Project/SCMD-Toolchain.
+  # Bump only as part of the #1 migration, after the canary matrix is green.
+  TOOLCHAIN_PIN_SHA: 27e23c179849aba2c1d6da20a583b99c49a3d716
+  # build/ size budget: ~2.7 MB baseline; warn at +10%.
+  SIZE_BUDGET_MB: 2.97
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  build:
+    name: Build (scmdc 0.10.0) + verify / windows
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Checkout pinned toolchain
+        uses: actions/checkout@v4
+        with:
+          repository: SCMD-Project/SCMD-Toolchain
+          ref: ${{ env.TOOLCHAIN_PIN_SHA }}
+          path: toolchain
+          persist-credentials: false
+
+      - name: Build pinned toolchain
+        run: |
+          Set-Location toolchain
+          ./scripts/build.ps1 -Config Release
+          & dist/release/scmdc.exe --version
+
+      - name: Build SCMD2
+        run: ./build.ps1 -Scmdc "${{ github.workspace }}/toolchain/dist/release/scmdc.exe"
+
+      - name: verify_beta3
+        run: python tools/verify_beta3.py --sim "${{ github.workspace }}/toolchain/dist/release/scmdsim.exe"
+
+      - name: verify_generated
+        run: python tools/verify_generated.py
+
+      - name: Size budget report
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $files = Get-ChildItem build -Recurse -File
+          $mb = [math]::Round((($files | Measure-Object Length -Sum).Sum) / 1MB, 3)
+          $budgetMb = [double] $env:SIZE_BUDGET_MB
+          "### SCMD2 build/ size report" >> $env:GITHUB_STEP_SUMMARY
+          "" >> $env:GITHUB_STEP_SUMMARY
+          "| compiler | size (MB) | budget |" >> $env:GITHUB_STEP_SUMMARY
+          "|---|---|---|" >> $env:GITHUB_STEP_SUMMARY
+          "| scmdc 0.10.0 (pinned) | $mb | ${budgetMb} MB |" >> $env:GITHUB_STEP_SUMMARY
+          if ($mb -gt $budgetMb) {
+            Write-Host "::warning::size budget exceeded: $mb MB (budget ${budgetMb} MB)"
+          }
+
+      - name: Upload deploy artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scmd2-deploy-${{ github.sha }}
+          path: build/
+          if-no-files-found: error
+          retention-days: 14
+
+  canary:
+    name: Latest toolchain canary (migration data)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: windows-latest
+    timeout-minutes: 20
+    # Informational: red canary is expected until #1 lands and must not gate merges.
+    continue-on-error: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Resolve candidate tag
+        id: resolve
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $candidate = '${{ inputs.toolchain_tag }}'
+          if (-not $candidate) {
+            $candidate = (Invoke-RestMethod -Uri 'https://api.github.com/repos/SCMD-Project/SCMD-Toolchain/releases/latest').tag_name
+          }
+          Write-Host "candidate=$candidate"
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "candidate=$candidate"
+
+      - name: Setup latest toolchain
+        id: tc
+        uses: SCMD-Project/SCMD-Toolchain/.github/actions/setup-toolchain@v0.13.0
+        with:
+          toolchain-tag: ${{ steps.resolve.outputs.candidate }}
+
+      - name: Build SCMD2 with candidate
+        id: build
+        continue-on-error: true
+        run: ./build.ps1 -Scmdc "${{ steps.tc.outputs.toolchain-dir }}/scmdc.exe"
+
+      - name: verify_beta3 with candidate
+        id: verify
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        run: python tools/verify_beta3.py --sim "${{ steps.tc.outputs.toolchain-dir }}/scmdsim.exe"
+
+      - name: Report canary outcome
+        if: always()
+        env:
+          CANDIDATE: ${{ steps.resolve.outputs.candidate }}
+          BUILD: ${{ steps.build.outcome }}
+          VERIFY: ${{ steps.verify.outcome }}
+        run: |
+          "### SCMD2 canary with $env:CANDIDATE" >> $env:GITHUB_STEP_SUMMARY
+          "" >> $env:GITHUB_STEP_SUMMARY
+          "| step | outcome |" >> $env:GITHUB_STEP_SUMMARY
+          "|---|---|" >> $env:GITHUB_STEP_SUMMARY
+          "| build | $env:BUILD |" >> $env:GITHUB_STEP_SUMMARY
+          "| verify_beta3 | $env:VERIFY |" >> $env:GITHUB_STEP_SUMMARY
+          "" >> $env:GITHUB_STEP_SUMMARY
+          "Migration readiness data for #1 — red canary is expected while SCMD2 is pinned to scmdc 0.10.0." >> $env:GITHUB_STEP_SUMMARY
