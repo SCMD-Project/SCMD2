@@ -40,7 +40,7 @@ u8 st_tensec = 0;
 u8 bind_target = 0;
 
 // clear mode: 0 none, 1 soft scroll clear, 2 native clear (delayed async).
-u8 pref_clear_mode = 2;
+u8 pref_clear_mode = 1;
 bool pref_tips = true;
 
 // fn[0] reset_slots
