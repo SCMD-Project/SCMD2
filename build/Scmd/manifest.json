@@ -7,5 +7,5 @@
   "loading": {"mode": "demand", "mandatory": true},
   "console": {"mode": "async", "settle_ms": 32, "tick_ms": 16},
   "paging": {"max_bytes": 4096, "max_commands": 40},
-  "sources": ["K:/Project/SCMD/scmd-2.0/src/main.scmd"]
+  "sources": ["src/main.scmd"]
 }

@@ -20,11 +20,11 @@ permissions:
   contents: read
 
 env:
-  # Pinned compiler: scmdc 0.10.0 = last 0.10.0 commit of SCMD-Project/SCMD-Toolchain.
-  # Bump only as part of the #1 migration, after the canary matrix is green.
-  TOOLCHAIN_PIN_SHA: 27e23c179849aba2c1d6da20a583b99c49a3d716
-  # build/ size budget: ~2.7 MB baseline; warn at +10%.
-  SIZE_BUDGET_MB: 2.97
+  # Pinned compiler: scmdc 0.13.0 release artifact (setup-toolchain action).
+  # Bump after a green canary run against the candidate tag, via PR.
+  TOOLCHAIN_TAG: v0.13.0
+  # build/ size budget: ~2.0 MB with scmdc 0.13.0 (2.7 MB on 0.10.0); warn at +10%.
+  SIZE_BUDGET_MB: 2.2
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
@@ -36,7 +36,7 @@ defaults:
 
 jobs:
   build:
-    name: Build (scmdc 0.10.0) + verify / windows
+    name: Build (scmdc v0.13.0) + verify / windows
     runs-on: windows-latest
     timeout-minutes: 30
 
@@ -46,28 +46,17 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Checkout pinned toolchain
-        uses: actions/checkout@v4
+      - name: Setup pinned toolchain
+        id: tc
+        uses: SCMD-Project/SCMD-Toolchain/.github/actions/setup-toolchain@v0.13.0
         with:
-          repository: SCMD-Project/SCMD-Toolchain
-          ref: ${{ env.TOOLCHAIN_PIN_SHA }}
-          path: toolchain
-          persist-credentials: false
-
-      - name: Build pinned toolchain
-        run: |
-          Set-Location toolchain
-          # -NoTest: we only need the scmdc/scmdsim binaries; the 0.10.0-era
-          # ctest set predates CI and has at least one runner-incompatible
-          # test (sim_execifexists_missing_is_nonfatal).
-          ./scripts/build.ps1 -Config Release -NoTest
-          & dist/release/scmdc.exe --version
+          toolchain-tag: ${{ env.TOOLCHAIN_TAG }}
 
       - name: Build SCMD2
-        run: ./build.ps1 -Scmdc "${{ github.workspace }}/toolchain/dist/release/scmdc.exe"
+        run: ./build.ps1 -Scmdc "${{ steps.tc.outputs.toolchain-dir }}/scmdc.exe"
 
       - name: verify_beta3
-        run: python tools/verify_beta3.py --sim "${{ github.workspace }}/toolchain/dist/release/scmdsim.exe"
+        run: python tools/verify_beta3.py --sim "${{ steps.tc.outputs.toolchain-dir }}/scmdsim.exe"
 
       - name: verify_generated
         run: python tools/verify_generated.py
@@ -82,7 +71,7 @@ jobs:
           "" >> $env:GITHUB_STEP_SUMMARY
           "| compiler | size (MB) | budget |" >> $env:GITHUB_STEP_SUMMARY
           "|---|---|---|" >> $env:GITHUB_STEP_SUMMARY
-          "| scmdc 0.10.0 (pinned) | $mb | ${budgetMb} MB |" >> $env:GITHUB_STEP_SUMMARY
+          "| scmdc v0.13.0 (pinned) | $mb | ${budgetMb} MB |" >> $env:GITHUB_STEP_SUMMARY
           if ($mb -gt $budgetMb) {
             Write-Host "::warning::size budget exceeded: $mb MB (budget ${budgetMb} MB)"
           }
@@ -151,4 +140,4 @@ jobs:
           "| build | $env:BUILD |" >> $env:GITHUB_STEP_SUMMARY
           "| verify_beta3 | $env:VERIFY |" >> $env:GITHUB_STEP_SUMMARY
           "" >> $env:GITHUB_STEP_SUMMARY
-          "Migration readiness data for #1 — red canary is expected while SCMD2 is pinned to scmdc 0.10.0." >> $env:GITHUB_STEP_SUMMARY
+          "Migration readiness data for #1 — canary guards against future toolchain release regressions." >> $env:GITHUB_STEP_SUMMARY

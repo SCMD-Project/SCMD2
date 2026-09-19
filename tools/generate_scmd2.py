@@ -29,7 +29,12 @@ def addf(name, body, alias=None):
 def qtext(s: str) -> str:
     if '"' in s or '\n' in s or '\r' in s:
         raise ValueError(f'unsupported SCMD text: {s!r}')
-    return s.replace('\\', '\\\\\\\\')
+    # SCMD string literals unescape "\\" -> "\" once (frontend/parser.c). The
+    # 0.13.0 cfg loader preserves backslashes literally ("Console CFG is not a
+    # C string literal"), so one doubling encodes one runtime backslash.
+    # The 0.10.0-era loader unescaped a second time, which is why this used to
+    # emit four backslashes per intended one.
+    return s.replace('\\', '\\\\')
 
 def pr(s: str) -> str:
     return f'console.print("{qtext(s)}");'
@@ -908,7 +913,7 @@ addf('menu_preferences', menu_body('菜单\\首选项', [('',[DynamicItem(1,'row
 
 # About.
 addf('menu_about', menu_body('关于SCMD', [('',[
-    '=SCMD - Shortcut Command','=','=Started in 2022','=Rebuilt for CS2 in 2026','=','=SCMD 2.0 Beta 3','=Compiler: scmdc 0.10.0','=Simulator: scmdsim','=','=scmd.cc'
+    '=SCMD - Shortcut Command','=','=Started in 2022','=Rebuilt for CS2 in 2026','=','=SCMD 2.0 Beta 3','=Compiler: scmdc 0.13.0','=Simulator: scmdsim','=','=scmd.cc'
 ])], 'scmd_menu','scmd_about'), 'scmd_about')
 
 # Binding system.
@@ -1037,7 +1042,7 @@ smoke='''00\n+1\n1\n+13\n13\n0\n5\n8\n4\n+4\n4\n4\n0\n8\n6\n+6\n6\n0\n11\n2\n+2\
 (OUT/'smoke_console.txt').write_text(smoke,encoding='utf-8',newline='\n')
 
 # Verification helper that confirms aliases point at expected generated fn ids.
-verify='''#!/usr/bin/env python3\nfrom pathlib import Path\nimport re, sys\nroot=Path(__file__).resolve().parents[1]\nsrc=(root/'src/main.scmd').read_text(encoding='utf-8')\npages='\\n'.join(p.read_text(encoding='utf-8') for p in sorted((root/'build/Scmd/pages').glob('*.cfg')))\nfuncs=[]\nfor line in src.splitlines():\n    m=re.match(r'// fn\\[(\\d+)\\] ([A-Za-z0-9_]+)(?: -> ([A-Za-z0-9_]+))?', line)\n    if m: funcs.append((int(m.group(1)),m.group(2),m.group(3)))\nerrors=[]\nfor idx,name,alias in funcs:\n    if f'alias __scmd_fn{idx} ' not in pages:\n        errors.append(f'missing function alias __scmd_fn{idx} ({name})')\n    if alias and f'alias {alias} __scmd_fn{idx}' not in pages:\n        # registration exists inside a generated function body, so search textual body fragment too\n        if f'alias {alias} __scmd_fn{idx};' not in pages and f'alias {alias} __scmd_fn{idx}' not in pages:\n            errors.append(f'missing registration literal for {alias} -> __scmd_fn{idx}')\nif errors:\n    print('VERIFY_FAIL')\n    print('\\n'.join(errors[:50]))\n    sys.exit(1)\nprint(f'VERIFY_PASS functions={len(funcs)} public_entries={sum(1 for _,_,a in funcs if a)}')\n'''
+verify='''#!/usr/bin/env python3\nfrom pathlib import Path\nimport re, sys\nroot=Path(__file__).resolve().parents[1]\nsrc=(root/'src/main.scmd').read_text(encoding='utf-8')\n# Scan the whole compiled package (pages/, lazy/, bootstrap.cfg, entry.cfg, ...):\n# since 0.11+ the boot-path registration lives in bootstrap.cfg, not pages/.\npkg=root/'build/Scmd'\npages='\\n'.join(p.read_text(encoding='utf-8') for p in sorted(pkg.rglob('*.cfg')))\nfuncs=[]\nfor line in src.splitlines():\n    m=re.match(r'// fn\\[(\\d+)\\] ([A-Za-z0-9_]+)(?: -> ([A-Za-z0-9_]+))?', line)\n    if m: funcs.append((int(m.group(1)),m.group(2),m.group(3)))\nerrors=[]\nfor idx,name,alias in funcs:\n    if f'alias __scmd_fn{idx} ' not in pages:\n        errors.append(f'missing function alias __scmd_fn{idx} ({name})')\n    if alias and f'alias {alias} __scmd_fn{idx}' not in pages:\n        # registration exists inside a generated function body, so search textual body fragment too\n        if f'alias {alias} __scmd_fn{idx};' not in pages and f'alias {alias} __scmd_fn{idx}' not in pages:\n            errors.append(f'missing registration literal for {alias} -> __scmd_fn{idx}')\nif errors:\n    print('VERIFY_FAIL')\n    print('\\n'.join(errors[:50]))\n    sys.exit(1)\nprint(f'VERIFY_PASS functions={len(funcs)} public_entries={sum(1 for _,_,a in funcs if a)}')\n'''
 (TOOLS/'verify_generated.py').write_text(verify,encoding='utf-8',newline='\n')
 
 # README / CHANGELOG / docs are maintained separately from generated source.

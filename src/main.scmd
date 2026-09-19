@@ -2839,7 +2839,7 @@ function menu_main()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单");
+    console.print("=|SCMD 2.0:\\菜单");
     console.print("================================");
     console.print("=指令:");
     console.print("=1.快捷指令");
@@ -3193,7 +3193,7 @@ function menu_quick()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\快捷指令");
+    console.print("=|SCMD 2.0:\\菜单\\快捷指令");
     console.print("================================");
     console.print("=常用:");
     console.print("=1.清空控制台");
@@ -3440,7 +3440,7 @@ function menu_commands()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令");
     console.print("================================");
     console.print("=1.CFG与控制台");
     console.print("=2.按键与输入");
@@ -3507,7 +3507,7 @@ function cmd_cfg()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\CFG与控制台");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\CFG与控制台");
     console.print("================================");
     console.print("=alias - 定义别名");
     console.print("=exec - 执行CFG");
@@ -3541,7 +3541,7 @@ function cmd_bind()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\按键与输入");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\按键与输入");
     console.print("================================");
     console.print("=bind - 绑定按键");
     console.print("=unbind - 解除按键");
@@ -3571,7 +3571,7 @@ function cmd_map()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\地图与会话");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\地图与会话");
     console.print("================================");
     console.print("=maps - 列出地图");
     console.print("=map <name> - 加载地图");
@@ -3599,7 +3599,7 @@ function cmd_game()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\游戏与回合");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\游戏与回合");
     console.print("================================");
     console.print("=mp_warmup_start / mp_warmup_end");
     console.print("=mp_pause_match / mp_unpause_match");
@@ -3630,7 +3630,7 @@ function cmd_practice()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\练习与作弊");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\练习与作弊");
     console.print("================================");
     console.print("=noclip [CHEATS]");
     console.print("=god [CHEATS]");
@@ -3663,7 +3663,7 @@ function cmd_bot()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\人机");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\人机");
     console.print("================================");
     console.print("=bot_add / bot_add_t / bot_add_ct");
     console.print("=bot_kick / bot_kill");
@@ -3692,7 +3692,7 @@ function cmd_weapon()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\武器与购买");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\武器与购买");
     console.print("================================");
     console.print("=give <item> [LOCAL/CHEATS]");
     console.print("=weapon_switch <name>");
@@ -3721,7 +3721,7 @@ function cmd_demo()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\Demo与观战");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\Demo与观战");
     console.print("================================");
     console.print("=playdemo");
     console.print("=demoui");
@@ -3751,7 +3751,7 @@ function cmd_display()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\显示与HUD");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\显示与HUD");
     console.print("================================");
     console.print("=cl_showfps");
     console.print("=cl_printfps");
@@ -3778,7 +3778,7 @@ function cmd_cross()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\准星与视角");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\准星与视角");
     console.print("================================");
     console.print("=crosshair");
     console.print("=cl_crosshairstyle");
@@ -3809,7 +3809,7 @@ function cmd_sound()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\声音与语音");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\声音与语音");
     console.print("================================");
     console.print("=volume");
     console.print("=snd_mute_losefocus");
@@ -3839,7 +3839,7 @@ function cmd_chat()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\聊天与通信");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\聊天与通信");
     console.print("================================");
     console.print("=say");
     console.print("=say_team");
@@ -3864,7 +3864,7 @@ function cmd_net()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\网络与状态");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\网络与状态");
     console.print("================================");
     console.print("=status");
     console.print("=net_status");
@@ -3892,7 +3892,7 @@ function cmd_capture()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\截图/位置/记录");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\截图/位置/记录");
     console.print("================================");
     console.print("=getpos / getpos_exact");
     console.print("=getposcopy / getposcopy_exact");
@@ -3917,7 +3917,7 @@ function cmd_workshop()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\Workshop与地图");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\Workshop与地图");
     console.print("================================");
     console.print("=map_workshop");
     console.print("=ds_workshop_changelevel");
@@ -3943,7 +3943,7 @@ function cmd_server()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\全部命令\\\\服务端与管理");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\服务端与管理");
     console.print("================================");
     console.print("=kick / kickid");
     console.print("=banid / banip");
@@ -4101,7 +4101,7 @@ function menu_weapons()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\武器与装备");
+    console.print("=|SCMD 2.0:\\菜单\\武器与装备");
     console.print("================================");
     console.print("=1.全部武器 [LOCAL/CHEATS]");
     console.print("=2.步枪");
@@ -4232,7 +4232,7 @@ function menu_scmd_weapons_rifle()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\步枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\步枪");
     console.print("================================");
     console.print("=1.AK-47");
     console.print("=2.M4A4");
@@ -4314,7 +4314,7 @@ function menu_scmd_weapons_sniper()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\狙击枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\狙击枪");
     console.print("================================");
     console.print("=1.AWP");
     console.print("=2.SSG 08");
@@ -4420,7 +4420,7 @@ function menu_scmd_weapons_smg()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\冲锋枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\冲锋枪");
     console.print("================================");
     console.print("=1.MAC-10");
     console.print("=2.MP9");
@@ -4502,7 +4502,7 @@ function menu_scmd_weapons_shotgun()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\霰弹枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\霰弹枪");
     console.print("================================");
     console.print("=1.Nova");
     console.print("=2.XM1014");
@@ -4553,7 +4553,7 @@ function menu_scmd_weapons_mg()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\机枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\机枪");
     console.print("================================");
     console.print("=1.M249");
     console.print("=2.Negev");
@@ -4686,7 +4686,7 @@ function menu_scmd_weapons_pistol()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\手枪");
+    console.print("=|SCMD 2.0:\\武器与装备\\手枪");
     console.print("================================");
     console.print("=1.Glock-18");
     console.print("=2.USP-S");
@@ -4799,7 +4799,7 @@ function menu_scmd_weapons_grenade()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\投掷物");
+    console.print("=|SCMD 2.0:\\武器与装备\\投掷物");
     console.print("================================");
     console.print("=1.HE Grenade");
     console.print("=2.Flashbang");
@@ -4878,7 +4878,7 @@ function menu_scmd_weapons_gear()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\装备");
+    console.print("=|SCMD 2.0:\\武器与装备\\装备");
     console.print("================================");
     console.print("=1.Zeus x27");
     console.print("=2.Kevlar");
@@ -4940,7 +4940,7 @@ function menu_scmd_weapons_special()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\特殊物品");
+    console.print("=|SCMD 2.0:\\武器与装备\\特殊物品");
     console.print("================================");
     console.print("=1.Knife");
     console.print("=2.C4");
@@ -5483,7 +5483,7 @@ function menu_weapons_all()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\全部武器");
+    console.print("=|SCMD 2.0:\\武器与装备\\全部武器");
     console.print("================================");
     console.print("=1.AK-47");
     console.print("=2.M4A4");
@@ -5697,7 +5697,7 @@ function menu_weapons_pack()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\武器与装备\\\\快速整套装备");
+    console.print("=|SCMD 2.0:\\武器与装备\\快速整套装备");
     console.print("================================");
     console.print("=1.AK + Deagle + 全甲 + 投掷物");
     console.print("=2.M4A1-S + USP-S + 全甲 + 投掷物");
@@ -5847,7 +5847,7 @@ function menu_custom()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\自定义指令");
+    console.print("=|SCMD 2.0:\\菜单\\自定义指令");
     console.print("================================");
     console.print("=1.执行自定义指令1");
     console.print("=2.执行自定义指令2");
@@ -5894,7 +5894,7 @@ function custom_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\自定义指令\\\\设置方法");
+    console.print("=|SCMD 2.0:\\自定义指令\\设置方法");
     console.print("================================");
     console.print("=临时设置示例:");
     console.print("=alias scmd_custom1 say_team_ready");
@@ -6007,7 +6007,7 @@ function menu_practice()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\快速跑图");
+    console.print("=|SCMD 2.0:\\菜单\\快速跑图");
     console.print("================================");
     console.print("=初始化:");
     console.print("=1.标准跑图");
@@ -6332,7 +6332,7 @@ function menu_practice_tools()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\练习工具");
+    console.print("=|SCMD 2.0:\\菜单\\练习工具");
     console.print("================================");
     console.print("=移动:");
     console.print("=1.切换飞行");
@@ -6576,7 +6576,7 @@ function menu_bots()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\人机控制");
+    console.print("=|SCMD 2.0:\\菜单\\人机控制");
     console.print("================================");
     console.print("=生成:");
     console.print("=1.添加T人机");
@@ -6771,7 +6771,7 @@ function menu_demo()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\Demo与观战");
+    console.print("=|SCMD 2.0:\\菜单\\Demo与观战");
     console.print("================================");
     console.print("=播放:");
     console.print("=1.暂停/继续");
@@ -6931,7 +6931,7 @@ function menu_map()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\地图与会话");
+    console.print("=|SCMD 2.0:\\菜单\\地图与会话");
     console.print("================================");
     console.print("=1.列出地图");
     console.print("=2.加载地图说明");
@@ -6978,7 +6978,7 @@ function map_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\地图与会话\\\\加载地图");
+    console.print("=|SCMD 2.0:\\地图与会话\\加载地图");
     console.print("================================");
     console.print("=控制台用法:");
     console.print("=map <mapname>");
@@ -7000,7 +7000,7 @@ function connect_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\地图与会话\\\\连接服务器");
+    console.print("=|SCMD 2.0:\\地图与会话\\连接服务器");
     console.print("================================");
     console.print("=控制台用法:");
     console.print("=connect <address>");
@@ -7245,7 +7245,7 @@ function menu_display()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\显示与HUD");
+    console.print("=|SCMD 2.0:\\菜单\\显示与HUD");
     console.print("================================");
     row_display_fps();
     row_display_hud();
@@ -7359,7 +7359,7 @@ function display_net()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\显示与HUD\\\\网络状态");
+    console.print("=|SCMD 2.0:\\显示与HUD\\网络状态");
     console.print("================================");
     console.print("=1.net_status");
     console.print("=2.net_channels");
@@ -7754,7 +7754,7 @@ function menu_crosshair()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\准星与视角");
+    console.print("=|SCMD 2.0:\\菜单\\准星与视角");
     console.print("================================");
     row_cross_main();
     row_cross_style();
@@ -7906,7 +7906,7 @@ function menu_cross_extras()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\准星与视角\\\\额外开关");
+    console.print("=|SCMD 2.0:\\准星与视角\\额外开关");
     console.print("================================");
     row_cross_dot();
     row_cross_outline();
@@ -8012,7 +8012,7 @@ function menu_viewmodel()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\准星与视角\\\\Viewmodel");
+    console.print("=|SCMD 2.0:\\准星与视角\\Viewmodel");
     console.print("================================");
     row_view_fov();
     row_view_preset();
@@ -8323,7 +8323,7 @@ function menu_sound()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\声音与语音");
+    console.print("=|SCMD 2.0:\\菜单\\声音与语音");
     console.print("================================");
     row_sound_volume();
     row_sound_menu_music();
@@ -8504,7 +8504,7 @@ function menu_cfg()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\CFG与控制台");
+    console.print("=|SCMD 2.0:\\菜单\\CFG与控制台");
     console.print("================================");
     console.print("=SCMD:");
     console.print("=1.重新加载SCMD");
@@ -8566,7 +8566,7 @@ function exec_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\CFG与控制台\\\\执行CFG");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\执行CFG");
     console.print("================================");
     console.print("=控制台用法:");
     console.print("=exec <name>");
@@ -8588,7 +8588,7 @@ function find_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\CFG与控制台\\\\查找命令");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\查找命令");
     console.print("================================");
     console.print("=控制台用法:");
     console.print("=find <keyword>");
@@ -8609,7 +8609,7 @@ function help_help()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\CFG与控制台\\\\命令帮助");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\命令帮助");
     console.print("================================");
     console.print("=控制台用法:");
     console.print("=help <command>");
@@ -8733,7 +8733,7 @@ function menu_preferences()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\首选项");
+    console.print("=|SCMD 2.0:\\菜单\\首选项");
     console.print("================================");
     row_pref_clear();
     row_pref_tips();
@@ -8760,7 +8760,7 @@ function menu_about()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\关于SCMD");
+    console.print("=|SCMD 2.0:\\关于SCMD");
     console.print("================================");
     console.print("=SCMD - Shortcut Command");
     console.print("=");
@@ -8768,7 +8768,7 @@ function menu_about()
     console.print("=Rebuilt for CS2 in 2026");
     console.print("=");
     console.print("=SCMD 2.0 Beta 3");
-    console.print("=Compiler: scmdc 0.10.0");
+    console.print("=Compiler: scmdc 0.13.0");
     console.print("=Simulator: scmdsim");
     console.print("=");
     console.print("=scmd.cc");
@@ -9066,7 +9066,7 @@ function menu_bind()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\菜单\\\\按键与快捷键");
+    console.print("=|SCMD 2.0:\\菜单\\按键与快捷键");
     console.print("================================");
     console.print("=1.绑定预设命令");
     console.print("=2.绑定自定义指令");
@@ -9363,7 +9363,7 @@ function menu_bind_preset()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\按键与快捷键\\\\绑定预设命令");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\绑定预设命令");
     console.print("================================");
     console.print("=1.打开SCMD菜单");
     console.print("=2.打开快捷指令");
@@ -9540,7 +9540,7 @@ function menu_bind_custom()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\按键与快捷键\\\\绑定自定义指令");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\绑定自定义指令");
     console.print("================================");
     console.print("=1.自定义指令1");
     console.print("=2.自定义指令2");
@@ -9581,7 +9581,7 @@ function menu_bind_manual()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\按键与快捷键\\\\手动绑定");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\手动绑定");
     console.print("================================");
     console.print("=格式: bind <key> <SCMD命令>");
     console.print("=例如:");
@@ -12734,7 +12734,7 @@ function menu_bind_key()
     screen_begin();
     reset_slots();
     console.print("================================");
-    console.print("=|SCMD 2.0:\\\\按键与快捷键\\\\选择按键");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\选择按键");
     console.print("================================");
     console.print("=1.F1");
     console.print("=2.F2");

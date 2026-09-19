@@ -3,7 +3,10 @@ from pathlib import Path
 import re, sys
 root=Path(__file__).resolve().parents[1]
 src=(root/'src/main.scmd').read_text(encoding='utf-8')
-pages='\n'.join(p.read_text(encoding='utf-8') for p in sorted((root/'build/Scmd/pages').glob('*.cfg')))
+# Scan the whole compiled package (pages/, lazy/, bootstrap.cfg, entry.cfg, ...):
+# since 0.11+ the boot-path registration lives in bootstrap.cfg, not pages/.
+pkg=root/'build/Scmd'
+pages='\n'.join(p.read_text(encoding='utf-8') for p in sorted(pkg.rglob('*.cfg')))
 funcs=[]
 for line in src.splitlines():
     m=re.match(r'// fn\[(\d+)\] ([A-Za-z0-9_]+)(?: -> ([A-Za-z0-9_]+))?', line)
