@@ -1,0 +1,1770 @@
+// Stable public actions, page wrappers and practice presets.
+
+export function scmd_clear()
+{
+    command.exec("clear");
+}
+
+export function scmd_disconnect()
+{
+    command.exec("disconnect");
+}
+
+export function scmd_buymenu()
+{
+    command.exec("buymenu");
+}
+
+export function scmd_teammenu()
+{
+    command.exec("teammenu");
+}
+
+export function scmd_switchhands()
+{
+    command.exec("switchhands");
+}
+
+export function scmd_noclip()
+{
+    command.exec("noclip");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已切换飞行");
+    }
+}
+
+export function scmd_rethrow()
+{
+    command.exec("sv_rethrow_last_grenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已重新投掷");
+    }
+}
+
+export function scmd_bot_place()
+{
+    command.exec("bot_place");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已执行 bot_place");
+    }
+}
+
+export function scmd_bot_clear()
+{
+    command.exec("bot_kick all");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已清除全部人机");
+    }
+}
+
+export function scmd_round_restart()
+{
+    command.exec("mp_restartgame 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 正在重新开始回合");
+    }
+}
+
+export function scmd_warmup_end()
+{
+    command.exec("mp_warmup_end");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已结束热身");
+    }
+}
+
+export function scmd_showpos_once()
+{
+    command.exec("getpos");
+}
+
+export function scmd_poscopy()
+{
+    command.exec("getposcopy_exact");
+}
+
+export function scmd_smoke_clear()
+{
+    command.exec("sv_kill_smokegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已清除烟雾");
+    }
+}
+
+export function scmd_heal()
+{
+    command.exec("healme 100");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已执行治疗");
+    }
+}
+
+export function scmd_kill()
+{
+    command.exec("kill");
+}
+
+export function scmd_bot_add()
+{
+    command.exec("bot_add");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已添加人机");
+    }
+}
+
+export function scmd_bot_add_t()
+{
+    command.exec("bot_add_t");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已添加T人机");
+    }
+}
+
+export function scmd_bot_add_ct()
+{
+    command.exec("bot_add_ct");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已添加CT人机");
+    }
+}
+
+export function scmd_bot_kill()
+{
+    command.exec("bot_kill all");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已击杀全部人机");
+    }
+}
+
+export function scmd_i_bot_all()
+{
+    command.exec("bot_all_weapons");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 人机允许全部武器");
+    }
+}
+
+export function scmd_i_bot_pistols()
+{
+    command.exec("bot_pistols_only");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 人机仅手枪");
+    }
+}
+
+export function scmd_i_bot_snipers()
+{
+    command.exec("bot_snipers_only");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 人机仅狙击枪");
+    }
+}
+
+export function scmd_i_bot_knives()
+{
+    command.exec("bot_knives_only");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 人机仅刀");
+    }
+}
+
+export function scmd_demo_pause()
+{
+    command.exec("demo_togglepause");
+}
+
+export function scmd_i_demo_pause()
+{
+    command.exec("demo_pause");
+}
+
+export function scmd_i_demo_resume()
+{
+    command.exec("demo_resume");
+}
+
+export function scmd_i_demo_step()
+{
+    command.exec("demo_step_tick 1");
+}
+
+export function scmd_i_demo_ui()
+{
+    command.exec("demoui");
+}
+
+export function scmd_demo_quarter()
+{
+    command.exec("demo_timescale 0.25");
+}
+
+export function scmd_demo_half()
+{
+    command.exec("demo_timescale 0.5");
+}
+
+export function scmd_demo_normal()
+{
+    command.exec("demo_timescale 1");
+}
+
+export function scmd_demo_double()
+{
+    command.exec("demo_timescale 2");
+}
+
+export function scmd_demo_quad()
+{
+    command.exec("demo_timescale 4");
+}
+
+export function scmd_i_demo_info()
+{
+    command.exec("demo_info");
+}
+
+export function scmd_i_demo_list()
+{
+    command.exec("demolist");
+}
+
+export function scmd_i_demo_list2()
+{
+    command.exec("listdemo");
+}
+
+export function scmd_i_key_list()
+{
+    command.exec("key_listboundkeys");
+}
+
+export function scmd_i_write_keys()
+{
+    command.exec("writekeybindings");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已请求保存按键绑定");
+    }
+}
+
+export function scmd_i_write_config()
+{
+    command.exec("host_writeconfig");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已请求保存用户配置");
+    }
+}
+
+export function scmd_i_differences()
+{
+    command.exec("differences");
+}
+
+export function scmd_i_changed()
+{
+    command.exec("print_changed_convars");
+}
+
+export function scmd_i_export()
+{
+    command.exec("cvarlist log scmd_cvarlist");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已请求导出完整命令表");
+    }
+}
+
+export function scmd_i_reload_custom2()
+{
+    command.exec("execifexists Scmd/Custom");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已重新加载 Custom.cfg");
+    }
+}
+
+export function scmd_reload()
+{
+    command.exec("exec scmd");
+}
+
+export function scmd_i_maps()
+{
+    command.exec("maps");
+}
+
+export function scmd_i_timeleft()
+{
+    command.exec("timeleft");
+}
+
+export function scmd_i_pause()
+{
+    command.exec("pause");
+}
+
+export function scmd_i_unpause()
+{
+    command.exec("unpause");
+}
+
+export function scmd_i_swapteams()
+{
+    command.exec("mp_swapteams");
+}
+
+export function scmd_i_scramble()
+{
+    command.exec("mp_scrambleteams");
+}
+
+export function scmd_i_workshop()
+{
+    command.exec("ds_workshop_listmaps");
+}
+
+function a_volume_0()
+{
+    command.exec("volume 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 主音量 0%");
+    }
+}
+
+function a_volume_25()
+{
+    command.exec("volume 0.25");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 主音量 25%");
+    }
+}
+
+function a_volume_50()
+{
+    command.exec("volume 0.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 主音量 50%");
+    }
+}
+
+function a_volume_75()
+{
+    command.exec("volume 0.75");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 主音量 75%");
+    }
+}
+
+function a_volume_100()
+{
+    command.exec("volume 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 主音量 100%");
+    }
+}
+
+function a_menu_music_0()
+{
+    command.exec("snd_menumusic_volume 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 菜单音乐 0%");
+    }
+}
+
+function a_menu_music_25()
+{
+    command.exec("snd_menumusic_volume 0.25");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 菜单音乐 25%");
+    }
+}
+
+function a_menu_music_50()
+{
+    command.exec("snd_menumusic_volume 0.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 菜单音乐 50%");
+    }
+}
+
+function a_menu_music_100()
+{
+    command.exec("snd_menumusic_volume 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 菜单音乐 100%");
+    }
+}
+
+function a_mvp_0()
+{
+    command.exec("snd_mvp_volume 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] MVP音乐 0%");
+    }
+}
+
+function a_mvp_25()
+{
+    command.exec("snd_mvp_volume 0.25");
+    if(pref_tips)
+    {
+        console.print("[SCMD] MVP音乐 25%");
+    }
+}
+
+function a_mvp_50()
+{
+    command.exec("snd_mvp_volume 0.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] MVP音乐 50%");
+    }
+}
+
+function a_mvp_100()
+{
+    command.exec("snd_mvp_volume 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] MVP音乐 100%");
+    }
+}
+
+function a_tensec_0()
+{
+    command.exec("snd_tensecondwarning_volume 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 十秒警告音量 0%");
+    }
+}
+
+function a_tensec_25()
+{
+    command.exec("snd_tensecondwarning_volume 0.25");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 十秒警告音量 25%");
+    }
+}
+
+function a_tensec_50()
+{
+    command.exec("snd_tensecondwarning_volume 0.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 十秒警告音量 50%");
+    }
+}
+
+function a_tensec_100()
+{
+    command.exec("snd_tensecondwarning_volume 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 十秒警告音量 100%");
+    }
+}
+
+function a_cross_style_0()
+{
+    command.exec("cl_crosshairstyle 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 0");
+    }
+}
+
+function a_cross_style_1()
+{
+    command.exec("cl_crosshairstyle 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 1");
+    }
+}
+
+function a_cross_style_2()
+{
+    command.exec("cl_crosshairstyle 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 2");
+    }
+}
+
+function a_cross_style_3()
+{
+    command.exec("cl_crosshairstyle 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 3");
+    }
+}
+
+function a_cross_style_4()
+{
+    command.exec("cl_crosshairstyle 4");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 4");
+    }
+}
+
+function a_cross_style_5()
+{
+    command.exec("cl_crosshairstyle 5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星样式 5");
+    }
+}
+
+function a_cross_size_1()
+{
+    command.exec("cl_crosshairsize 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星大小 1");
+    }
+}
+
+function a_cross_size_2()
+{
+    command.exec("cl_crosshairsize 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星大小 2");
+    }
+}
+
+function a_cross_size_3()
+{
+    command.exec("cl_crosshairsize 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星大小 3");
+    }
+}
+
+function a_cross_size_4()
+{
+    command.exec("cl_crosshairsize 4");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星大小 4");
+    }
+}
+
+function a_cross_size_5()
+{
+    command.exec("cl_crosshairsize 5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星大小 5");
+    }
+}
+
+function a_cross_thick_05()
+{
+    command.exec("cl_crosshairthickness 0.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星粗细 0.5");
+    }
+}
+
+function a_cross_thick_1()
+{
+    command.exec("cl_crosshairthickness 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星粗细 1");
+    }
+}
+
+function a_cross_thick_15()
+{
+    command.exec("cl_crosshairthickness 1.5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星粗细 1.5");
+    }
+}
+
+function a_cross_thick_2()
+{
+    command.exec("cl_crosshairthickness 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星粗细 2");
+    }
+}
+
+function a_cross_gap_m3()
+{
+    command.exec("cl_crosshairgap -3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星间距 -3");
+    }
+}
+
+function a_cross_gap_m1()
+{
+    command.exec("cl_crosshairgap -1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星间距 -1");
+    }
+}
+
+function a_cross_gap_0()
+{
+    command.exec("cl_crosshairgap 0");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星间距 0");
+    }
+}
+
+function a_cross_gap_1()
+{
+    command.exec("cl_crosshairgap 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星间距 1");
+    }
+}
+
+function a_cross_gap_3()
+{
+    command.exec("cl_crosshairgap 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星间距 3");
+    }
+}
+
+function a_cross_color_1()
+{
+    command.exec("cl_crosshaircolor 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星颜色预设 1");
+    }
+}
+
+function a_cross_color_2()
+{
+    command.exec("cl_crosshaircolor 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星颜色预设 2");
+    }
+}
+
+function a_cross_color_3()
+{
+    command.exec("cl_crosshaircolor 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星颜色预设 3");
+    }
+}
+
+function a_cross_color_4()
+{
+    command.exec("cl_crosshaircolor 4");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星颜色预设 4");
+    }
+}
+
+function a_cross_color_5()
+{
+    command.exec("cl_crosshaircolor 5");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 准星颜色预设 5");
+    }
+}
+
+function a_sniper_width_1()
+{
+    command.exec("cl_crosshair_sniper_width 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 狙击准星宽度 1");
+    }
+}
+
+function a_sniper_width_2()
+{
+    command.exec("cl_crosshair_sniper_width 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 狙击准星宽度 2");
+    }
+}
+
+function a_sniper_width_3()
+{
+    command.exec("cl_crosshair_sniper_width 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 狙击准星宽度 3");
+    }
+}
+
+function a_sniper_width_4()
+{
+    command.exec("cl_crosshair_sniper_width 4");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 狙击准星宽度 4");
+    }
+}
+
+function a_view_fov_54()
+{
+    command.exec("viewmodel_fov 54");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel FOV 54");
+    }
+}
+
+function a_view_fov_60()
+{
+    command.exec("viewmodel_fov 60");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel FOV 60");
+    }
+}
+
+function a_view_fov_68()
+{
+    command.exec("viewmodel_fov 68");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel FOV 68");
+    }
+}
+
+function a_view_preset_1()
+{
+    command.exec("viewmodel_presetpos 1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel 预设 1");
+    }
+}
+
+function a_view_preset_2()
+{
+    command.exec("viewmodel_presetpos 2");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel 预设 2");
+    }
+}
+
+function a_view_preset_3()
+{
+    command.exec("viewmodel_presetpos 3");
+    if(pref_tips)
+    {
+        console.print("[SCMD] Viewmodel 预设 3");
+    }
+}
+
+export function scmd_give_ak47()
+{
+    command.exec("give weapon_ak47");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give AK-47");
+    }
+}
+
+export function scmd_give_m4a4()
+{
+    command.exec("give weapon_m4a1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give M4A4");
+    }
+}
+
+export function scmd_give_m4a1s()
+{
+    command.exec("give weapon_m4a1_silencer");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give M4A1-S");
+    }
+}
+
+export function scmd_give_galilar()
+{
+    command.exec("give weapon_galilar");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Galil AR");
+    }
+}
+
+export function scmd_give_famas()
+{
+    command.exec("give weapon_famas");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give FAMAS");
+    }
+}
+
+export function scmd_give_aug()
+{
+    command.exec("give weapon_aug");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give AUG");
+    }
+}
+
+export function scmd_give_sg553()
+{
+    command.exec("give weapon_sg556");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give SG 553");
+    }
+}
+
+export function scmd_give_awp()
+{
+    command.exec("give weapon_awp");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give AWP");
+    }
+}
+
+export function scmd_give_ssg08()
+{
+    command.exec("give weapon_ssg08");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give SSG 08");
+    }
+}
+
+export function scmd_give_g3sg1()
+{
+    command.exec("give weapon_g3sg1");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give G3SG1");
+    }
+}
+
+export function scmd_give_scar20()
+{
+    command.exec("give weapon_scar20");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give SCAR-20");
+    }
+}
+
+export function scmd_give_mac10()
+{
+    command.exec("give weapon_mac10");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give MAC-10");
+    }
+}
+
+export function scmd_give_mp9()
+{
+    command.exec("give weapon_mp9");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give MP9");
+    }
+}
+
+export function scmd_give_mp7()
+{
+    command.exec("give weapon_mp7");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give MP7");
+    }
+}
+
+export function scmd_give_mp5sd()
+{
+    command.exec("give weapon_mp5sd");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give MP5-SD");
+    }
+}
+
+export function scmd_give_ump45()
+{
+    command.exec("give weapon_ump45");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give UMP-45");
+    }
+}
+
+export function scmd_give_p90()
+{
+    command.exec("give weapon_p90");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give P90");
+    }
+}
+
+export function scmd_give_bizon()
+{
+    command.exec("give weapon_bizon");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give PP-Bizon");
+    }
+}
+
+export function scmd_give_nova()
+{
+    command.exec("give weapon_nova");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Nova");
+    }
+}
+
+export function scmd_give_xm1014()
+{
+    command.exec("give weapon_xm1014");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give XM1014");
+    }
+}
+
+export function scmd_give_mag7()
+{
+    command.exec("give weapon_mag7");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give MAG-7");
+    }
+}
+
+export function scmd_give_sawedoff()
+{
+    command.exec("give weapon_sawedoff");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Sawed-Off");
+    }
+}
+
+export function scmd_give_m249()
+{
+    command.exec("give weapon_m249");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give M249");
+    }
+}
+
+export function scmd_give_negev()
+{
+    command.exec("give weapon_negev");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Negev");
+    }
+}
+
+export function scmd_give_glock()
+{
+    command.exec("give weapon_glock");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Glock-18");
+    }
+}
+
+export function scmd_give_usps()
+{
+    command.exec("give weapon_usp_silencer");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give USP-S");
+    }
+}
+
+export function scmd_give_p2000()
+{
+    command.exec("give weapon_hkp2000");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give P2000");
+    }
+}
+
+export function scmd_give_p250()
+{
+    command.exec("give weapon_p250");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give P250");
+    }
+}
+
+export function scmd_give_elite()
+{
+    command.exec("give weapon_elite");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Dual Berettas");
+    }
+}
+
+export function scmd_give_fiveseven()
+{
+    command.exec("give weapon_fiveseven");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Five-SeveN");
+    }
+}
+
+export function scmd_give_tec9()
+{
+    command.exec("give weapon_tec9");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Tec-9");
+    }
+}
+
+export function scmd_give_cz75()
+{
+    command.exec("give weapon_cz75a");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give CZ75-Auto");
+    }
+}
+
+export function scmd_give_deagle()
+{
+    command.exec("give weapon_deagle");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Desert Eagle");
+    }
+}
+
+export function scmd_give_revolver()
+{
+    command.exec("give weapon_revolver");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give R8 Revolver");
+    }
+}
+
+export function scmd_give_he()
+{
+    command.exec("give weapon_hegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give HE Grenade");
+    }
+}
+
+export function scmd_give_flash()
+{
+    command.exec("give weapon_flashbang");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Flashbang");
+    }
+}
+
+export function scmd_give_smoke()
+{
+    command.exec("give weapon_smokegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Smoke Grenade");
+    }
+}
+
+export function scmd_give_molotov()
+{
+    command.exec("give weapon_molotov");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Molotov");
+    }
+}
+
+export function scmd_give_inc()
+{
+    command.exec("give weapon_incgrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Incendiary Grenade");
+    }
+}
+
+export function scmd_give_decoy()
+{
+    command.exec("give weapon_decoy");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Decoy");
+    }
+}
+
+export function scmd_give_zeus()
+{
+    command.exec("give weapon_taser");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Zeus x27");
+    }
+}
+
+export function scmd_give_kevlar()
+{
+    command.exec("give item_kevlar");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Kevlar");
+    }
+}
+
+export function scmd_give_assaultsuit()
+{
+    command.exec("give item_assaultsuit");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Kevlar + Helmet");
+    }
+}
+
+export function scmd_give_defuser()
+{
+    command.exec("give item_defuser");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Defuse Kit");
+    }
+}
+
+export function scmd_give_knife()
+{
+    command.exec("give weapon_knife");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Knife");
+    }
+}
+
+export function scmd_give_c4()
+{
+    command.exec("give weapon_c4");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give C4");
+    }
+}
+
+export function scmd_give_healthshot()
+{
+    command.exec("give weapon_healthshot");
+    if(pref_tips)
+    {
+        console.print("[SCMD] give Healthshot");
+    }
+}
+
+export function scmd_give_ammo()
+{
+    command.exec("givecurrentammo");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已补充当前武器弹药");
+    }
+}
+
+export function scmd_i_pack_ak()
+{
+    command.exec("give item_assaultsuit");
+    command.exec("give weapon_ak47");
+    command.exec("give weapon_deagle");
+    command.exec("give weapon_smokegrenade");
+    command.exec("give weapon_flashbang");
+    command.exec("give weapon_molotov");
+    command.exec("give weapon_hegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已发放 AK 整套");
+    }
+}
+
+export function scmd_i_pack_m4s()
+{
+    command.exec("give item_assaultsuit");
+    command.exec("give weapon_m4a1_silencer");
+    command.exec("give weapon_usp_silencer");
+    command.exec("give weapon_smokegrenade");
+    command.exec("give weapon_flashbang");
+    command.exec("give weapon_incgrenade");
+    command.exec("give weapon_hegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已发放 M4A1-S 整套");
+    }
+}
+
+export function scmd_i_pack_m4()
+{
+    command.exec("give item_assaultsuit");
+    command.exec("give weapon_m4a1");
+    command.exec("give weapon_usp_silencer");
+    command.exec("give weapon_smokegrenade");
+    command.exec("give weapon_flashbang");
+    command.exec("give weapon_incgrenade");
+    command.exec("give weapon_hegrenade");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已发放 M4A4 整套");
+    }
+}
+
+export function scmd_i_pack_awp()
+{
+    command.exec("give item_assaultsuit");
+    command.exec("give weapon_awp");
+    command.exec("give weapon_deagle");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已发放 AWP 整套");
+    }
+}
+
+export function scmd_i_pack_nades()
+{
+    command.exec("give weapon_smokegrenade");
+    command.exec("give weapon_flashbang");
+    command.exec("give weapon_molotov");
+    command.exec("give weapon_incgrenade");
+    command.exec("give weapon_hegrenade");
+    command.exec("give weapon_decoy");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 已发放投掷物包");
+    }
+}
+
+export function scmd_practice_standard()
+{
+    command.exec("sv_cheats 1");
+    command.exec("mp_warmup_end");
+    command.exec("mp_limitteams 0");
+    command.exec("mp_autoteambalance 0");
+    command.exec("mp_roundtime 60");
+    command.exec("mp_roundtime_defuse 60");
+    command.exec("mp_roundtime_hostage 60");
+    command.exec("mp_freezetime 0");
+    command.exec("mp_buy_anywhere 1");
+    command.exec("mp_buytime 9999");
+    command.exec("mp_maxmoney 60000");
+    command.exec("mp_startmoney 60000");
+    command.exec("mp_afterroundmoney 60000");
+    command.exec("mp_weapons_allow_typecount -1");
+    command.exec("ammo_grenade_limit_total 6");
+    command.exec("mp_ignore_round_win_conditions 1");
+    command.exec("sv_infinite_ammo 2");
+    command.exec("host_timescale 1");
+    command.exec("bot_kick");
+    command.exec("mp_restartgame 1");
+    st_ammo = 2;
+    st_timescale = 4;
+    st_bot_stop = 0;
+    st_bot_mimic = 0;
+    command.exec("scmd_practice");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 标准跑图环境初始化完成");
+    }
+}
+
+export function scmd_practice_grenade()
+{
+    command.exec("sv_cheats 1");
+    command.exec("mp_warmup_end");
+    command.exec("mp_limitteams 0");
+    command.exec("mp_autoteambalance 0");
+    command.exec("mp_roundtime 60");
+    command.exec("mp_roundtime_defuse 60");
+    command.exec("mp_roundtime_hostage 60");
+    command.exec("mp_freezetime 0");
+    command.exec("mp_buy_anywhere 1");
+    command.exec("mp_buytime 9999");
+    command.exec("mp_maxmoney 60000");
+    command.exec("mp_startmoney 60000");
+    command.exec("mp_afterroundmoney 60000");
+    command.exec("mp_weapons_allow_typecount -1");
+    command.exec("ammo_grenade_limit_total 6");
+    command.exec("mp_ignore_round_win_conditions 1");
+    command.exec("sv_infinite_ammo 2");
+    command.exec("host_timescale 1");
+    command.exec("bot_kick");
+    command.exec("mp_restartgame 1");
+    command.exec("sv_grenade_trajectory_prac_pipreview 1");
+    command.exec("sv_grenade_trajectory_prac_trailtime 8");
+    command.exec("sv_showimpacts 1");
+    command.exec("sv_showimpacts_time 8");
+    st_ammo = 2;
+    st_timescale = 4;
+    st_trajectory = 2;
+    st_impacts = 2;
+    command.exec("scmd_practice");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 投掷物练习环境初始化完成");
+    }
+}
+
+export function scmd_practice_aim()
+{
+    command.exec("sv_cheats 1");
+    command.exec("mp_warmup_end");
+    command.exec("mp_limitteams 0");
+    command.exec("mp_autoteambalance 0");
+    command.exec("mp_roundtime 60");
+    command.exec("mp_roundtime_defuse 60");
+    command.exec("mp_roundtime_hostage 60");
+    command.exec("mp_freezetime 0");
+    command.exec("mp_buy_anywhere 1");
+    command.exec("mp_buytime 9999");
+    command.exec("mp_maxmoney 60000");
+    command.exec("mp_startmoney 60000");
+    command.exec("mp_afterroundmoney 60000");
+    command.exec("mp_weapons_allow_typecount -1");
+    command.exec("ammo_grenade_limit_total 6");
+    command.exec("mp_ignore_round_win_conditions 1");
+    command.exec("sv_infinite_ammo 2");
+    command.exec("host_timescale 1");
+    command.exec("bot_kick");
+    command.exec("mp_restartgame 1");
+    command.exec("sv_showimpacts 1");
+    command.exec("sv_showimpacts_penetration 1");
+    command.exec("mp_respawn_on_death_t 1");
+    command.exec("mp_respawn_on_death_ct 1");
+    st_ammo = 2;
+    st_timescale = 4;
+    st_impacts = 2;
+    command.exec("scmd_practice");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 枪械练习环境初始化完成");
+    }
+}
+
+export function scmd_practice_bot()
+{
+    command.exec("sv_cheats 1");
+    command.exec("mp_warmup_end");
+    command.exec("mp_limitteams 0");
+    command.exec("mp_autoteambalance 0");
+    command.exec("mp_roundtime 60");
+    command.exec("mp_roundtime_defuse 60");
+    command.exec("mp_roundtime_hostage 60");
+    command.exec("mp_freezetime 0");
+    command.exec("mp_buy_anywhere 1");
+    command.exec("mp_buytime 9999");
+    command.exec("mp_maxmoney 60000");
+    command.exec("mp_startmoney 60000");
+    command.exec("mp_afterroundmoney 60000");
+    command.exec("mp_weapons_allow_typecount -1");
+    command.exec("ammo_grenade_limit_total 6");
+    command.exec("mp_ignore_round_win_conditions 1");
+    command.exec("sv_infinite_ammo 2");
+    command.exec("host_timescale 1");
+    command.exec("bot_kick");
+    command.exec("mp_restartgame 1");
+    command.exec("bot_add_ct");
+    st_ammo = 2;
+    st_timescale = 4;
+    command.exec("scmd_practice");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 人机练习环境初始化完成");
+    }
+}
+
+export function scmd_practice_minimal()
+{
+    command.exec("sv_cheats 1");
+    command.exec("mp_warmup_end");
+    command.exec("mp_limitteams 0");
+    command.exec("mp_autoteambalance 0");
+    command.exec("mp_roundtime 60");
+    command.exec("mp_roundtime_defuse 60");
+    command.exec("mp_freezetime 0");
+    command.exec("mp_buy_anywhere 1");
+    command.exec("mp_buytime 9999");
+    command.exec("mp_maxmoney 60000");
+    command.exec("mp_startmoney 60000");
+    command.exec("ammo_grenade_limit_total 6");
+    command.exec("mp_ignore_round_win_conditions 1");
+    command.exec("host_timescale 1");
+    command.exec("mp_restartgame 1");
+    st_timescale = 4;
+    command.exec("scmd_practice");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 纯净跑图环境初始化完成");
+    }
+}
+
+export function scmd_i_quick_fps()
+{
+    scmd_fps();
+    command.exec("scmd_quick");
+}
+
+export function scmd_i_quick_impacts()
+{
+    scmd_impacts();
+    command.exec("scmd_quick");
+}
+
+export function scmd_i_quick_trajectory()
+{
+    scmd_trajectory();
+    command.exec("scmd_quick");
+}
+
+export function scmd_i_quick_showpos()
+{
+    scmd_showpos();
+    command.exec("scmd_quick");
+}
+
+export function scmd_i_practice_timescale()
+{
+    scmd_timescale();
+    command.exec("scmd_practice_tools");
+}
+
+export function scmd_i_practice_trajectory()
+{
+    scmd_trajectory();
+    command.exec("scmd_practice_tools");
+}
+
+export function scmd_i_practice_impacts()
+{
+    scmd_impacts();
+    command.exec("scmd_practice_tools");
+}
+
+export function scmd_i_practice_ammo()
+{
+    scmd_ammo();
+    command.exec("scmd_practice_tools");
+}
+
+export function scmd_i_practice_god()
+{
+    scmd_god();
+    command.exec("scmd_practice_tools");
+}
+
+export function scmd_i_bots_stop()
+{
+    scmd_bot_freeze();
+    command.exec("scmd_bots");
+}
+
+export function scmd_i_bots_mimic()
+{
+    scmd_bot_mimic();
+    command.exec("scmd_bots");
+}
+
+export function scmd_i_demo_speed()
+{
+    scmd_demo_speed();
+    command.exec("scmd_demo");
+}
+
+export function scmd_i_display_fps()
+{
+    scmd_fps();
+    command.exec("scmd_display");
+}
+
+export function scmd_i_display_hud()
+{
+    scmd_hud();
+    command.exec("scmd_display");
+}
+
+export function scmd_i_display_showpos()
+{
+    scmd_showpos();
+    command.exec("scmd_display");
+}
+
+export function scmd_i_display_impacts()
+{
+    scmd_impacts();
+    command.exec("scmd_display");
+}
+
+export function scmd_i_display_trajectory()
+{
+    scmd_trajectory();
+    command.exec("scmd_display");
+}
+
+export function scmd_i_firstperson()
+{
+    command.exec("firstperson");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 第一人称");
+    }
+}
+
+export function scmd_i_thirdperson()
+{
+    command.exec("thirdperson");
+    if(pref_tips)
+    {
+        console.print("[SCMD] 第三人称");
+    }
+}
+
+export function scmd_i_radar()
+{
+    command.exec("toggleradarscale");
+}
+
+export function scmd_i_net_status()
+{
+    command.exec("net_status");
+}
+
+export function scmd_i_net_channels()
+{
+    command.exec("net_channels");
+}
+
+export function scmd_i_status()
+{
+    command.exec("status");
+}
+
+export function scmd_i_ticktiming()
+{
+    command.exec("cl_ticktiming");
+}
+
+export function scmd_i_crosshair_toggle()
+{
+    scmd_crosshair();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_style()
+{
+    scmd_cross_style();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_size()
+{
+    scmd_cross_size();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_thick()
+{
+    scmd_cross_thickness();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_gap()
+{
+    scmd_cross_gap();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_color()
+{
+    scmd_cross_color();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_sniper()
+{
+    scmd_sniper_width();
+    command.exec("scmd_crosshair_menu");
+}
+
+export function scmd_i_cross_dot()
+{
+    scmd_crosshair_dot();
+    command.exec("scmd_crosshair_extras");
+}
+
+export function scmd_i_cross_outline()
+{
+    scmd_crosshair_outline();
+    command.exec("scmd_crosshair_extras");
+}
+
+export function scmd_i_cross_t()
+{
+    scmd_crosshair_t();
+    command.exec("scmd_crosshair_extras");
+}
+
+export function scmd_i_view_fov()
+{
+    scmd_view_fov();
+    command.exec("scmd_viewmodel");
+}
+
+export function scmd_i_view_preset()
+{
+    scmd_view_preset();
+    command.exec("scmd_viewmodel");
+}
+
+export function scmd_i_sound_volume()
+{
+    scmd_volume_cycle();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_menu_music()
+{
+    scmd_menu_music_cycle();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_mvp()
+{
+    scmd_mvp_music_cycle();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_tensec()
+{
+    scmd_tensec_cycle();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_voice()
+{
+    scmd_voice_toggle();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_loopback()
+{
+    scmd_voice_loopback();
+    command.exec("scmd_sound");
+}
+
+export function scmd_i_sound_mute()
+{
+    scmd_mute_losefocus();
+    command.exec("scmd_sound");
+}
+
+export function scmd_pref_clear()
+{
+    if(pref_clear_mode == 0)
+    {
+        pref_clear_mode = 1;
+    }
+    else if(pref_clear_mode == 1)
+    {
+        pref_clear_mode = 2;
+    }
+    else
+    {
+        pref_clear_mode = 0;
+    }
+    command.exec("scmd_preferences");
+}
+
+export function scmd_pref_tips()
+{
+    if(pref_tips)
+    {
+        pref_tips = false;
+    }
+    else
+    {
+        pref_tips = true;
+    }
+    command.exec("scmd_preferences");
+}
+
+export function scmd_pref_reset()
+{
+    pref_clear_mode = 1;
+    pref_tips = true;
+    command.exec("scmd_preferences");
+}

@@ -1,0 +1,147 @@
+// Screen lifecycle primitives shared by every menu page.
+
+function reset_slots()
+{
+    // Clear numeric menu aliases so handlers from the previous page cannot leak.
+    command.exec("alias 0 scmd_noop");
+    command.exec("alias 00 scmd_noop");
+    command.exec("alias 1 scmd_noop");
+    command.exec("alias 2 scmd_noop");
+    command.exec("alias 3 scmd_noop");
+    command.exec("alias 4 scmd_noop");
+    command.exec("alias 5 scmd_noop");
+    command.exec("alias 6 scmd_noop");
+    command.exec("alias 7 scmd_noop");
+    command.exec("alias 8 scmd_noop");
+    command.exec("alias 9 scmd_noop");
+    command.exec("alias 10 scmd_noop");
+    command.exec("alias 11 scmd_noop");
+    command.exec("alias 12 scmd_noop");
+    command.exec("alias 13 scmd_noop");
+    command.exec("alias 14 scmd_noop");
+    command.exec("alias 15 scmd_noop");
+    command.exec("alias 16 scmd_noop");
+    command.exec("alias 17 scmd_noop");
+    command.exec("alias 18 scmd_noop");
+    command.exec("alias 19 scmd_noop");
+    command.exec("alias 20 scmd_noop");
+    command.exec("alias 21 scmd_noop");
+    command.exec("alias 22 scmd_noop");
+    command.exec("alias 23 scmd_noop");
+    command.exec("alias 24 scmd_noop");
+    command.exec("alias 25 scmd_noop");
+    command.exec("alias 26 scmd_noop");
+    command.exec("alias 27 scmd_noop");
+    command.exec("alias 28 scmd_noop");
+    command.exec("alias 29 scmd_noop");
+    command.exec("alias 30 scmd_noop");
+    command.exec("alias 31 scmd_noop");
+    command.exec("alias 32 scmd_noop");
+    command.exec("alias 33 scmd_noop");
+    command.exec("alias 34 scmd_noop");
+    command.exec("alias 35 scmd_noop");
+    command.exec("alias 36 scmd_noop");
+    command.exec("alias 37 scmd_noop");
+    command.exec("alias 38 scmd_noop");
+    command.exec("alias 39 scmd_noop");
+    command.exec("alias 40 scmd_noop");
+    command.exec("alias 41 scmd_noop");
+    command.exec("alias 42 scmd_noop");
+    command.exec("alias 43 scmd_noop");
+    command.exec("alias 44 scmd_noop");
+    command.exec("alias 45 scmd_noop");
+    command.exec("alias 46 scmd_noop");
+    command.exec("alias 47 scmd_noop");
+    command.exec("alias 48 scmd_noop");
+    command.exec("alias 49 scmd_noop");
+    command.exec("alias 50 scmd_noop");
+    command.exec("alias +1 scmd_noop");
+    command.exec("alias +2 scmd_noop");
+    command.exec("alias +3 scmd_noop");
+    command.exec("alias +4 scmd_noop");
+    command.exec("alias +5 scmd_noop");
+    command.exec("alias +6 scmd_noop");
+    command.exec("alias +7 scmd_noop");
+    command.exec("alias +8 scmd_noop");
+    command.exec("alias +9 scmd_noop");
+    command.exec("alias +10 scmd_noop");
+    command.exec("alias +11 scmd_noop");
+    command.exec("alias +12 scmd_noop");
+    command.exec("alias +13 scmd_noop");
+    command.exec("alias +14 scmd_noop");
+    command.exec("alias +15 scmd_noop");
+    command.exec("alias +16 scmd_noop");
+    command.exec("alias +17 scmd_noop");
+    command.exec("alias +18 scmd_noop");
+    command.exec("alias +19 scmd_noop");
+    command.exec("alias +20 scmd_noop");
+    command.exec("alias +21 scmd_noop");
+    command.exec("alias +22 scmd_noop");
+    command.exec("alias +23 scmd_noop");
+    command.exec("alias +24 scmd_noop");
+    command.exec("alias +25 scmd_noop");
+    command.exec("alias +26 scmd_noop");
+    command.exec("alias +27 scmd_noop");
+    command.exec("alias +28 scmd_noop");
+    command.exec("alias +29 scmd_noop");
+    command.exec("alias +30 scmd_noop");
+    command.exec("alias +31 scmd_noop");
+    command.exec("alias +32 scmd_noop");
+    command.exec("alias +33 scmd_noop");
+    command.exec("alias +34 scmd_noop");
+    command.exec("alias +35 scmd_noop");
+    command.exec("alias +36 scmd_noop");
+    command.exec("alias +37 scmd_noop");
+    command.exec("alias +38 scmd_noop");
+    command.exec("alias +39 scmd_noop");
+    command.exec("alias +40 scmd_noop");
+    command.exec("alias +41 scmd_noop");
+    command.exec("alias +42 scmd_noop");
+    command.exec("alias +43 scmd_noop");
+    command.exec("alias +44 scmd_noop");
+    command.exec("alias +45 scmd_noop");
+    command.exec("alias +46 scmd_noop");
+    command.exec("alias +47 scmd_noop");
+    command.exec("alias +48 scmd_noop");
+    command.exec("alias +49 scmd_noop");
+    command.exec("alias +50 scmd_noop");
+}
+
+function screen_begin()
+{
+    if(pref_clear_mode == 1)
+    {
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+        console.print("");
+    }
+    else if(pref_clear_mode == 2)
+    {
+        console.clear();
+    }
+}
+
+export function scmd_noop()
+{
+}

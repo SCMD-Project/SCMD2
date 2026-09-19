@@ -9,7 +9,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "src" / "main.scmd"
+SRC_DIR = ROOT / "src"
 BUILD = ROOT / "build"
 PAGES = BUILD / "Scmd" / "pages"
 ASYNC = BUILD / "Scmd" / "async" / "000.cfg"
@@ -71,7 +71,9 @@ def main() -> int:
     if not sim.is_file():
         fail(f"simulator missing: {sim}")
 
-    source = SRC.read_text(encoding="utf-8")
+    source = "\n".join(
+        p.read_text(encoding="utf-8") for p in sorted(SRC_DIR.glob("*.scmd"))
+    )
     if "SCMD 2.0 BETA 3 SOURCE" not in source:
         fail("wrong generated source version")
     if not PAGES.is_dir():
@@ -117,11 +119,19 @@ def main() -> int:
     if len(KEYS) * len(TARGETS) != 672:
         fail("binding matrix size changed unexpectedly")
 
-    pages = "\n".join(p.read_text(encoding="utf-8") for p in sorted(PAGES.glob("*.cfg")))
-    fn_count = len(re.findall(r"^function [A-Za-z0-9_]+\(\)", source, re.M))
-    for i in range(fn_count):
-        if f"alias __scmd_fn{i} " not in pages:
-            fail(f"generated CFG missing __scmd_fn{i}")
+    # Whole-package alias coverage: every `export function` must have its
+    # console alias registered somewhere in the compiled package (eager
+    # trampoline pages or the module's own lazy page). The public entry count
+    # is pinned: changing the scmd_* ABI must be a conscious decision.
+    pkg = BUILD / "Scmd"
+    pages = "\n".join(p.read_text(encoding="utf-8") for p in sorted(pkg.rglob("*.cfg")))
+    fn_count = len(re.findall(r"^(?:export )?function [A-Za-z0-9_]+\(\)", source, re.M))
+    exports = re.findall(r"^export function ([A-Za-z0-9_]+)\(\)", source, re.M)
+    if len(exports) != 626:
+        fail(f"public entry count changed: {len(exports)} (expected 626)")
+    for name in exports:
+        if f"alias {name} " not in pages and f'alias {name} "' not in pages:
+            fail(f"compiled package missing console alias for export {name}")
 
     # Root navigation.
     out = run_sim(sim, "".join(f"{i}\n0\n" for i in range(1, 17)))

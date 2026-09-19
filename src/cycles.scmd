@@ -1,0 +1,437 @@
+// Parameter preset cycles (public scmd_* never force a page render).
+
+export function scmd_timescale()
+{
+    if(st_timescale == 1)
+    {
+        command.exec("host_timescale 0.25");
+        st_timescale = 2;
+    }
+    else if(st_timescale == 2)
+    {
+        command.exec("host_timescale 0.5");
+        st_timescale = 3;
+    }
+    else if(st_timescale == 3)
+    {
+        command.exec("host_timescale 1");
+        st_timescale = 4;
+    }
+    else if(st_timescale == 4)
+    {
+        command.exec("host_timescale 2");
+        st_timescale = 5;
+    }
+    else if(st_timescale == 5)
+    {
+        command.exec("host_timescale 0.1");
+        st_timescale = 1;
+    }
+    else
+    {
+        command.exec("host_timescale 0.1");
+        st_timescale = 1;
+    }
+}
+
+export function scmd_demo_speed()
+{
+    if(st_demo_speed == 1)
+    {
+        command.exec("demo_timescale 0.5");
+        st_demo_speed = 2;
+    }
+    else if(st_demo_speed == 2)
+    {
+        command.exec("demo_timescale 1");
+        st_demo_speed = 3;
+    }
+    else if(st_demo_speed == 3)
+    {
+        command.exec("demo_timescale 2");
+        st_demo_speed = 4;
+    }
+    else if(st_demo_speed == 4)
+    {
+        command.exec("demo_timescale 4");
+        st_demo_speed = 5;
+    }
+    else if(st_demo_speed == 5)
+    {
+        command.exec("demo_timescale 0.25");
+        st_demo_speed = 1;
+    }
+    else
+    {
+        command.exec("demo_timescale 0.25");
+        st_demo_speed = 1;
+    }
+}
+
+export function scmd_cross_style()
+{
+    if(st_cross_style == 1)
+    {
+        command.exec("cl_crosshairstyle 1");
+        st_cross_style = 2;
+    }
+    else if(st_cross_style == 2)
+    {
+        command.exec("cl_crosshairstyle 2");
+        st_cross_style = 3;
+    }
+    else if(st_cross_style == 3)
+    {
+        command.exec("cl_crosshairstyle 3");
+        st_cross_style = 4;
+    }
+    else if(st_cross_style == 4)
+    {
+        command.exec("cl_crosshairstyle 4");
+        st_cross_style = 5;
+    }
+    else if(st_cross_style == 5)
+    {
+        command.exec("cl_crosshairstyle 5");
+        st_cross_style = 6;
+    }
+    else if(st_cross_style == 6)
+    {
+        command.exec("cl_crosshairstyle 0");
+        st_cross_style = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshairstyle 0");
+        st_cross_style = 1;
+    }
+}
+
+export function scmd_cross_size()
+{
+    if(st_cross_size == 1)
+    {
+        command.exec("cl_crosshairsize 2");
+        st_cross_size = 2;
+    }
+    else if(st_cross_size == 2)
+    {
+        command.exec("cl_crosshairsize 3");
+        st_cross_size = 3;
+    }
+    else if(st_cross_size == 3)
+    {
+        command.exec("cl_crosshairsize 4");
+        st_cross_size = 4;
+    }
+    else if(st_cross_size == 4)
+    {
+        command.exec("cl_crosshairsize 5");
+        st_cross_size = 5;
+    }
+    else if(st_cross_size == 5)
+    {
+        command.exec("cl_crosshairsize 1");
+        st_cross_size = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshairsize 1");
+        st_cross_size = 1;
+    }
+}
+
+export function scmd_cross_thickness()
+{
+    if(st_cross_thickness == 1)
+    {
+        command.exec("cl_crosshairthickness 1");
+        st_cross_thickness = 2;
+    }
+    else if(st_cross_thickness == 2)
+    {
+        command.exec("cl_crosshairthickness 1.5");
+        st_cross_thickness = 3;
+    }
+    else if(st_cross_thickness == 3)
+    {
+        command.exec("cl_crosshairthickness 2");
+        st_cross_thickness = 4;
+    }
+    else if(st_cross_thickness == 4)
+    {
+        command.exec("cl_crosshairthickness 0.5");
+        st_cross_thickness = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshairthickness 0.5");
+        st_cross_thickness = 1;
+    }
+}
+
+export function scmd_cross_gap()
+{
+    if(st_cross_gap == 1)
+    {
+        command.exec("cl_crosshairgap -1");
+        st_cross_gap = 2;
+    }
+    else if(st_cross_gap == 2)
+    {
+        command.exec("cl_crosshairgap 0");
+        st_cross_gap = 3;
+    }
+    else if(st_cross_gap == 3)
+    {
+        command.exec("cl_crosshairgap 1");
+        st_cross_gap = 4;
+    }
+    else if(st_cross_gap == 4)
+    {
+        command.exec("cl_crosshairgap 3");
+        st_cross_gap = 5;
+    }
+    else if(st_cross_gap == 5)
+    {
+        command.exec("cl_crosshairgap -3");
+        st_cross_gap = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshairgap -3");
+        st_cross_gap = 1;
+    }
+}
+
+export function scmd_cross_color()
+{
+    if(st_cross_color == 1)
+    {
+        command.exec("cl_crosshaircolor 2");
+        st_cross_color = 2;
+    }
+    else if(st_cross_color == 2)
+    {
+        command.exec("cl_crosshaircolor 3");
+        st_cross_color = 3;
+    }
+    else if(st_cross_color == 3)
+    {
+        command.exec("cl_crosshaircolor 4");
+        st_cross_color = 4;
+    }
+    else if(st_cross_color == 4)
+    {
+        command.exec("cl_crosshaircolor 5");
+        st_cross_color = 5;
+    }
+    else if(st_cross_color == 5)
+    {
+        command.exec("cl_crosshaircolor 1");
+        st_cross_color = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshaircolor 1");
+        st_cross_color = 1;
+    }
+}
+
+export function scmd_sniper_width()
+{
+    if(st_sniper_width == 1)
+    {
+        command.exec("cl_crosshair_sniper_width 2");
+        st_sniper_width = 2;
+    }
+    else if(st_sniper_width == 2)
+    {
+        command.exec("cl_crosshair_sniper_width 3");
+        st_sniper_width = 3;
+    }
+    else if(st_sniper_width == 3)
+    {
+        command.exec("cl_crosshair_sniper_width 4");
+        st_sniper_width = 4;
+    }
+    else if(st_sniper_width == 4)
+    {
+        command.exec("cl_crosshair_sniper_width 1");
+        st_sniper_width = 1;
+    }
+    else
+    {
+        command.exec("cl_crosshair_sniper_width 1");
+        st_sniper_width = 1;
+    }
+}
+
+export function scmd_view_fov()
+{
+    if(st_view_fov == 1)
+    {
+        command.exec("viewmodel_fov 60");
+        st_view_fov = 2;
+    }
+    else if(st_view_fov == 2)
+    {
+        command.exec("viewmodel_fov 68");
+        st_view_fov = 3;
+    }
+    else if(st_view_fov == 3)
+    {
+        command.exec("viewmodel_fov 54");
+        st_view_fov = 1;
+    }
+    else
+    {
+        command.exec("viewmodel_fov 54");
+        st_view_fov = 1;
+    }
+}
+
+export function scmd_view_preset()
+{
+    if(st_view_preset == 1)
+    {
+        command.exec("viewmodel_presetpos 2");
+        st_view_preset = 2;
+    }
+    else if(st_view_preset == 2)
+    {
+        command.exec("viewmodel_presetpos 3");
+        st_view_preset = 3;
+    }
+    else if(st_view_preset == 3)
+    {
+        command.exec("viewmodel_presetpos 1");
+        st_view_preset = 1;
+    }
+    else
+    {
+        command.exec("viewmodel_presetpos 1");
+        st_view_preset = 1;
+    }
+}
+
+export function scmd_volume_cycle()
+{
+    if(st_volume == 1)
+    {
+        command.exec("volume 0.25");
+        st_volume = 2;
+    }
+    else if(st_volume == 2)
+    {
+        command.exec("volume 0.5");
+        st_volume = 3;
+    }
+    else if(st_volume == 3)
+    {
+        command.exec("volume 0.75");
+        st_volume = 4;
+    }
+    else if(st_volume == 4)
+    {
+        command.exec("volume 1");
+        st_volume = 5;
+    }
+    else if(st_volume == 5)
+    {
+        command.exec("volume 0");
+        st_volume = 1;
+    }
+    else
+    {
+        command.exec("volume 0");
+        st_volume = 1;
+    }
+}
+
+export function scmd_menu_music_cycle()
+{
+    if(st_menu_music == 1)
+    {
+        command.exec("snd_menumusic_volume 0.25");
+        st_menu_music = 2;
+    }
+    else if(st_menu_music == 2)
+    {
+        command.exec("snd_menumusic_volume 0.5");
+        st_menu_music = 3;
+    }
+    else if(st_menu_music == 3)
+    {
+        command.exec("snd_menumusic_volume 1");
+        st_menu_music = 4;
+    }
+    else if(st_menu_music == 4)
+    {
+        command.exec("snd_menumusic_volume 0");
+        st_menu_music = 1;
+    }
+    else
+    {
+        command.exec("snd_menumusic_volume 0");
+        st_menu_music = 1;
+    }
+}
+
+export function scmd_mvp_music_cycle()
+{
+    if(st_mvp_music == 1)
+    {
+        command.exec("snd_mvp_volume 0.25");
+        st_mvp_music = 2;
+    }
+    else if(st_mvp_music == 2)
+    {
+        command.exec("snd_mvp_volume 0.5");
+        st_mvp_music = 3;
+    }
+    else if(st_mvp_music == 3)
+    {
+        command.exec("snd_mvp_volume 1");
+        st_mvp_music = 4;
+    }
+    else if(st_mvp_music == 4)
+    {
+        command.exec("snd_mvp_volume 0");
+        st_mvp_music = 1;
+    }
+    else
+    {
+        command.exec("snd_mvp_volume 0");
+        st_mvp_music = 1;
+    }
+}
+
+export function scmd_tensec_cycle()
+{
+    if(st_tensec == 1)
+    {
+        command.exec("snd_tensecondwarning_volume 0.25");
+        st_tensec = 2;
+    }
+    else if(st_tensec == 2)
+    {
+        command.exec("snd_tensecondwarning_volume 0.5");
+        st_tensec = 3;
+    }
+    else if(st_tensec == 3)
+    {
+        command.exec("snd_tensecondwarning_volume 1");
+        st_tensec = 4;
+    }
+    else if(st_tensec == 4)
+    {
+        command.exec("snd_tensecondwarning_volume 0");
+        st_tensec = 1;
+    }
+    else
+    {
+        command.exec("snd_tensecondwarning_volume 0");
+        st_tensec = 1;
+    }
+}

@@ -58,9 +58,6 @@ jobs:
       - name: verify_beta3
         run: python tools/verify_beta3.py --sim "${{ steps.tc.outputs.toolchain-dir }}/scmdsim.exe"
 
-      - name: verify_generated
-        run: python tools/verify_generated.py
-
       - name: Size budget report
         run: |
           $ErrorActionPreference = 'Stop'

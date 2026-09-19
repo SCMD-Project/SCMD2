@@ -7,5 +7,5 @@
   "loading": {"mode": "demand", "mandatory": true},
   "console": {"mode": "async", "settle_ms": 32, "tick_ms": 16},
   "paging": {"max_bytes": 4096, "max_commands": 40},
-  "sources": ["src/main.scmd"]
+  "sources": ["src/main.scmd", "src/core.scmd", "src/toggles.scmd", "src/cycles.scmd", "src/rows.scmd", "src/actions.scmd", "src/menus.scmd", "src/catalog.scmd", "src/help.scmd", "src/bind.scmd"]
 }

@@ -1,0 +1,3350 @@
+// +N help entries, one function per menu item (alias scmd_h_N).
+
+export function scmd_h_1()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 快捷指令");
+    console.print("命令: scmd_quick");
+    console.print("说明: 执行或打开: 快捷指令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_2()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 全部命令");
+    console.print("命令: scmd_commands");
+    console.print("说明: 执行或打开: 全部命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_3()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 武器与装备");
+    console.print("命令: scmd_weapons");
+    console.print("说明: 执行或打开: 武器与装备");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_4()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令");
+    console.print("命令: scmd_custom_menu");
+    console.print("说明: 执行或打开: 自定义指令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_5()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 快速跑图");
+    console.print("命令: scmd_practice");
+    console.print("说明: 执行或打开: 快速跑图");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_6()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 练习工具");
+    console.print("命令: scmd_practice_tools");
+    console.print("说明: 执行或打开: 练习工具");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_7()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 人机控制");
+    console.print("命令: scmd_bots");
+    console.print("说明: 执行或打开: 人机控制");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_8()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Demo与观战");
+    console.print("命令: scmd_demo");
+    console.print("说明: 执行或打开: Demo与观战");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_9()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 地图与会话");
+    console.print("命令: scmd_map");
+    console.print("说明: 执行或打开: 地图与会话");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_10()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 显示与HUD");
+    console.print("命令: scmd_display");
+    console.print("说明: 执行或打开: 显示与HUD");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_11()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星与视角");
+    console.print("命令: scmd_crosshair_menu");
+    console.print("说明: 执行或打开: 准星与视角");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_12()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 声音与语音");
+    console.print("命令: scmd_sound");
+    console.print("说明: 执行或打开: 声音与语音");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_13()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 按键与快捷键");
+    console.print("命令: scmd_bind");
+    console.print("说明: 执行或打开: 按键与快捷键");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_14()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] CFG与控制台");
+    console.print("命令: scmd_cfg");
+    console.print("说明: 执行或打开: CFG与控制台");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_15()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 首选项");
+    console.print("命令: scmd_preferences");
+    console.print("说明: 执行或打开: 首选项");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_16()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 关于SCMD");
+    console.print("命令: scmd_about");
+    console.print("说明: 执行或打开: 关于SCMD");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_17()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清空控制台");
+    console.print("命令: clear");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_18()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 断开当前服务器");
+    console.print("命令: disconnect");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_19()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开购买菜单");
+    console.print("命令: buymenu");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_20()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开队伍菜单");
+    console.print("命令: teammenu");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_21()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换左右手");
+    console.print("命令: switchhands");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_22()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换飞行");
+    console.print("命令: noclip");
+    console.print("说明: 切换飞行模式 [LOCAL/CHEATS]");
+    console.print("示例: noclip");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_23()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新投掷上一个投掷物");
+    console.print("命令: sv_rethrow_last_grenade");
+    console.print("说明: 重新投掷上一个投掷物 [LOCAL/CHEATS]");
+    console.print("示例: sv_rethrow_last_grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_24()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 放置人机");
+    console.print("命令: bot_place");
+    console.print("说明: 在准星位置放置一个现有人机 [LOCAL/CHEATS]");
+    console.print("示例: bot_place");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_25()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 冻结/解除人机");
+    console.print("命令: bot_stop {0|1}");
+    console.print("说明: 切换冻结人机；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: bot_stop 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_26()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清除全部人机");
+    console.print("命令: bot_kick all");
+    console.print("说明: 已清除全部人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_27()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新开始回合");
+    console.print("命令: mp_restartgame {秒}");
+    console.print("说明: 重新开始当前回合");
+    console.print("示例: mp_restartgame 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_28()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 结束热身");
+    console.print("命令: mp_warmup_end");
+    console.print("说明: 已结束热身");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_29()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 13");
+    console.print("命令: cl_showfps {0|1}");
+    console.print("说明: 切换FPS显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_showfps 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_30()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 14");
+    console.print("命令: sv_showimpacts {0|1}");
+    console.print("说明: 切换弹着点；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_showimpacts 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_31()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 15");
+    console.print("命令: sv_grenade_trajectory_prac_pipreview {0|1}");
+    console.print("说明: 切换投掷物轨迹；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_grenade_trajectory_prac_pipreview 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_32()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 16");
+    console.print("命令: cl_showpos {0|1}");
+    console.print("说明: 切换位置显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_showpos 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_33()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] CFG与控制台");
+    console.print("命令: scmd_cmd_cfg");
+    console.print("说明: 执行或打开: CFG与控制台");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_34()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 按键与输入");
+    console.print("命令: scmd_cmd_bind");
+    console.print("说明: 执行或打开: 按键与输入");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_35()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 地图与会话");
+    console.print("命令: scmd_cmd_map");
+    console.print("说明: 执行或打开: 地图与会话");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_36()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 游戏与回合");
+    console.print("命令: scmd_cmd_game");
+    console.print("说明: 执行或打开: 游戏与回合");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_37()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 练习与作弊");
+    console.print("命令: scmd_cmd_practice");
+    console.print("说明: 执行或打开: 练习与作弊");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_38()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 人机");
+    console.print("命令: scmd_cmd_bot");
+    console.print("说明: 执行或打开: 人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_39()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 武器与购买");
+    console.print("命令: scmd_cmd_weapon");
+    console.print("说明: 执行或打开: 武器与购买");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_40()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Demo与观战");
+    console.print("命令: scmd_cmd_demo");
+    console.print("说明: 执行或打开: Demo与观战");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_41()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 显示与HUD");
+    console.print("命令: scmd_cmd_display");
+    console.print("说明: 执行或打开: 显示与HUD");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_42()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星与视角");
+    console.print("命令: scmd_cmd_cross");
+    console.print("说明: 执行或打开: 准星与视角");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_43()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 声音与语音");
+    console.print("命令: scmd_cmd_sound");
+    console.print("说明: 执行或打开: 声音与语音");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_44()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 聊天与通信");
+    console.print("命令: scmd_cmd_chat");
+    console.print("说明: 执行或打开: 聊天与通信");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_45()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 网络与状态");
+    console.print("命令: scmd_cmd_net");
+    console.print("说明: 执行或打开: 网络与状态");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_46()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 截图/位置/记录");
+    console.print("命令: scmd_cmd_capture");
+    console.print("说明: 执行或打开: 截图/位置/记录");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_47()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Workshop与地图");
+    console.print("命令: scmd_cmd_workshop");
+    console.print("说明: 执行或打开: Workshop与地图");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_48()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 服务端与管理");
+    console.print("命令: scmd_cmd_server");
+    console.print("说明: 执行或打开: 服务端与管理");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_49()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 全部武器 [LOCAL/CHEATS]");
+    console.print("命令: scmd_weapons_all");
+    console.print("说明: 执行或打开: 全部武器 [LOCAL/CHEATS]");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_50()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 步枪");
+    console.print("命令: scmd_weapons_rifle");
+    console.print("说明: 执行或打开: 步枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_51()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 狙击枪");
+    console.print("命令: scmd_weapons_sniper");
+    console.print("说明: 执行或打开: 狙击枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_52()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 冲锋枪");
+    console.print("命令: scmd_weapons_smg");
+    console.print("说明: 执行或打开: 冲锋枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_53()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 霰弹枪");
+    console.print("命令: scmd_weapons_shotgun");
+    console.print("说明: 执行或打开: 霰弹枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_54()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 机枪");
+    console.print("命令: scmd_weapons_mg");
+    console.print("说明: 执行或打开: 机枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_55()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 手枪");
+    console.print("命令: scmd_weapons_pistol");
+    console.print("说明: 执行或打开: 手枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_56()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 投掷物");
+    console.print("命令: scmd_weapons_grenade");
+    console.print("说明: 执行或打开: 投掷物");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_57()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 装备");
+    console.print("命令: scmd_weapons_gear");
+    console.print("说明: 执行或打开: 装备");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_58()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 特殊物品 [LOCAL/CHEATS]");
+    console.print("命令: scmd_weapons_special");
+    console.print("说明: 执行或打开: 特殊物品 [LOCAL/CHEATS]");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_59()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 快速整套装备");
+    console.print("命令: scmd_weapons_pack");
+    console.print("说明: 执行或打开: 快速整套装备");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_60()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 补充当前武器弹药");
+    console.print("命令: givecurrentammo");
+    console.print("说明: 已补充当前武器弹药");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_61()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AK-47");
+    console.print("命令: give weapon_ak47");
+    console.print("说明: give AK-47");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_62()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A4");
+    console.print("命令: give weapon_m4a1");
+    console.print("说明: give M4A4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_63()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A1-S");
+    console.print("命令: give weapon_m4a1_silencer");
+    console.print("说明: give M4A1-S");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_64()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Galil AR");
+    console.print("命令: give weapon_galilar");
+    console.print("说明: give Galil AR");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_65()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] FAMAS");
+    console.print("命令: give weapon_famas");
+    console.print("说明: give FAMAS");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_66()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AUG");
+    console.print("命令: give weapon_aug");
+    console.print("说明: give AUG");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_67()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SG 553");
+    console.print("命令: give weapon_sg556");
+    console.print("说明: give SG 553");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_68()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AWP");
+    console.print("命令: give weapon_awp");
+    console.print("说明: give AWP");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_69()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SSG 08");
+    console.print("命令: give weapon_ssg08");
+    console.print("说明: give SSG 08");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_70()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] G3SG1");
+    console.print("命令: give weapon_g3sg1");
+    console.print("说明: give G3SG1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_71()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SCAR-20");
+    console.print("命令: give weapon_scar20");
+    console.print("说明: give SCAR-20");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_72()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MAC-10");
+    console.print("命令: give weapon_mac10");
+    console.print("说明: give MAC-10");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_73()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP9");
+    console.print("命令: give weapon_mp9");
+    console.print("说明: give MP9");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_74()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP7");
+    console.print("命令: give weapon_mp7");
+    console.print("说明: give MP7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_75()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP5-SD");
+    console.print("命令: give weapon_mp5sd");
+    console.print("说明: give MP5-SD");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_76()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] UMP-45");
+    console.print("命令: give weapon_ump45");
+    console.print("说明: give UMP-45");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_77()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P90");
+    console.print("命令: give weapon_p90");
+    console.print("说明: give P90");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_78()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] PP-Bizon");
+    console.print("命令: give weapon_bizon");
+    console.print("说明: give PP-Bizon");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_79()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Nova");
+    console.print("命令: give weapon_nova");
+    console.print("说明: give Nova");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_80()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] XM1014");
+    console.print("命令: give weapon_xm1014");
+    console.print("说明: give XM1014");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_81()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MAG-7");
+    console.print("命令: give weapon_mag7");
+    console.print("说明: give MAG-7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_82()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Sawed-Off");
+    console.print("命令: give weapon_sawedoff");
+    console.print("说明: give Sawed-Off");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_83()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M249");
+    console.print("命令: give weapon_m249");
+    console.print("说明: give M249");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_84()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Negev");
+    console.print("命令: give weapon_negev");
+    console.print("说明: give Negev");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_85()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Glock-18");
+    console.print("命令: give weapon_glock");
+    console.print("说明: give Glock-18");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_86()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] USP-S");
+    console.print("命令: give weapon_usp_silencer");
+    console.print("说明: give USP-S");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_87()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P2000");
+    console.print("命令: give weapon_hkp2000");
+    console.print("说明: give P2000");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_88()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P250");
+    console.print("命令: give weapon_p250");
+    console.print("说明: give P250");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_89()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Dual Berettas");
+    console.print("命令: give weapon_elite");
+    console.print("说明: give Dual Berettas");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_90()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Five-SeveN");
+    console.print("命令: give weapon_fiveseven");
+    console.print("说明: give Five-SeveN");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_91()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Tec-9");
+    console.print("命令: give weapon_tec9");
+    console.print("说明: give Tec-9");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_92()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] CZ75-Auto");
+    console.print("命令: give weapon_cz75a");
+    console.print("说明: give CZ75-Auto");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_93()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Desert Eagle");
+    console.print("命令: give weapon_deagle");
+    console.print("说明: give Desert Eagle");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_94()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] R8 Revolver");
+    console.print("命令: give weapon_revolver");
+    console.print("说明: give R8 Revolver");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_95()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] HE Grenade");
+    console.print("命令: give weapon_hegrenade");
+    console.print("说明: give HE Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_96()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Flashbang");
+    console.print("命令: give weapon_flashbang");
+    console.print("说明: give Flashbang");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_97()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Smoke Grenade");
+    console.print("命令: give weapon_smokegrenade");
+    console.print("说明: give Smoke Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_98()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Molotov");
+    console.print("命令: give weapon_molotov");
+    console.print("说明: give Molotov");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_99()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Incendiary Grenade");
+    console.print("命令: give weapon_incgrenade");
+    console.print("说明: give Incendiary Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_100()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Decoy");
+    console.print("命令: give weapon_decoy");
+    console.print("说明: give Decoy");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_101()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Zeus x27");
+    console.print("命令: give weapon_taser");
+    console.print("说明: give Zeus x27");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_102()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Kevlar");
+    console.print("命令: give item_kevlar");
+    console.print("说明: give Kevlar");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_103()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Kevlar + Helmet");
+    console.print("命令: give item_assaultsuit");
+    console.print("说明: give Kevlar + Helmet");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_104()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Defuse Kit");
+    console.print("命令: give item_defuser");
+    console.print("说明: give Defuse Kit");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_105()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Knife");
+    console.print("命令: give weapon_knife");
+    console.print("说明: give Knife");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_106()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] C4");
+    console.print("命令: give weapon_c4");
+    console.print("说明: give C4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_107()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Healthshot");
+    console.print("命令: give weapon_healthshot");
+    console.print("说明: give Healthshot");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_108()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AK-47");
+    console.print("命令: give weapon_ak47");
+    console.print("说明: give AK-47");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_109()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A4");
+    console.print("命令: give weapon_m4a1");
+    console.print("说明: give M4A4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_110()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A1-S");
+    console.print("命令: give weapon_m4a1_silencer");
+    console.print("说明: give M4A1-S");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_111()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Galil AR");
+    console.print("命令: give weapon_galilar");
+    console.print("说明: give Galil AR");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_112()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] FAMAS");
+    console.print("命令: give weapon_famas");
+    console.print("说明: give FAMAS");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_113()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AUG");
+    console.print("命令: give weapon_aug");
+    console.print("说明: give AUG");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_114()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SG 553");
+    console.print("命令: give weapon_sg556");
+    console.print("说明: give SG 553");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_115()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AWP");
+    console.print("命令: give weapon_awp");
+    console.print("说明: give AWP");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_116()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SSG 08");
+    console.print("命令: give weapon_ssg08");
+    console.print("说明: give SSG 08");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_117()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] G3SG1");
+    console.print("命令: give weapon_g3sg1");
+    console.print("说明: give G3SG1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_118()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] SCAR-20");
+    console.print("命令: give weapon_scar20");
+    console.print("说明: give SCAR-20");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_119()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MAC-10");
+    console.print("命令: give weapon_mac10");
+    console.print("说明: give MAC-10");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_120()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP9");
+    console.print("命令: give weapon_mp9");
+    console.print("说明: give MP9");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_121()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP7");
+    console.print("命令: give weapon_mp7");
+    console.print("说明: give MP7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_122()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MP5-SD");
+    console.print("命令: give weapon_mp5sd");
+    console.print("说明: give MP5-SD");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_123()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] UMP-45");
+    console.print("命令: give weapon_ump45");
+    console.print("说明: give UMP-45");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_124()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P90");
+    console.print("命令: give weapon_p90");
+    console.print("说明: give P90");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_125()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] PP-Bizon");
+    console.print("命令: give weapon_bizon");
+    console.print("说明: give PP-Bizon");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_126()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Nova");
+    console.print("命令: give weapon_nova");
+    console.print("说明: give Nova");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_127()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] XM1014");
+    console.print("命令: give weapon_xm1014");
+    console.print("说明: give XM1014");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_128()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MAG-7");
+    console.print("命令: give weapon_mag7");
+    console.print("说明: give MAG-7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_129()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Sawed-Off");
+    console.print("命令: give weapon_sawedoff");
+    console.print("说明: give Sawed-Off");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_130()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M249");
+    console.print("命令: give weapon_m249");
+    console.print("说明: give M249");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_131()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Negev");
+    console.print("命令: give weapon_negev");
+    console.print("说明: give Negev");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_132()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Glock-18");
+    console.print("命令: give weapon_glock");
+    console.print("说明: give Glock-18");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_133()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] USP-S");
+    console.print("命令: give weapon_usp_silencer");
+    console.print("说明: give USP-S");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_134()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P2000");
+    console.print("命令: give weapon_hkp2000");
+    console.print("说明: give P2000");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_135()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] P250");
+    console.print("命令: give weapon_p250");
+    console.print("说明: give P250");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_136()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Dual Berettas");
+    console.print("命令: give weapon_elite");
+    console.print("说明: give Dual Berettas");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_137()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Five-SeveN");
+    console.print("命令: give weapon_fiveseven");
+    console.print("说明: give Five-SeveN");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_138()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Tec-9");
+    console.print("命令: give weapon_tec9");
+    console.print("说明: give Tec-9");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_139()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] CZ75-Auto");
+    console.print("命令: give weapon_cz75a");
+    console.print("说明: give CZ75-Auto");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_140()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Desert Eagle");
+    console.print("命令: give weapon_deagle");
+    console.print("说明: give Desert Eagle");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_141()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] R8 Revolver");
+    console.print("命令: give weapon_revolver");
+    console.print("说明: give R8 Revolver");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_142()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] HE Grenade");
+    console.print("命令: give weapon_hegrenade");
+    console.print("说明: give HE Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_143()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Flashbang");
+    console.print("命令: give weapon_flashbang");
+    console.print("说明: give Flashbang");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_144()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Smoke Grenade");
+    console.print("命令: give weapon_smokegrenade");
+    console.print("说明: give Smoke Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_145()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Molotov");
+    console.print("命令: give weapon_molotov");
+    console.print("说明: give Molotov");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_146()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Incendiary Grenade");
+    console.print("命令: give weapon_incgrenade");
+    console.print("说明: give Incendiary Grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_147()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Decoy");
+    console.print("命令: give weapon_decoy");
+    console.print("说明: give Decoy");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_148()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Zeus x27");
+    console.print("命令: give weapon_taser");
+    console.print("说明: give Zeus x27");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_149()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Kevlar");
+    console.print("命令: give item_kevlar");
+    console.print("说明: give Kevlar");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_150()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Kevlar + Helmet");
+    console.print("命令: give item_assaultsuit");
+    console.print("说明: give Kevlar + Helmet");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_151()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Defuse Kit");
+    console.print("命令: give item_defuser");
+    console.print("说明: give Defuse Kit");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_152()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Knife");
+    console.print("命令: give weapon_knife");
+    console.print("说明: give Knife");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_153()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] C4");
+    console.print("命令: give weapon_c4");
+    console.print("说明: give C4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_154()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Healthshot");
+    console.print("命令: give weapon_healthshot");
+    console.print("说明: give Healthshot");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_155()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AK + Deagle + 全甲 + 投掷物");
+    console.print("命令: scmd_i_pack_ak");
+    console.print("说明: 执行或打开: AK + Deagle + 全甲 + 投掷物");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_156()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A1-S + USP-S + 全甲 + 投掷物");
+    console.print("命令: scmd_i_pack_m4s");
+    console.print("说明: 执行或打开: M4A1-S + USP-S + 全甲 + 投掷物");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_157()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] M4A4 + USP-S + 全甲 + 投掷物");
+    console.print("命令: scmd_i_pack_m4");
+    console.print("说明: 执行或打开: M4A4 + USP-S + 全甲 + 投掷物");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_158()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] AWP + Deagle + 全甲");
+    console.print("命令: scmd_i_pack_awp");
+    console.print("说明: 执行或打开: AWP + Deagle + 全甲");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_159()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 投掷物包");
+    console.print("命令: scmd_i_pack_nades");
+    console.print("说明: 执行或打开: 投掷物包");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_160()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令1");
+    console.print("命令: scmd_custom1");
+    console.print("说明: 执行或打开: 执行自定义指令1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_161()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令2");
+    console.print("命令: scmd_custom2");
+    console.print("说明: 执行或打开: 执行自定义指令2");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_162()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令3");
+    console.print("命令: scmd_custom3");
+    console.print("说明: 执行或打开: 执行自定义指令3");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_163()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令4");
+    console.print("命令: scmd_custom4");
+    console.print("说明: 执行或打开: 执行自定义指令4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_164()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令5");
+    console.print("命令: scmd_custom5");
+    console.print("说明: 执行或打开: 执行自定义指令5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_165()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令6");
+    console.print("命令: scmd_custom6");
+    console.print("说明: 执行或打开: 执行自定义指令6");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_166()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令7");
+    console.print("命令: scmd_custom7");
+    console.print("说明: 执行或打开: 执行自定义指令7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_167()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行自定义指令8");
+    console.print("命令: scmd_custom8");
+    console.print("说明: 执行或打开: 执行自定义指令8");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_168()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 设置方法");
+    console.print("命令: scmd_custom_help");
+    console.print("说明: 执行或打开: 设置方法");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_169()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新加载 Custom.cfg");
+    console.print("命令: scmd_i_reload_custom");
+    console.print("说明: 执行或打开: 重新加载 Custom.cfg");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_170()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 标准跑图");
+    console.print("命令: scmd_practice_standard");
+    console.print("说明: 标准跑图环境初始化完成");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_171()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 投掷物练习");
+    console.print("命令: scmd_practice_grenade");
+    console.print("说明: 投掷物练习环境初始化完成");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_172()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 枪械练习");
+    console.print("命令: scmd_practice_aim");
+    console.print("说明: 枪械练习环境初始化完成");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_173()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 人机练习");
+    console.print("命令: scmd_practice_bot");
+    console.print("说明: 人机练习环境初始化完成");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_174()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 纯净跑图");
+    console.print("命令: scmd_practice_minimal");
+    console.print("说明: 纯净跑图环境初始化完成");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_175()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新开始回合");
+    console.print("命令: mp_restartgame {秒}");
+    console.print("说明: 重新开始当前回合");
+    console.print("示例: mp_restartgame 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_176()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 结束热身");
+    console.print("命令: mp_warmup_end");
+    console.print("说明: 已结束热身");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_177()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 练习工具");
+    console.print("命令: scmd_practice_tools");
+    console.print("说明: 执行或打开: 练习工具");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_178()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换飞行");
+    console.print("命令: noclip");
+    console.print("说明: 切换飞行模式 [LOCAL/CHEATS]");
+    console.print("示例: noclip");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_179()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 显示当前位置");
+    console.print("命令: getpos");
+    console.print("说明: 输出当前位置");
+    console.print("示例: getpos");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_180()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 复制精确位置");
+    console.print("命令: getposcopy_exact");
+    console.print("说明: 输出可复制的精确位置");
+    console.print("示例: getposcopy_exact");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_181()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 时间流速");
+    console.print("命令: host_timescale {数字}");
+    console.print("说明: 输入 4 循环预设；也可直接输入任意合法数字 [LOCAL/CHEATS]");
+    console.print("示例: host_timescale 0.75");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_182()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新投掷");
+    console.print("命令: sv_rethrow_last_grenade");
+    console.print("说明: 重新投掷上一个投掷物 [LOCAL/CHEATS]");
+    console.print("示例: sv_rethrow_last_grenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_183()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 7");
+    console.print("命令: sv_grenade_trajectory_prac_pipreview {0|1}");
+    console.print("说明: 切换投掷物轨迹；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_grenade_trajectory_prac_pipreview 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_184()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清除烟雾 [CHEATS]");
+    console.print("命令: sv_kill_smokegrenade");
+    console.print("说明: 清除当前烟雾 [LOCAL/CHEATS]");
+    console.print("示例: sv_kill_smokegrenade");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_185()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 10");
+    console.print("命令: sv_showimpacts {0|1}");
+    console.print("说明: 切换弹着点；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_showimpacts 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_186()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 12");
+    console.print("命令: sv_infinite_ammo {0|1|2}");
+    console.print("说明: 菜单循环：换弹 / 无限 / OFF；也可以手动设置");
+    console.print("示例: sv_infinite_ammo 2");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_187()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 14");
+    console.print("命令: god {0|1}");
+    console.print("说明: 切换无敌；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: god 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_188()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 治疗");
+    console.print("命令: healme {数字}");
+    console.print("说明: 恢复指定生命值 [LOCAL/CHEATS]");
+    console.print("示例: healme 100");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_189()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自杀/重生测试");
+    console.print("命令: kill");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_190()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 添加T人机");
+    console.print("命令: bot_add_t");
+    console.print("说明: 已添加T人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_191()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 添加CT人机");
+    console.print("命令: bot_add_ct");
+    console.print("说明: 已添加CT人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_192()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 添加任意人机");
+    console.print("命令: bot_add");
+    console.print("说明: 已添加人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_193()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 放置人机");
+    console.print("命令: bot_place");
+    console.print("说明: 在准星位置放置一个现有人机 [LOCAL/CHEATS]");
+    console.print("示例: bot_place");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_194()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 5");
+    console.print("命令: bot_stop {0|1}");
+    console.print("说明: 切换冻结人机；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: bot_stop 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_195()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 7");
+    console.print("命令: bot_mimic {0|1}");
+    console.print("说明: 切换人机模仿；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: bot_mimic 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_196()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 仅手枪");
+    console.print("命令: scmd_i_bot_pistols");
+    console.print("说明: 执行或打开: 仅手枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_197()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 仅狙击枪");
+    console.print("命令: scmd_i_bot_snipers");
+    console.print("说明: 执行或打开: 仅狙击枪");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_198()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 仅刀");
+    console.print("命令: scmd_i_bot_knives");
+    console.print("说明: 执行或打开: 仅刀");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_199()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 允许全部武器");
+    console.print("命令: scmd_i_bot_all");
+    console.print("说明: 执行或打开: 允许全部武器");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_200()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 击杀全部人机");
+    console.print("命令: bot_kill all");
+    console.print("说明: 已击杀全部人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_201()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 踢出全部人机");
+    console.print("命令: bot_kick all");
+    console.print("说明: 已清除全部人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_202()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 暂停/继续");
+    console.print("命令: demo_togglepause");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_203()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 暂停");
+    console.print("命令: scmd_i_demo_pause");
+    console.print("说明: 执行或打开: 暂停");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_204()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 继续");
+    console.print("命令: scmd_i_demo_resume");
+    console.print("说明: 执行或打开: 继续");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_205()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 单步1 Tick");
+    console.print("命令: scmd_i_demo_step");
+    console.print("说明: 执行或打开: 单步1 Tick");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_206()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开Demo UI");
+    console.print("命令: scmd_i_demo_ui");
+    console.print("说明: 执行或打开: 打开Demo UI");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_207()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Demo速度");
+    console.print("命令: demo_timescale {数字}");
+    console.print("说明: 输入 6 循环 Demo 播放速度；也可以手动输入任意合法数字");
+    console.print("示例: demo_timescale 1.5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_208()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Demo信息");
+    console.print("命令: scmd_i_demo_info");
+    console.print("说明: 执行或打开: Demo信息");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_209()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] demolist");
+    console.print("命令: scmd_i_demo_list");
+    console.print("说明: 执行或打开: demolist");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_210()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] listdemo");
+    console.print("命令: scmd_i_demo_list2");
+    console.print("说明: 执行或打开: listdemo");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_211()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 列出地图");
+    console.print("命令: scmd_i_maps");
+    console.print("说明: 执行或打开: 列出地图");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_212()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 加载地图说明");
+    console.print("命令: scmd_map_help");
+    console.print("说明: 执行或打开: 加载地图说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_213()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Workshop地图列表");
+    console.print("命令: scmd_i_workshop");
+    console.print("说明: 执行或打开: Workshop地图列表");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_214()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 连接服务器说明");
+    console.print("命令: scmd_connect_help");
+    console.print("说明: 执行或打开: 连接服务器说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_215()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 断开服务器");
+    console.print("命令: disconnect");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_216()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 比赛剩余时间");
+    console.print("命令: scmd_i_timeleft");
+    console.print("说明: 执行或打开: 比赛剩余时间");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_217()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 暂停");
+    console.print("命令: scmd_i_pause");
+    console.print("说明: 执行或打开: 暂停");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_218()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 继续");
+    console.print("命令: scmd_i_unpause");
+    console.print("说明: 执行或打开: 继续");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_219()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 交换双方");
+    console.print("命令: scmd_i_swapteams");
+    console.print("说明: 执行或打开: 交换双方");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_220()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打乱队伍");
+    console.print("命令: scmd_i_scramble");
+    console.print("说明: 执行或打开: 打乱队伍");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_221()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 1");
+    console.print("命令: cl_showfps {0|1}");
+    console.print("说明: 切换FPS显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_showfps 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_222()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 2");
+    console.print("命令: cl_drawhud {0|1}");
+    console.print("说明: 切换HUD显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_drawhud 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_223()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 3");
+    console.print("命令: cl_showpos {0|1}");
+    console.print("说明: 切换位置显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_showpos 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_224()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 4");
+    console.print("命令: sv_showimpacts {0|1}");
+    console.print("说明: 切换弹着点；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_showimpacts 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_225()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 5");
+    console.print("命令: sv_grenade_trajectory_prac_pipreview {0|1}");
+    console.print("说明: 切换投掷物轨迹；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: sv_grenade_trajectory_prac_pipreview 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_226()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 网络状态");
+    console.print("命令: scmd_display_net");
+    console.print("说明: 执行或打开: 网络状态");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_227()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 第一人称");
+    console.print("命令: scmd_i_firstperson");
+    console.print("说明: 执行或打开: 第一人称");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_228()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 第三人称 [CHEATS]");
+    console.print("命令: scmd_i_thirdperson");
+    console.print("说明: 执行或打开: 第三人称 [CHEATS]");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_229()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换雷达缩放");
+    console.print("命令: scmd_i_radar");
+    console.print("说明: 执行或打开: 切换雷达缩放");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_230()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] net_status");
+    console.print("命令: scmd_i_net_status");
+    console.print("说明: 执行或打开: net_status");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_231()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] net_channels");
+    console.print("命令: scmd_i_net_channels");
+    console.print("说明: 执行或打开: net_channels");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_232()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] status");
+    console.print("命令: scmd_i_status");
+    console.print("说明: 执行或打开: status");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_233()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] cl_ticktiming");
+    console.print("命令: scmd_i_ticktiming");
+    console.print("说明: 执行或打开: cl_ticktiming");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_234()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星显示");
+    console.print("命令: crosshair {0|1}");
+    console.print("说明: 切换准星显示；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: crosshair 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_235()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星样式");
+    console.print("命令: cl_crosshairstyle {数字}");
+    console.print("说明: 输入 2 循环准星样式预设");
+    console.print("示例: cl_crosshairstyle 4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_236()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星大小");
+    console.print("命令: cl_crosshairsize {数字}");
+    console.print("说明: 输入 3 循环准星大小预设");
+    console.print("示例: cl_crosshairsize 2.5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_237()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星粗细");
+    console.print("命令: cl_crosshairthickness {数字}");
+    console.print("说明: 输入 4 循环准星粗细预设");
+    console.print("示例: cl_crosshairthickness 0.5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_238()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星间距");
+    console.print("命令: cl_crosshairgap {数字}");
+    console.print("说明: 输入 5 循环准星间距预设");
+    console.print("示例: cl_crosshairgap -2");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_239()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 准星颜色");
+    console.print("命令: cl_crosshaircolor {数字}");
+    console.print("说明: 输入 6 循环准星颜色预设");
+    console.print("示例: cl_crosshaircolor 4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_240()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 额外开关");
+    console.print("命令: scmd_crosshair_extras");
+    console.print("说明: 执行或打开: 额外开关");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_241()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 狙击准星宽度");
+    console.print("命令: cl_crosshair_sniper_width {数字}");
+    console.print("说明: 输入 8 循环狙击准星宽度预设");
+    console.print("示例: cl_crosshair_sniper_width 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_242()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Viewmodel");
+    console.print("命令: scmd_viewmodel");
+    console.print("说明: 执行或打开: Viewmodel");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_243()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 1");
+    console.print("命令: cl_crosshairdot {0|1}");
+    console.print("说明: 切换准星中心点；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_crosshairdot 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_244()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 2");
+    console.print("命令: cl_crosshair_drawoutline {0|1}");
+    console.print("说明: 切换准星描边；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_crosshair_drawoutline 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_245()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单项目 3");
+    console.print("命令: cl_crosshair_t {0|1}");
+    console.print("说明: 切换T形准星；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: cl_crosshair_t 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_246()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Viewmodel FOV");
+    console.print("命令: viewmodel_fov {数字}");
+    console.print("说明: 输入 1 循环 FOV 预设；也可手动输入允许的数字");
+    console.print("示例: viewmodel_fov 68");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_247()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Viewmodel预设");
+    console.print("命令: viewmodel_presetpos {数字}");
+    console.print("说明: 输入 2 循环 Viewmodel 位置预设");
+    console.print("示例: viewmodel_presetpos 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_248()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 主音量");
+    console.print("命令: volume {数字}");
+    console.print("说明: 输入 1 循环主音量预设；可手动输入任意 0..1 数值");
+    console.print("示例: volume 0.8");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_249()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 菜单音乐");
+    console.print("命令: snd_menumusic_volume {数字}");
+    console.print("说明: 输入 2 循环菜单音乐音量预设");
+    console.print("示例: snd_menumusic_volume 0.3");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_250()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] MVP音乐");
+    console.print("命令: snd_mvp_volume {数字}");
+    console.print("说明: 输入 3 循环 MVP 音量预设");
+    console.print("示例: snd_mvp_volume 0.5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_251()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 十秒警告音量");
+    console.print("命令: snd_tensecondwarning_volume {数字}");
+    console.print("说明: 输入 4 循环十秒警告音量预设");
+    console.print("示例: snd_tensecondwarning_volume 0.5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_252()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 语音接收");
+    console.print("命令: voice_modenable {0|1}");
+    console.print("说明: 切换语音接收；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: voice_modenable 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_253()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 麦克风回放");
+    console.print("命令: voice_loopback {0|1}");
+    console.print("说明: 切换麦克风回放；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: voice_loopback 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_254()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 失焦静音");
+    console.print("命令: snd_mute_losefocus {0|1}");
+    console.print("说明: 切换失焦静音；菜单状态表示 SCMD 最近一次设置");
+    console.print("示例: snd_mute_losefocus 1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_255()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新加载SCMD");
+    console.print("命令: exec scmd");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_256()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新加载Custom.cfg");
+    console.print("命令: scmd_i_reload_custom2");
+    console.print("说明: 执行或打开: 重新加载Custom.cfg");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_257()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开主菜单");
+    console.print("命令: scmd_menu");
+    console.print("说明: 执行或打开: 打开主菜单");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_258()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 执行CFG说明");
+    console.print("命令: scmd_exec_help");
+    console.print("说明: 执行或打开: 执行CFG说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_259()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 保存当前用户配置");
+    console.print("命令: scmd_i_write_config");
+    console.print("说明: 执行或打开: 保存当前用户配置");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_260()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 保存当前按键绑定");
+    console.print("命令: scmd_i_write_keys");
+    console.print("说明: 执行或打开: 保存当前按键绑定");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_261()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清空控制台");
+    console.print("命令: clear");
+    console.print("说明: 执行该命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_262()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 查找命令说明");
+    console.print("命令: scmd_find_help");
+    console.print("说明: 执行或打开: 查找命令说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_263()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 命令帮助说明");
+    console.print("命令: scmd_help_help");
+    console.print("说明: 执行或打开: 命令帮助说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_264()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 显示非默认ConVar");
+    console.print("命令: scmd_i_differences");
+    console.print("说明: 执行或打开: 显示非默认ConVar");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_265()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 显示已修改ConVar");
+    console.print("命令: scmd_i_changed");
+    console.print("说明: 执行或打开: 显示已修改ConVar");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_266()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 查看当前按键绑定");
+    console.print("命令: scmd_i_key_list");
+    console.print("说明: 执行或打开: 查看当前按键绑定");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_267()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 导出完整命令表");
+    console.print("命令: scmd_i_export");
+    console.print("说明: 执行或打开: 导出完整命令表");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_help_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\命令帮助");
+    console.print("================================");
+    console.print("=控制台用法:");
+    console.print("=help <command>");
+    console.print("");
+    console.print("=例如: help bot_place");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_cfg");
+    command.exec("alias 00 scmd_help_help");
+}
+
+export function scmd_h_268()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清屏模式");
+    console.print("命令: SCMD 内部首选项");
+    console.print("说明: 循环清屏模式：关闭 / 软清屏 / 原生清屏。原生清屏使用 32ms async settle，适合本地环境");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_269()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 操作提示");
+    console.print("命令: scmd_pref_tips");
+    console.print("说明: 执行或打开: 操作提示");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_270()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 恢复默认首选项");
+    console.print("命令: scmd_pref_reset");
+    console.print("说明: 执行或打开: 恢复默认首选项");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_271()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 绑定预设命令");
+    console.print("命令: scmd_bind_preset");
+    console.print("说明: 执行或打开: 绑定预设命令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_272()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 绑定自定义指令");
+    console.print("命令: scmd_bind_custom");
+    console.print("说明: 执行或打开: 绑定自定义指令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_273()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 查看当前绑定");
+    console.print("命令: scmd_i_key_list");
+    console.print("说明: 执行或打开: 查看当前绑定");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_274()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 保存当前按键绑定");
+    console.print("命令: scmd_i_write_keys");
+    console.print("说明: 执行或打开: 保存当前按键绑定");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_275()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 手动绑定说明");
+    console.print("命令: scmd_bind_manual");
+    console.print("说明: 执行或打开: 手动绑定说明");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_276()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开SCMD菜单");
+    console.print("命令: scmd_i_bind_target_1");
+    console.print("说明: 执行或打开: 打开SCMD菜单");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_277()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开快捷指令");
+    console.print("命令: scmd_i_bind_target_2");
+    console.print("说明: 执行或打开: 打开快捷指令");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_278()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开快速跑图");
+    console.print("命令: scmd_i_bind_target_3");
+    console.print("说明: 执行或打开: 打开快速跑图");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_279()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开练习工具");
+    console.print("命令: scmd_i_bind_target_4");
+    console.print("说明: 执行或打开: 打开练习工具");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_280()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开人机控制");
+    console.print("命令: scmd_i_bind_target_5");
+    console.print("说明: 执行或打开: 打开人机控制");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_281()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 打开武器菜单");
+    console.print("命令: scmd_i_bind_target_6");
+    console.print("说明: 执行或打开: 打开武器菜单");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_282()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换飞行");
+    console.print("命令: scmd_i_bind_target_7");
+    console.print("说明: 执行或打开: 切换飞行");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_283()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新投掷");
+    console.print("命令: scmd_i_bind_target_8");
+    console.print("说明: 执行或打开: 重新投掷");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_284()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 放置人机");
+    console.print("命令: scmd_i_bind_target_9");
+    console.print("说明: 执行或打开: 放置人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_285()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 冻结/解除人机");
+    console.print("命令: scmd_i_bind_target_10");
+    console.print("说明: 执行或打开: 冻结/解除人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_286()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 人机模仿");
+    console.print("命令: scmd_i_bind_target_11");
+    console.print("说明: 执行或打开: 人机模仿");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_287()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清除人机");
+    console.print("命令: scmd_i_bind_target_12");
+    console.print("说明: 执行或打开: 清除人机");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_288()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换FPS显示");
+    console.print("命令: scmd_i_bind_target_13");
+    console.print("说明: 执行或打开: 切换FPS显示");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_289()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换弹着点");
+    console.print("命令: scmd_i_bind_target_14");
+    console.print("说明: 执行或打开: 切换弹着点");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_290()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换投掷轨迹");
+    console.print("命令: scmd_i_bind_target_15");
+    console.print("说明: 执行或打开: 切换投掷轨迹");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_291()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换位置显示");
+    console.print("命令: scmd_i_bind_target_16");
+    console.print("说明: 执行或打开: 切换位置显示");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_292()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 循环无限弹药");
+    console.print("命令: scmd_i_bind_target_17");
+    console.print("说明: 执行或打开: 循环无限弹药");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_293()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换无敌");
+    console.print("命令: scmd_i_bind_target_18");
+    console.print("说明: 执行或打开: 切换无敌");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_294()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 清除烟雾");
+    console.print("命令: scmd_i_bind_target_19");
+    console.print("说明: 执行或打开: 清除烟雾");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_295()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 重新开始回合");
+    console.print("命令: scmd_i_bind_target_20");
+    console.print("说明: 执行或打开: 重新开始回合");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_296()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 结束热身");
+    console.print("命令: scmd_i_bind_target_21");
+    console.print("说明: 执行或打开: 结束热身");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_297()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Demo暂停/继续");
+    console.print("命令: scmd_i_bind_target_22");
+    console.print("说明: 执行或打开: Demo暂停/继续");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_298()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换准星显示");
+    console.print("命令: scmd_i_bind_target_23");
+    console.print("说明: 执行或打开: 切换准星显示");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_299()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 切换语音接收");
+    console.print("命令: scmd_i_bind_target_24");
+    console.print("说明: 执行或打开: 切换语音接收");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_300()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令1");
+    console.print("命令: scmd_i_bind_target_25");
+    console.print("说明: 执行或打开: 自定义指令1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_301()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令2");
+    console.print("命令: scmd_i_bind_target_26");
+    console.print("说明: 执行或打开: 自定义指令2");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_302()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令3");
+    console.print("命令: scmd_i_bind_target_27");
+    console.print("说明: 执行或打开: 自定义指令3");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_303()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令4");
+    console.print("命令: scmd_i_bind_target_28");
+    console.print("说明: 执行或打开: 自定义指令4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_304()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令5");
+    console.print("命令: scmd_i_bind_target_29");
+    console.print("说明: 执行或打开: 自定义指令5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_305()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令6");
+    console.print("命令: scmd_i_bind_target_30");
+    console.print("说明: 执行或打开: 自定义指令6");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_306()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令7");
+    console.print("命令: scmd_i_bind_target_31");
+    console.print("说明: 执行或打开: 自定义指令7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_307()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] 自定义指令8");
+    console.print("命令: scmd_i_bind_target_32");
+    console.print("说明: 执行或打开: 自定义指令8");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_308()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F1");
+    console.print("命令: scmd_i_bind_key_1");
+    console.print("说明: 执行或打开: F1");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_309()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F2");
+    console.print("命令: scmd_i_bind_key_2");
+    console.print("说明: 执行或打开: F2");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_310()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F3");
+    console.print("命令: scmd_i_bind_key_3");
+    console.print("说明: 执行或打开: F3");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_311()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F4");
+    console.print("命令: scmd_i_bind_key_4");
+    console.print("说明: 执行或打开: F4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_312()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F5");
+    console.print("命令: scmd_i_bind_key_5");
+    console.print("说明: 执行或打开: F5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_313()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F6");
+    console.print("命令: scmd_i_bind_key_6");
+    console.print("说明: 执行或打开: F6");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_314()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F7");
+    console.print("命令: scmd_i_bind_key_7");
+    console.print("说明: 执行或打开: F7");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_315()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F8");
+    console.print("命令: scmd_i_bind_key_8");
+    console.print("说明: 执行或打开: F8");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_316()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F9");
+    console.print("命令: scmd_i_bind_key_9");
+    console.print("说明: 执行或打开: F9");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_317()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F10");
+    console.print("命令: scmd_i_bind_key_10");
+    console.print("说明: 执行或打开: F10");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_318()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F11");
+    console.print("命令: scmd_i_bind_key_11");
+    console.print("说明: 执行或打开: F11");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_319()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] F12");
+    console.print("命令: scmd_i_bind_key_12");
+    console.print("说明: 执行或打开: F12");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_320()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Insert");
+    console.print("命令: scmd_i_bind_key_13");
+    console.print("说明: 执行或打开: Insert");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_321()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Delete");
+    console.print("命令: scmd_i_bind_key_14");
+    console.print("说明: 执行或打开: Delete");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_322()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Home");
+    console.print("命令: scmd_i_bind_key_15");
+    console.print("说明: 执行或打开: Home");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_323()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] End");
+    console.print("命令: scmd_i_bind_key_16");
+    console.print("说明: 执行或打开: End");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_324()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] PageUp");
+    console.print("命令: scmd_i_bind_key_17");
+    console.print("说明: 执行或打开: PageUp");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_325()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] PageDown");
+    console.print("命令: scmd_i_bind_key_18");
+    console.print("说明: 执行或打开: PageDown");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_326()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Mouse3");
+    console.print("命令: scmd_i_bind_key_19");
+    console.print("说明: 执行或打开: Mouse3");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_327()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Mouse4");
+    console.print("命令: scmd_i_bind_key_20");
+    console.print("说明: 执行或打开: Mouse4");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
+
+export function scmd_h_328()
+{
+    console.print("--------------------------------");
+    console.print("[SCMD] Mouse5");
+    console.print("命令: scmd_i_bind_key_21");
+    console.print("说明: 执行或打开: Mouse5");
+    console.print("提示: 输入 00 可刷新当前菜单");
+    console.print("--------------------------------");
+}
