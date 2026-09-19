@@ -2,7 +2,7 @@
 
 **SCMD — Shortcut Command** 的 CS2 重制版。
 
-Beta 3 的运行实现仍然是 **SCMD 源码 → scmdc 0.10.0 → 纯 CFG / alias package**。菜单 CFG 没有手写；`tools/generate_scmd2.py` 只负责维护大量重复的 SCMD 源码，最终 CS2 运行文件全部由 `scmdc` 生成。
+Beta 3 的运行实现仍然是 **SCMD 源码 → scmdc 0.13.0 → 纯 CFG / alias package**。菜单 CFG 没有手写；`tools/generate_scmd2.py` 只负责维护大量重复的 SCMD 源码，最终 CS2 运行文件全部由 `scmdc` 生成。
 
 ## 直接运行
 
@@ -134,7 +134,7 @@ alias scmd_custom2 "toggle cl_showfps 0 1"
 
 ## 从源码构建
 
-需要 SCMD Toolchain 0.10.0：
+需要 SCMD Toolchain v0.13.0（release 工件或自行构建）：
 
 ```powershell
 python tools/generate_scmd2.py
@@ -143,7 +143,7 @@ python tools/verify_generated.py
 python tools/verify_beta3.py --sim C:\path\to\scmdsim.exe
 ```
 
-`scmdsim` 0.10.0 的 CFG-root 模式是 lazy compile：模拟器可以瞬间进入 Console；某个 CFG 第一次 `exec` 时才编译。运行中新增 / 修改 CFG 后也能直接再次 `exec`，不需要重启 simulator。
+`scmdsim` 0.13.0 的 CFG-root 模式是 lazy compile：模拟器可以瞬间进入 Console；某个 CFG 第一次 `exec` 时才编译。运行中新增 / 修改 CFG 后也能直接再次 `exec`，不需要重启 simulator。
 
 ## 已知边界
 
