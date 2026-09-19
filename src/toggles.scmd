@@ -1,0 +1,365 @@
+// Binary state toggles (public scmd_* never force a page render).
+
+export function scmd_fps()
+{
+    if(st_fps == 2)
+    {
+        command.exec("cl_showfps 0");
+        st_fps = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] FPS显示: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_showfps 1");
+        st_fps = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] FPS显示: ON");
+        }
+    }
+}
+
+export function scmd_hud()
+{
+    if(st_hud == 2)
+    {
+        command.exec("cl_drawhud 0");
+        st_hud = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] HUD显示: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_drawhud 1");
+        st_hud = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] HUD显示: ON");
+        }
+    }
+}
+
+export function scmd_crosshair()
+{
+    if(st_crosshair == 2)
+    {
+        command.exec("crosshair 0");
+        st_crosshair = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星显示: OFF");
+        }
+    }
+    else
+    {
+        command.exec("crosshair 1");
+        st_crosshair = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星显示: ON");
+        }
+    }
+}
+
+export function scmd_impacts()
+{
+    if(st_impacts == 2)
+    {
+        command.exec("sv_showimpacts 0");
+        st_impacts = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 弹着点: OFF");
+        }
+    }
+    else
+    {
+        command.exec("sv_showimpacts 1");
+        st_impacts = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 弹着点: ON");
+        }
+    }
+}
+
+export function scmd_trajectory()
+{
+    if(st_trajectory == 2)
+    {
+        command.exec("sv_grenade_trajectory_prac_pipreview 0");
+        st_trajectory = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 投掷物轨迹: OFF");
+        }
+    }
+    else
+    {
+        command.exec("sv_grenade_trajectory_prac_pipreview 1");
+        st_trajectory = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 投掷物轨迹: ON");
+        }
+    }
+}
+
+export function scmd_showpos()
+{
+    if(st_showpos == 2)
+    {
+        command.exec("cl_showpos 0");
+        st_showpos = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 位置显示: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_showpos 1");
+        st_showpos = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 位置显示: ON");
+        }
+    }
+}
+
+export function scmd_god()
+{
+    if(st_god == 2)
+    {
+        command.exec("god 0");
+        st_god = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 无敌: OFF");
+        }
+    }
+    else
+    {
+        command.exec("god 1");
+        st_god = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 无敌: ON");
+        }
+    }
+}
+
+export function scmd_bot_freeze()
+{
+    if(st_bot_stop == 2)
+    {
+        command.exec("bot_stop 0");
+        st_bot_stop = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 冻结人机: OFF");
+        }
+    }
+    else
+    {
+        command.exec("bot_stop 1");
+        st_bot_stop = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 冻结人机: ON");
+        }
+    }
+}
+
+export function scmd_bot_mimic()
+{
+    if(st_bot_mimic == 2)
+    {
+        command.exec("bot_mimic 0");
+        st_bot_mimic = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 人机模仿: OFF");
+        }
+    }
+    else
+    {
+        command.exec("bot_mimic 1");
+        st_bot_mimic = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 人机模仿: ON");
+        }
+    }
+}
+
+export function scmd_voice_toggle()
+{
+    if(st_voice == 2)
+    {
+        command.exec("voice_modenable 0");
+        st_voice = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 语音接收: OFF");
+        }
+    }
+    else
+    {
+        command.exec("voice_modenable 1");
+        st_voice = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 语音接收: ON");
+        }
+    }
+}
+
+export function scmd_voice_loopback()
+{
+    if(st_loopback == 2)
+    {
+        command.exec("voice_loopback 0");
+        st_loopback = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 麦克风回放: OFF");
+        }
+    }
+    else
+    {
+        command.exec("voice_loopback 1");
+        st_loopback = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 麦克风回放: ON");
+        }
+    }
+}
+
+export function scmd_mute_losefocus()
+{
+    if(st_mute_losefocus == 2)
+    {
+        command.exec("snd_mute_losefocus 0");
+        st_mute_losefocus = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 失焦静音: OFF");
+        }
+    }
+    else
+    {
+        command.exec("snd_mute_losefocus 1");
+        st_mute_losefocus = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 失焦静音: ON");
+        }
+    }
+}
+
+export function scmd_crosshair_dot()
+{
+    if(st_dot == 2)
+    {
+        command.exec("cl_crosshairdot 0");
+        st_dot = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星中心点: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_crosshairdot 1");
+        st_dot = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星中心点: ON");
+        }
+    }
+}
+
+export function scmd_crosshair_outline()
+{
+    if(st_outline == 2)
+    {
+        command.exec("cl_crosshair_drawoutline 0");
+        st_outline = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星描边: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_crosshair_drawoutline 1");
+        st_outline = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] 准星描边: ON");
+        }
+    }
+}
+
+export function scmd_crosshair_t()
+{
+    if(st_tcross == 2)
+    {
+        command.exec("cl_crosshair_t 0");
+        st_tcross = 1;
+        if(pref_tips)
+        {
+            console.print("[SCMD] T形准星: OFF");
+        }
+    }
+    else
+    {
+        command.exec("cl_crosshair_t 1");
+        st_tcross = 2;
+        if(pref_tips)
+        {
+            console.print("[SCMD] T形准星: ON");
+        }
+    }
+}
+
+export function scmd_ammo()
+{
+    if(st_ammo == 2)
+    {
+        command.exec("sv_infinite_ammo 1");
+        st_ammo = 3;
+    }
+    else if(st_ammo == 3)
+    {
+        command.exec("sv_infinite_ammo 0");
+        st_ammo = 1;
+    }
+    else
+    {
+        command.exec("sv_infinite_ammo 2");
+        st_ammo = 2;
+    }
+    if(pref_tips)
+    {
+        if(st_ammo == 3)
+        {
+            console.print("[SCMD] 无限弹药: 无限");
+        }
+        else if(st_ammo == 2)
+        {
+            console.print("[SCMD] 无限弹药: 换弹");
+        }
+        else
+        {
+            console.print("[SCMD] 无限弹药: OFF");
+        }
+    }
+}

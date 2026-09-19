@@ -1,0 +1,447 @@
+// Command catalog pages (static text).
+
+export function scmd_cmd_cfg()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\CFG与控制台");
+    console.print("================================");
+    console.print("=alias - 定义别名");
+    console.print("=exec - 执行CFG");
+    console.print("=execifexists - 存在时执行CFG");
+    console.print("=exec_async - 异步执行 [CHEATS]");
+    console.print("=clear / clearall - 清屏");
+    console.print("=echo / echoln - 输出文本");
+    console.print("=find / findflags - 搜索命令");
+    console.print("=help - 查询帮助");
+    console.print("=grep - 过滤输出");
+    console.print("=cvarlist - 命令与ConVar列表");
+    console.print("=differences - 非默认ConVar");
+    console.print("=print_changed_convars - 已修改ConVar");
+    console.print("=toggle / cyclevar - 切换值");
+    console.print("=incrementvar / multvar - 数值操作");
+    console.print("=push_var_values / pop_var_values - 保存恢复值");
+    console.print("=host_writeconfig - 保存配置");
+    console.print("=writekeybindings - 保存按键");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_cfg");
+}
+
+export function scmd_cmd_bind()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\按键与输入");
+    console.print("================================");
+    console.print("=bind - 绑定按键");
+    console.print("=unbind - 解除按键");
+    console.print("=unbindall - 全部解除 [DANGER]");
+    console.print("=binddefaults - 默认绑定 [DANGER]");
+    console.print("=button_info - 按键信息");
+    console.print("=key_findbinding - 查找绑定");
+    console.print("=key_listboundkeys - 列出绑定");
+    console.print("=lastinv / invnext / invprev - 武器切换");
+    console.print("=switchhands / switchhandsleft / switchhandsright");
+    console.print("=buymenu / teammenu");
+    console.print("=+attack / +attack2 / +jump / +duck");
+    console.print("=+use / +reload / +voicerecord");
+    console.print("=+lookatweapon / +spray_menu");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_bind");
+}
+
+export function scmd_cmd_map()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\地图与会话");
+    console.print("================================");
+    console.print("=maps - 列出地图");
+    console.print("=map <name> - 加载地图");
+    console.print("=changelevel <name> - 切图");
+    console.print("=map_workshop - Workshop地图");
+    console.print("=ds_workshop_listmaps - Workshop列表");
+    console.print("=connect <address> - 连接服务器");
+    console.print("=disconnect - 断开");
+    console.print("=timeleft - 剩余时间");
+    console.print("=pause / unpause - 暂停继续");
+    console.print("=game_alias - 游戏别名");
+    console.print("=quit - 退出游戏 [DANGER]");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_map");
+}
+
+export function scmd_cmd_game()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\游戏与回合");
+    console.print("================================");
+    console.print("=mp_warmup_start / mp_warmup_end");
+    console.print("=mp_pause_match / mp_unpause_match");
+    console.print("=mp_swapteams / mp_scrambleteams");
+    console.print("=mp_restartgame");
+    console.print("=mp_freezetime");
+    console.print("=mp_roundtime / mp_roundtime_defuse");
+    console.print("=mp_round_restart_delay");
+    console.print("=mp_buy_anywhere / mp_buytime");
+    console.print("=mp_startmoney / mp_maxmoney");
+    console.print("=mp_limitteams / mp_autoteambalance");
+    console.print("=mp_ignore_round_win_conditions");
+    console.print("=mp_friendlyfire");
+    console.print("=mp_respawn_on_death_t / ct");
+    console.print("=mp_c4timer / mp_maxrounds");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_game");
+}
+
+export function scmd_cmd_practice()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\练习与作弊");
+    console.print("================================");
+    console.print("=noclip [CHEATS]");
+    console.print("=god [CHEATS]");
+    console.print("=healme / hurtme [CHEATS]");
+    console.print("=give <item> [LOCAL/CHEATS]");
+    console.print("=givecurrentammo [CHEATS]");
+    console.print("=getpos / getpos_exact");
+    console.print("=getposcopy / getposcopy_exact");
+    console.print("=sv_rethrow_last_grenade");
+    console.print("=sv_kill_smokegrenade");
+    console.print("=sv_infinite_ammo");
+    console.print("=sv_grenade_trajectory_prac_pipreview");
+    console.print("=sv_grenade_trajectory_prac_trailtime");
+    console.print("=sv_showimpacts / sv_showimpacts_time");
+    console.print("=sv_showimpacts_penetration");
+    console.print("=ammo_grenade_limit_total");
+    console.print("=sv_gravity");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_practice");
+}
+
+export function scmd_cmd_bot()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\人机");
+    console.print("================================");
+    console.print("=bot_add / bot_add_t / bot_add_ct");
+    console.print("=bot_kick / bot_kill");
+    console.print("=bot_place [CHEATS]");
+    console.print("=bot_stop");
+    console.print("=bot_mimic / bot_mimic_yaw_offset");
+    console.print("=bot_all_weapons");
+    console.print("=bot_knives_only");
+    console.print("=bot_pistols_only");
+    console.print("=bot_snipers_only");
+    console.print("=bot_goto_mark / bot_goto_selected [CHEATS]");
+    console.print("=bot_path [CHEATS]");
+    console.print("=bot_difficulty");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_bot");
+}
+
+export function scmd_cmd_weapon()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\武器与购买");
+    console.print("================================");
+    console.print("=give <item> [LOCAL/CHEATS]");
+    console.print("=weapon_switch <name>");
+    console.print("=givecurrentammo");
+    console.print("=autobuy / rebuy / buy");
+    console.print("=buyrandom");
+    console.print("=buymenu");
+    console.print("=sellbackall");
+    console.print("=mp_buy_anywhere / mp_buytime");
+    console.print("=mp_buy_allow_grenades / guns");
+    console.print("=mp_weapons_allow_typecount");
+    console.print("=mp_weapons_allow_zeus");
+    console.print("=mp_weapons_allow_pistols / rifles / smgs");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_weapon");
+}
+
+export function scmd_cmd_demo()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\Demo与观战");
+    console.print("================================");
+    console.print("=playdemo");
+    console.print("=demoui");
+    console.print("=demo_pause / demo_resume");
+    console.print("=demo_togglepause");
+    console.print("=demo_step_tick");
+    console.print("=demo_timescale");
+    console.print("=demo_goto / demo_gototick");
+    console.print("=demo_marktick / demo_gotomark");
+    console.print("=demo_info / demolist / listdemo");
+    console.print("=nextdemo");
+    console.print("=timedemo / timedemoquit");
+    console.print("=firstperson");
+    console.print("=thirdperson [CHEATS]");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_demo");
+}
+
+export function scmd_cmd_display()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\显示与HUD");
+    console.print("================================");
+    console.print("=cl_showfps");
+    console.print("=cl_printfps");
+    console.print("=cl_ticktiming");
+    console.print("=cl_showpos");
+    console.print("=+cl_show_team_equipment");
+    console.print("=toggleradarscale");
+    console.print("=hideradar / drawradar");
+    console.print("=gameui_hide / gameui_activate");
+    console.print("=net_status / net_channels");
+    console.print("=firstperson / thirdperson [CHEATS]");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_display");
+}
+
+export function scmd_cmd_cross()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\准星与视角");
+    console.print("================================");
+    console.print("=crosshair");
+    console.print("=cl_crosshairstyle");
+    console.print("=cl_crosshairsize");
+    console.print("=cl_crosshairthickness");
+    console.print("=cl_crosshairgap");
+    console.print("=cl_crosshairalpha / usealpha");
+    console.print("=cl_crosshaircolor + RGB");
+    console.print("=cl_crosshair_drawoutline");
+    console.print("=cl_crosshairdot");
+    console.print("=cl_crosshair_t");
+    console.print("=cl_crosshair_sniper_width");
+    console.print("=viewmodel_fov");
+    console.print("=viewmodel_offset_x / y / z");
+    console.print("=viewmodel_presetpos");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_cross");
+}
+
+export function scmd_cmd_sound()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\声音与语音");
+    console.print("================================");
+    console.print("=volume");
+    console.print("=snd_mute_losefocus");
+    console.print("=snd_voipvolume");
+    console.print("=snd_menumusic_volume");
+    console.print("=snd_mvp_volume");
+    console.print("=snd_tensecondwarning_volume");
+    console.print("=snd_roundstart_volume / roundend_volume");
+    console.print("=voice_modenable");
+    console.print("=voice_modenable_toggle");
+    console.print("=voice_toggle_open_mic");
+    console.print("=voice_loopback");
+    console.print("=+voicerecord");
+    console.print("=play / playvol");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_sound");
+}
+
+export function scmd_cmd_chat()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\聊天与通信");
+    console.print("================================");
+    console.print("=say");
+    console.print("=say_team");
+    console.print("=messagemode");
+    console.print("=messagemode2");
+    console.print("=player_ping");
+    console.print("=callvote");
+    console.print("=listissues");
+    console.print("=+radialradio / 2 / 3");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_chat");
+}
+
+export function scmd_cmd_net()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\网络与状态");
+    console.print("================================");
+    console.print("=status");
+    console.print("=net_status");
+    console.print("=net_channels");
+    console.print("=net_connections_stats");
+    console.print("=net_showudp");
+    console.print("=net_option");
+    console.print("=timeleft");
+    console.print("=users");
+    console.print("=sys_info");
+    console.print("=cpuinfo");
+    console.print("=cl_ticktiming");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_net");
+}
+
+export function scmd_cmd_capture()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\截图/位置/记录");
+    console.print("================================");
+    console.print("=getpos / getpos_exact");
+    console.print("=getposcopy / getposcopy_exact");
+    console.print("=screenshot");
+    console.print("=png_screenshot");
+    console.print("=jpeg_screenshot");
+    console.print("=_record");
+    console.print("=tv_record");
+    console.print("=tv_stoprecord");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_capture");
+}
+
+export function scmd_cmd_workshop()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\Workshop与地图");
+    console.print("================================");
+    console.print("=map_workshop");
+    console.print("=ds_workshop_changelevel");
+    console.print("=ds_workshop_listmaps");
+    console.print("=host_workshop_map");
+    console.print("=host_workshop_collection");
+    console.print("=print_mapgroup");
+    console.print("=print_mapgroup_sv");
+    console.print("=maps");
+    console.print("=changelevel");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_workshop");
+}
+
+export function scmd_cmd_server()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令\\服务端与管理");
+    console.print("================================");
+    console.print("=kick / kickid");
+    console.print("=banid / banip");
+    console.print("=listid / listip");
+    console.print("=writeid / writeip");
+    console.print("=sv_shutdown [DANGER]");
+    console.print("=tv_status / tv_clients");
+    console.print("=tv_broadcast_status");
+    console.print("=mp_disable_autokick");
+    console.print("=mp_pause_match / mp_unpause_match");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_commands");
+    command.exec("alias 00 scmd_cmd_server");
+}

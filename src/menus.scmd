@@ -1,0 +1,1859 @@
+// Menu pages: print rows, bind numeric/+N slots, then rebind 0/00.
+
+export function scmd_menu()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单");
+    console.print("================================");
+    console.print("=指令:");
+    console.print("=1.快捷指令");
+    console.print("=2.全部命令");
+    console.print("=3.武器与装备");
+    console.print("=4.自定义指令");
+    console.print("");
+    console.print("=练习:");
+    console.print("=5.快速跑图");
+    console.print("=6.练习工具");
+    console.print("=7.人机控制");
+    console.print("=8.Demo与观战");
+    console.print("");
+    console.print("=设置:");
+    console.print("=9.地图与会话");
+    console.print("=10.显示与HUD");
+    console.print("=11.准星与视角");
+    console.print("=12.声音与语音");
+    console.print("=13.按键与快捷键");
+    console.print("=14.CFG与控制台");
+    console.print("");
+    console.print("=SCMD:");
+    console.print("=15.首选项");
+    console.print("=16.关于SCMD");
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_menu");
+    command.exec("alias 1 scmd_quick");
+    command.exec("alias +1 scmd_h_1");
+    command.exec("alias 2 scmd_commands");
+    command.exec("alias +2 scmd_h_2");
+    command.exec("alias 3 scmd_weapons");
+    command.exec("alias +3 scmd_h_3");
+    command.exec("alias 4 scmd_custom_menu");
+    command.exec("alias +4 scmd_h_4");
+    command.exec("alias 5 scmd_practice");
+    command.exec("alias +5 scmd_h_5");
+    command.exec("alias 6 scmd_practice_tools");
+    command.exec("alias +6 scmd_h_6");
+    command.exec("alias 7 scmd_bots");
+    command.exec("alias +7 scmd_h_7");
+    command.exec("alias 8 scmd_demo");
+    command.exec("alias +8 scmd_h_8");
+    command.exec("alias 9 scmd_map");
+    command.exec("alias +9 scmd_h_9");
+    command.exec("alias 10 scmd_display");
+    command.exec("alias +10 scmd_h_10");
+    command.exec("alias 11 scmd_crosshair_menu");
+    command.exec("alias +11 scmd_h_11");
+    command.exec("alias 12 scmd_sound");
+    command.exec("alias +12 scmd_h_12");
+    command.exec("alias 13 scmd_bind");
+    command.exec("alias +13 scmd_h_13");
+    command.exec("alias 14 scmd_cfg");
+    command.exec("alias +14 scmd_h_14");
+    command.exec("alias 15 scmd_preferences");
+    command.exec("alias +15 scmd_h_15");
+    command.exec("alias 16 scmd_about");
+    command.exec("alias +16 scmd_h_16");
+}
+
+export function scmd_quick()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\快捷指令");
+    console.print("================================");
+    console.print("=常用:");
+    console.print("=1.清空控制台");
+    console.print("=2.断开当前服务器");
+    console.print("=3.打开购买菜单");
+    console.print("=4.打开队伍菜单");
+    console.print("=5.切换左右手");
+    console.print("");
+    console.print("=练习:");
+    console.print("=6.切换飞行");
+    console.print("=7.重新投掷上一个投掷物");
+    console.print("=8.放置人机");
+    console.print("=9.冻结/解除人机");
+    console.print("=10.清除全部人机");
+    console.print("=11.重新开始回合");
+    console.print("=12.结束热身");
+    console.print("");
+    console.print("=显示:");
+    row_quick_fps();
+    row_quick_impacts();
+    row_quick_trajectory();
+    row_quick_showpos();
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_quick");
+    command.exec("alias 1 scmd_clear");
+    command.exec("alias +1 scmd_h_17");
+    command.exec("alias 2 scmd_disconnect");
+    command.exec("alias +2 scmd_h_18");
+    command.exec("alias 3 scmd_buymenu");
+    command.exec("alias +3 scmd_h_19");
+    command.exec("alias 4 scmd_teammenu");
+    command.exec("alias +4 scmd_h_20");
+    command.exec("alias 5 scmd_switchhands");
+    command.exec("alias +5 scmd_h_21");
+    command.exec("alias 6 scmd_noclip");
+    command.exec("alias +6 scmd_h_22");
+    command.exec("alias 7 scmd_rethrow");
+    command.exec("alias +7 scmd_h_23");
+    command.exec("alias 8 scmd_bot_place");
+    command.exec("alias +8 scmd_h_24");
+    command.exec("alias 9 scmd_bot_freeze");
+    command.exec("alias +9 scmd_h_25");
+    command.exec("alias 10 scmd_bot_clear");
+    command.exec("alias +10 scmd_h_26");
+    command.exec("alias 11 scmd_round_restart");
+    command.exec("alias +11 scmd_h_27");
+    command.exec("alias 12 scmd_warmup_end");
+    command.exec("alias +12 scmd_h_28");
+    command.exec("alias 13 scmd_i_quick_fps");
+    command.exec("alias +13 scmd_h_29");
+    command.exec("alias 14 scmd_i_quick_impacts");
+    command.exec("alias +14 scmd_h_30");
+    command.exec("alias 15 scmd_i_quick_trajectory");
+    command.exec("alias +15 scmd_h_31");
+    command.exec("alias 16 scmd_i_quick_showpos");
+    command.exec("alias +16 scmd_h_32");
+}
+
+export function scmd_commands()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\全部命令");
+    console.print("================================");
+    console.print("=1.CFG与控制台");
+    console.print("=2.按键与输入");
+    console.print("=3.地图与会话");
+    console.print("=4.游戏与回合");
+    console.print("=5.练习与作弊");
+    console.print("=6.人机");
+    console.print("=7.武器与购买");
+    console.print("=8.Demo与观战");
+    console.print("=9.显示与HUD");
+    console.print("=10.准星与视角");
+    console.print("=11.声音与语音");
+    console.print("=12.聊天与通信");
+    console.print("=13.网络与状态");
+    console.print("=14.截图/位置/记录");
+    console.print("=15.Workshop与地图");
+    console.print("=16.服务端与管理");
+    console.print("=这是精选实用命令目录");
+    console.print("=原始全集请在 CFG与控制台 中导出");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_commands");
+    command.exec("alias 1 scmd_cmd_cfg");
+    command.exec("alias +1 scmd_h_33");
+    command.exec("alias 2 scmd_cmd_bind");
+    command.exec("alias +2 scmd_h_34");
+    command.exec("alias 3 scmd_cmd_map");
+    command.exec("alias +3 scmd_h_35");
+    command.exec("alias 4 scmd_cmd_game");
+    command.exec("alias +4 scmd_h_36");
+    command.exec("alias 5 scmd_cmd_practice");
+    command.exec("alias +5 scmd_h_37");
+    command.exec("alias 6 scmd_cmd_bot");
+    command.exec("alias +6 scmd_h_38");
+    command.exec("alias 7 scmd_cmd_weapon");
+    command.exec("alias +7 scmd_h_39");
+    command.exec("alias 8 scmd_cmd_demo");
+    command.exec("alias +8 scmd_h_40");
+    command.exec("alias 9 scmd_cmd_display");
+    command.exec("alias +9 scmd_h_41");
+    command.exec("alias 10 scmd_cmd_cross");
+    command.exec("alias +10 scmd_h_42");
+    command.exec("alias 11 scmd_cmd_sound");
+    command.exec("alias +11 scmd_h_43");
+    command.exec("alias 12 scmd_cmd_chat");
+    command.exec("alias +12 scmd_h_44");
+    command.exec("alias 13 scmd_cmd_net");
+    command.exec("alias +13 scmd_h_45");
+    command.exec("alias 14 scmd_cmd_capture");
+    command.exec("alias +14 scmd_h_46");
+    command.exec("alias 15 scmd_cmd_workshop");
+    command.exec("alias +15 scmd_h_47");
+    command.exec("alias 16 scmd_cmd_server");
+    command.exec("alias +16 scmd_h_48");
+}
+
+export function scmd_weapons()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\武器与装备");
+    console.print("================================");
+    console.print("=1.全部武器 [LOCAL/CHEATS]");
+    console.print("=2.步枪");
+    console.print("=3.狙击枪");
+    console.print("=4.冲锋枪");
+    console.print("=5.霰弹枪");
+    console.print("=6.机枪");
+    console.print("=7.手枪");
+    console.print("=8.投掷物");
+    console.print("=9.装备");
+    console.print("=10.特殊物品 [LOCAL/CHEATS]");
+    console.print("=11.快速整套装备");
+    console.print("=12.补充当前武器弹药");
+    console.print("=give 类功能通常需要本地 sv_cheats 1");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_weapons");
+    command.exec("alias 1 scmd_weapons_all");
+    command.exec("alias +1 scmd_h_49");
+    command.exec("alias 2 scmd_weapons_rifle");
+    command.exec("alias +2 scmd_h_50");
+    command.exec("alias 3 scmd_weapons_sniper");
+    command.exec("alias +3 scmd_h_51");
+    command.exec("alias 4 scmd_weapons_smg");
+    command.exec("alias +4 scmd_h_52");
+    command.exec("alias 5 scmd_weapons_shotgun");
+    command.exec("alias +5 scmd_h_53");
+    command.exec("alias 6 scmd_weapons_mg");
+    command.exec("alias +6 scmd_h_54");
+    command.exec("alias 7 scmd_weapons_pistol");
+    command.exec("alias +7 scmd_h_55");
+    command.exec("alias 8 scmd_weapons_grenade");
+    command.exec("alias +8 scmd_h_56");
+    command.exec("alias 9 scmd_weapons_gear");
+    command.exec("alias +9 scmd_h_57");
+    command.exec("alias 10 scmd_weapons_special");
+    command.exec("alias +10 scmd_h_58");
+    command.exec("alias 11 scmd_weapons_pack");
+    command.exec("alias +11 scmd_h_59");
+    command.exec("alias 12 scmd_give_ammo");
+    command.exec("alias +12 scmd_h_60");
+}
+
+export function scmd_weapons_rifle()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\步枪");
+    console.print("================================");
+    console.print("=1.AK-47");
+    console.print("=2.M4A4");
+    console.print("=3.M4A1-S");
+    console.print("=4.Galil AR");
+    console.print("=5.FAMAS");
+    console.print("=6.AUG");
+    console.print("=7.SG 553");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_rifle");
+    command.exec("alias 1 scmd_give_ak47");
+    command.exec("alias +1 scmd_h_61");
+    command.exec("alias 2 scmd_give_m4a4");
+    command.exec("alias +2 scmd_h_62");
+    command.exec("alias 3 scmd_give_m4a1s");
+    command.exec("alias +3 scmd_h_63");
+    command.exec("alias 4 scmd_give_galilar");
+    command.exec("alias +4 scmd_h_64");
+    command.exec("alias 5 scmd_give_famas");
+    command.exec("alias +5 scmd_h_65");
+    command.exec("alias 6 scmd_give_aug");
+    command.exec("alias +6 scmd_h_66");
+    command.exec("alias 7 scmd_give_sg553");
+    command.exec("alias +7 scmd_h_67");
+}
+
+export function scmd_weapons_sniper()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\狙击枪");
+    console.print("================================");
+    console.print("=1.AWP");
+    console.print("=2.SSG 08");
+    console.print("=3.G3SG1");
+    console.print("=4.SCAR-20");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_sniper");
+    command.exec("alias 1 scmd_give_awp");
+    command.exec("alias +1 scmd_h_68");
+    command.exec("alias 2 scmd_give_ssg08");
+    command.exec("alias +2 scmd_h_69");
+    command.exec("alias 3 scmd_give_g3sg1");
+    command.exec("alias +3 scmd_h_70");
+    command.exec("alias 4 scmd_give_scar20");
+    command.exec("alias +4 scmd_h_71");
+}
+
+export function scmd_weapons_smg()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\冲锋枪");
+    console.print("================================");
+    console.print("=1.MAC-10");
+    console.print("=2.MP9");
+    console.print("=3.MP7");
+    console.print("=4.MP5-SD");
+    console.print("=5.UMP-45");
+    console.print("=6.P90");
+    console.print("=7.PP-Bizon");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_smg");
+    command.exec("alias 1 scmd_give_mac10");
+    command.exec("alias +1 scmd_h_72");
+    command.exec("alias 2 scmd_give_mp9");
+    command.exec("alias +2 scmd_h_73");
+    command.exec("alias 3 scmd_give_mp7");
+    command.exec("alias +3 scmd_h_74");
+    command.exec("alias 4 scmd_give_mp5sd");
+    command.exec("alias +4 scmd_h_75");
+    command.exec("alias 5 scmd_give_ump45");
+    command.exec("alias +5 scmd_h_76");
+    command.exec("alias 6 scmd_give_p90");
+    command.exec("alias +6 scmd_h_77");
+    command.exec("alias 7 scmd_give_bizon");
+    command.exec("alias +7 scmd_h_78");
+}
+
+export function scmd_weapons_shotgun()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\霰弹枪");
+    console.print("================================");
+    console.print("=1.Nova");
+    console.print("=2.XM1014");
+    console.print("=3.MAG-7");
+    console.print("=4.Sawed-Off");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_shotgun");
+    command.exec("alias 1 scmd_give_nova");
+    command.exec("alias +1 scmd_h_79");
+    command.exec("alias 2 scmd_give_xm1014");
+    command.exec("alias +2 scmd_h_80");
+    command.exec("alias 3 scmd_give_mag7");
+    command.exec("alias +3 scmd_h_81");
+    command.exec("alias 4 scmd_give_sawedoff");
+    command.exec("alias +4 scmd_h_82");
+}
+
+export function scmd_weapons_mg()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\机枪");
+    console.print("================================");
+    console.print("=1.M249");
+    console.print("=2.Negev");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_mg");
+    command.exec("alias 1 scmd_give_m249");
+    command.exec("alias +1 scmd_h_83");
+    command.exec("alias 2 scmd_give_negev");
+    command.exec("alias +2 scmd_h_84");
+}
+
+export function scmd_weapons_pistol()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\手枪");
+    console.print("================================");
+    console.print("=1.Glock-18");
+    console.print("=2.USP-S");
+    console.print("=3.P2000");
+    console.print("=4.P250");
+    console.print("=5.Dual Berettas");
+    console.print("=6.Five-SeveN");
+    console.print("=7.Tec-9");
+    console.print("=8.CZ75-Auto");
+    console.print("=9.Desert Eagle");
+    console.print("=10.R8 Revolver");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_pistol");
+    command.exec("alias 1 scmd_give_glock");
+    command.exec("alias +1 scmd_h_85");
+    command.exec("alias 2 scmd_give_usps");
+    command.exec("alias +2 scmd_h_86");
+    command.exec("alias 3 scmd_give_p2000");
+    command.exec("alias +3 scmd_h_87");
+    command.exec("alias 4 scmd_give_p250");
+    command.exec("alias +4 scmd_h_88");
+    command.exec("alias 5 scmd_give_elite");
+    command.exec("alias +5 scmd_h_89");
+    command.exec("alias 6 scmd_give_fiveseven");
+    command.exec("alias +6 scmd_h_90");
+    command.exec("alias 7 scmd_give_tec9");
+    command.exec("alias +7 scmd_h_91");
+    command.exec("alias 8 scmd_give_cz75");
+    command.exec("alias +8 scmd_h_92");
+    command.exec("alias 9 scmd_give_deagle");
+    command.exec("alias +9 scmd_h_93");
+    command.exec("alias 10 scmd_give_revolver");
+    command.exec("alias +10 scmd_h_94");
+}
+
+export function scmd_weapons_grenade()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\投掷物");
+    console.print("================================");
+    console.print("=1.HE Grenade");
+    console.print("=2.Flashbang");
+    console.print("=3.Smoke Grenade");
+    console.print("=4.Molotov");
+    console.print("=5.Incendiary Grenade");
+    console.print("=6.Decoy");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_grenade");
+    command.exec("alias 1 scmd_give_he");
+    command.exec("alias +1 scmd_h_95");
+    command.exec("alias 2 scmd_give_flash");
+    command.exec("alias +2 scmd_h_96");
+    command.exec("alias 3 scmd_give_smoke");
+    command.exec("alias +3 scmd_h_97");
+    command.exec("alias 4 scmd_give_molotov");
+    command.exec("alias +4 scmd_h_98");
+    command.exec("alias 5 scmd_give_inc");
+    command.exec("alias +5 scmd_h_99");
+    command.exec("alias 6 scmd_give_decoy");
+    command.exec("alias +6 scmd_h_100");
+}
+
+export function scmd_weapons_gear()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\装备");
+    console.print("================================");
+    console.print("=1.Zeus x27");
+    console.print("=2.Kevlar");
+    console.print("=3.Kevlar + Helmet");
+    console.print("=4.Defuse Kit");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_gear");
+    command.exec("alias 1 scmd_give_zeus");
+    command.exec("alias +1 scmd_h_101");
+    command.exec("alias 2 scmd_give_kevlar");
+    command.exec("alias +2 scmd_h_102");
+    command.exec("alias 3 scmd_give_assaultsuit");
+    command.exec("alias +3 scmd_h_103");
+    command.exec("alias 4 scmd_give_defuser");
+    command.exec("alias +4 scmd_h_104");
+}
+
+export function scmd_weapons_special()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\特殊物品");
+    console.print("================================");
+    console.print("=1.Knife");
+    console.print("=2.C4");
+    console.print("=3.Healthshot");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_special");
+    command.exec("alias 1 scmd_give_knife");
+    command.exec("alias +1 scmd_h_105");
+    command.exec("alias 2 scmd_give_c4");
+    command.exec("alias +2 scmd_h_106");
+    command.exec("alias 3 scmd_give_healthshot");
+    command.exec("alias +3 scmd_h_107");
+}
+
+export function scmd_weapons_all()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\全部武器");
+    console.print("================================");
+    console.print("=1.AK-47");
+    console.print("=2.M4A4");
+    console.print("=3.M4A1-S");
+    console.print("=4.Galil AR");
+    console.print("=5.FAMAS");
+    console.print("=6.AUG");
+    console.print("=7.SG 553");
+    console.print("=8.AWP");
+    console.print("=9.SSG 08");
+    console.print("=10.G3SG1");
+    console.print("=11.SCAR-20");
+    console.print("=12.MAC-10");
+    console.print("=13.MP9");
+    console.print("=14.MP7");
+    console.print("=15.MP5-SD");
+    console.print("=16.UMP-45");
+    console.print("=17.P90");
+    console.print("=18.PP-Bizon");
+    console.print("=19.Nova");
+    console.print("=20.XM1014");
+    console.print("=21.MAG-7");
+    console.print("=22.Sawed-Off");
+    console.print("=23.M249");
+    console.print("=24.Negev");
+    console.print("=25.Glock-18");
+    console.print("=26.USP-S");
+    console.print("=27.P2000");
+    console.print("=28.P250");
+    console.print("=29.Dual Berettas");
+    console.print("=30.Five-SeveN");
+    console.print("=31.Tec-9");
+    console.print("=32.CZ75-Auto");
+    console.print("=33.Desert Eagle");
+    console.print("=34.R8 Revolver");
+    console.print("=35.HE Grenade");
+    console.print("=36.Flashbang");
+    console.print("=37.Smoke Grenade");
+    console.print("=38.Molotov");
+    console.print("=39.Incendiary Grenade");
+    console.print("=40.Decoy");
+    console.print("=41.Zeus x27");
+    console.print("=42.Kevlar");
+    console.print("=43.Kevlar + Helmet");
+    console.print("=44.Defuse Kit");
+    console.print("=45.Knife");
+    console.print("=46.C4");
+    console.print("=47.Healthshot");
+    console.print("=长页模式: 一页查看全部可生成物品");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_all");
+    command.exec("alias 1 scmd_give_ak47");
+    command.exec("alias +1 scmd_h_108");
+    command.exec("alias 2 scmd_give_m4a4");
+    command.exec("alias +2 scmd_h_109");
+    command.exec("alias 3 scmd_give_m4a1s");
+    command.exec("alias +3 scmd_h_110");
+    command.exec("alias 4 scmd_give_galilar");
+    command.exec("alias +4 scmd_h_111");
+    command.exec("alias 5 scmd_give_famas");
+    command.exec("alias +5 scmd_h_112");
+    command.exec("alias 6 scmd_give_aug");
+    command.exec("alias +6 scmd_h_113");
+    command.exec("alias 7 scmd_give_sg553");
+    command.exec("alias +7 scmd_h_114");
+    command.exec("alias 8 scmd_give_awp");
+    command.exec("alias +8 scmd_h_115");
+    command.exec("alias 9 scmd_give_ssg08");
+    command.exec("alias +9 scmd_h_116");
+    command.exec("alias 10 scmd_give_g3sg1");
+    command.exec("alias +10 scmd_h_117");
+    command.exec("alias 11 scmd_give_scar20");
+    command.exec("alias +11 scmd_h_118");
+    command.exec("alias 12 scmd_give_mac10");
+    command.exec("alias +12 scmd_h_119");
+    command.exec("alias 13 scmd_give_mp9");
+    command.exec("alias +13 scmd_h_120");
+    command.exec("alias 14 scmd_give_mp7");
+    command.exec("alias +14 scmd_h_121");
+    command.exec("alias 15 scmd_give_mp5sd");
+    command.exec("alias +15 scmd_h_122");
+    command.exec("alias 16 scmd_give_ump45");
+    command.exec("alias +16 scmd_h_123");
+    command.exec("alias 17 scmd_give_p90");
+    command.exec("alias +17 scmd_h_124");
+    command.exec("alias 18 scmd_give_bizon");
+    command.exec("alias +18 scmd_h_125");
+    command.exec("alias 19 scmd_give_nova");
+    command.exec("alias +19 scmd_h_126");
+    command.exec("alias 20 scmd_give_xm1014");
+    command.exec("alias +20 scmd_h_127");
+    command.exec("alias 21 scmd_give_mag7");
+    command.exec("alias +21 scmd_h_128");
+    command.exec("alias 22 scmd_give_sawedoff");
+    command.exec("alias +22 scmd_h_129");
+    command.exec("alias 23 scmd_give_m249");
+    command.exec("alias +23 scmd_h_130");
+    command.exec("alias 24 scmd_give_negev");
+    command.exec("alias +24 scmd_h_131");
+    command.exec("alias 25 scmd_give_glock");
+    command.exec("alias +25 scmd_h_132");
+    command.exec("alias 26 scmd_give_usps");
+    command.exec("alias +26 scmd_h_133");
+    command.exec("alias 27 scmd_give_p2000");
+    command.exec("alias +27 scmd_h_134");
+    command.exec("alias 28 scmd_give_p250");
+    command.exec("alias +28 scmd_h_135");
+    command.exec("alias 29 scmd_give_elite");
+    command.exec("alias +29 scmd_h_136");
+    command.exec("alias 30 scmd_give_fiveseven");
+    command.exec("alias +30 scmd_h_137");
+    command.exec("alias 31 scmd_give_tec9");
+    command.exec("alias +31 scmd_h_138");
+    command.exec("alias 32 scmd_give_cz75");
+    command.exec("alias +32 scmd_h_139");
+    command.exec("alias 33 scmd_give_deagle");
+    command.exec("alias +33 scmd_h_140");
+    command.exec("alias 34 scmd_give_revolver");
+    command.exec("alias +34 scmd_h_141");
+    command.exec("alias 35 scmd_give_he");
+    command.exec("alias +35 scmd_h_142");
+    command.exec("alias 36 scmd_give_flash");
+    command.exec("alias +36 scmd_h_143");
+    command.exec("alias 37 scmd_give_smoke");
+    command.exec("alias +37 scmd_h_144");
+    command.exec("alias 38 scmd_give_molotov");
+    command.exec("alias +38 scmd_h_145");
+    command.exec("alias 39 scmd_give_inc");
+    command.exec("alias +39 scmd_h_146");
+    command.exec("alias 40 scmd_give_decoy");
+    command.exec("alias +40 scmd_h_147");
+    command.exec("alias 41 scmd_give_zeus");
+    command.exec("alias +41 scmd_h_148");
+    command.exec("alias 42 scmd_give_kevlar");
+    command.exec("alias +42 scmd_h_149");
+    command.exec("alias 43 scmd_give_assaultsuit");
+    command.exec("alias +43 scmd_h_150");
+    command.exec("alias 44 scmd_give_defuser");
+    command.exec("alias +44 scmd_h_151");
+    command.exec("alias 45 scmd_give_knife");
+    command.exec("alias +45 scmd_h_152");
+    command.exec("alias 46 scmd_give_c4");
+    command.exec("alias +46 scmd_h_153");
+    command.exec("alias 47 scmd_give_healthshot");
+    command.exec("alias +47 scmd_h_154");
+}
+
+export function scmd_weapons_pack()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\武器与装备\\快速整套装备");
+    console.print("================================");
+    console.print("=1.AK + Deagle + 全甲 + 投掷物");
+    console.print("=2.M4A1-S + USP-S + 全甲 + 投掷物");
+    console.print("=3.M4A4 + USP-S + 全甲 + 投掷物");
+    console.print("=4.AWP + Deagle + 全甲");
+    console.print("=5.投掷物包");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_weapons");
+    command.exec("alias 00 scmd_weapons_pack");
+    command.exec("alias 1 scmd_i_pack_ak");
+    command.exec("alias +1 scmd_h_155");
+    command.exec("alias 2 scmd_i_pack_m4s");
+    command.exec("alias +2 scmd_h_156");
+    command.exec("alias 3 scmd_i_pack_m4");
+    command.exec("alias +3 scmd_h_157");
+    command.exec("alias 4 scmd_i_pack_awp");
+    command.exec("alias +4 scmd_h_158");
+    command.exec("alias 5 scmd_i_pack_nades");
+    command.exec("alias +5 scmd_h_159");
+}
+
+export function scmd_custom_empty()
+{
+    console.print("[SCMD] 此自定义指令槽尚未设置");
+    console.print("[SCMD] 使用 alias scmd_customN <command> 临时设置");
+    console.print("[SCMD] 永久设置请编辑 Scmd/Custom.cfg");
+}
+
+export function scmd_custom_menu()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\自定义指令");
+    console.print("================================");
+    console.print("=1.执行自定义指令1");
+    console.print("=2.执行自定义指令2");
+    console.print("=3.执行自定义指令3");
+    console.print("=4.执行自定义指令4");
+    console.print("=5.执行自定义指令5");
+    console.print("=6.执行自定义指令6");
+    console.print("=7.执行自定义指令7");
+    console.print("=8.执行自定义指令8");
+    console.print("=9.设置方法");
+    console.print("=10.重新加载 Custom.cfg");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_custom_menu");
+    command.exec("alias 1 scmd_custom1");
+    command.exec("alias +1 scmd_h_160");
+    command.exec("alias 2 scmd_custom2");
+    command.exec("alias +2 scmd_h_161");
+    command.exec("alias 3 scmd_custom3");
+    command.exec("alias +3 scmd_h_162");
+    command.exec("alias 4 scmd_custom4");
+    command.exec("alias +4 scmd_h_163");
+    command.exec("alias 5 scmd_custom5");
+    command.exec("alias +5 scmd_h_164");
+    command.exec("alias 6 scmd_custom6");
+    command.exec("alias +6 scmd_h_165");
+    command.exec("alias 7 scmd_custom7");
+    command.exec("alias +7 scmd_h_166");
+    command.exec("alias 8 scmd_custom8");
+    command.exec("alias +8 scmd_h_167");
+    command.exec("alias 9 scmd_custom_help");
+    command.exec("alias +9 scmd_h_168");
+    command.exec("alias 10 scmd_i_reload_custom");
+    command.exec("alias +10 scmd_h_169");
+}
+
+export function scmd_custom_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\自定义指令\\设置方法");
+    console.print("================================");
+    console.print("=临时设置示例:");
+    console.print("=alias scmd_custom1 say_team_ready");
+    console.print("=如果需要多条命令请自行在 Custom.cfg 中定义");
+    console.print("");
+    console.print("=永久文件:");
+    console.print("=Scmd/Custom.cfg");
+    console.print("=SCMD 启动时会 execifexists 该文件");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_custom_menu");
+    command.exec("alias 00 scmd_custom_help");
+}
+
+export function scmd_practice()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\快速跑图");
+    console.print("================================");
+    console.print("=初始化:");
+    console.print("=1.标准跑图");
+    console.print("=2.投掷物练习");
+    console.print("=3.枪械练习");
+    console.print("=4.人机练习");
+    console.print("=5.纯净跑图");
+    console.print("");
+    console.print("=操作:");
+    console.print("=6.重新开始回合");
+    console.print("=7.结束热身");
+    console.print("=8.练习工具");
+    console.print("");
+    console.print("=初始化方案绝不会自动绑定按键");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_practice");
+    command.exec("alias 1 scmd_practice_standard");
+    command.exec("alias +1 scmd_h_170");
+    command.exec("alias 2 scmd_practice_grenade");
+    command.exec("alias +2 scmd_h_171");
+    command.exec("alias 3 scmd_practice_aim");
+    command.exec("alias +3 scmd_h_172");
+    command.exec("alias 4 scmd_practice_bot");
+    command.exec("alias +4 scmd_h_173");
+    command.exec("alias 5 scmd_practice_minimal");
+    command.exec("alias +5 scmd_h_174");
+    command.exec("alias 6 scmd_round_restart");
+    command.exec("alias +6 scmd_h_175");
+    command.exec("alias 7 scmd_warmup_end");
+    command.exec("alias +7 scmd_h_176");
+    command.exec("alias 8 scmd_practice_tools");
+    command.exec("alias +8 scmd_h_177");
+}
+
+export function scmd_practice_tools()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\练习工具");
+    console.print("================================");
+    console.print("=移动:");
+    console.print("=1.切换飞行");
+    console.print("=2.显示当前位置");
+    console.print("=3.复制精确位置");
+    row_practice_timescale();
+    console.print("");
+    console.print("=投掷物:");
+    console.print("=6.重新投掷");
+    row_practice_trajectory();
+    console.print("=9.清除烟雾 [CHEATS]");
+    console.print("");
+    console.print("=射击:");
+    row_practice_impacts();
+    row_practice_ammo();
+    console.print("");
+    console.print("=玩家:");
+    row_practice_god();
+    console.print("=15.治疗");
+    console.print("=16.自杀/重生测试");
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_practice_tools");
+    command.exec("alias 1 scmd_noclip");
+    command.exec("alias +1 scmd_h_178");
+    command.exec("alias 2 scmd_showpos_once");
+    command.exec("alias +2 scmd_h_179");
+    command.exec("alias 3 scmd_poscopy");
+    command.exec("alias +3 scmd_h_180");
+    command.exec("alias 4 scmd_i_practice_timescale");
+    command.exec("alias +4 scmd_h_181");
+    command.exec("alias 6 scmd_rethrow");
+    command.exec("alias +6 scmd_h_182");
+    command.exec("alias 7 scmd_i_practice_trajectory");
+    command.exec("alias +7 scmd_h_183");
+    command.exec("alias 9 scmd_smoke_clear");
+    command.exec("alias +9 scmd_h_184");
+    command.exec("alias 10 scmd_i_practice_impacts");
+    command.exec("alias +10 scmd_h_185");
+    command.exec("alias 12 scmd_i_practice_ammo");
+    command.exec("alias +12 scmd_h_186");
+    command.exec("alias 14 scmd_i_practice_god");
+    command.exec("alias +14 scmd_h_187");
+    command.exec("alias 15 scmd_heal");
+    command.exec("alias +15 scmd_h_188");
+    command.exec("alias 16 scmd_kill");
+    command.exec("alias +16 scmd_h_189");
+}
+
+export function scmd_bots()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\人机控制");
+    console.print("================================");
+    console.print("=生成:");
+    console.print("=1.添加T人机");
+    console.print("=2.添加CT人机");
+    console.print("=3.添加任意人机");
+    console.print("=4.放置人机");
+    console.print("");
+    console.print("=控制:");
+    row_bots_stop();
+    row_bots_mimic();
+    console.print("=9.仅手枪");
+    console.print("=10.仅狙击枪");
+    console.print("=11.仅刀");
+    console.print("=12.允许全部武器");
+    console.print("");
+    console.print("=清理:");
+    console.print("=13.击杀全部人机");
+    console.print("=14.踢出全部人机");
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_bots");
+    command.exec("alias 1 scmd_bot_add_t");
+    command.exec("alias +1 scmd_h_190");
+    command.exec("alias 2 scmd_bot_add_ct");
+    command.exec("alias +2 scmd_h_191");
+    command.exec("alias 3 scmd_bot_add");
+    command.exec("alias +3 scmd_h_192");
+    command.exec("alias 4 scmd_bot_place");
+    command.exec("alias +4 scmd_h_193");
+    command.exec("alias 5 scmd_i_bots_stop");
+    command.exec("alias +5 scmd_h_194");
+    command.exec("alias 7 scmd_i_bots_mimic");
+    command.exec("alias +7 scmd_h_195");
+    command.exec("alias 9 scmd_i_bot_pistols");
+    command.exec("alias +9 scmd_h_196");
+    command.exec("alias 10 scmd_i_bot_snipers");
+    command.exec("alias +10 scmd_h_197");
+    command.exec("alias 11 scmd_i_bot_knives");
+    command.exec("alias +11 scmd_h_198");
+    command.exec("alias 12 scmd_i_bot_all");
+    command.exec("alias +12 scmd_h_199");
+    command.exec("alias 13 scmd_bot_kill");
+    command.exec("alias +13 scmd_h_200");
+    command.exec("alias 14 scmd_bot_clear");
+    command.exec("alias +14 scmd_h_201");
+}
+
+export function scmd_demo()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\Demo与观战");
+    console.print("================================");
+    console.print("=播放:");
+    console.print("=1.暂停/继续");
+    console.print("=2.暂停");
+    console.print("=3.继续");
+    console.print("=4.单步1 Tick");
+    console.print("=5.打开Demo UI");
+    console.print("");
+    console.print("=速度:");
+    row_demo_speed();
+    console.print("");
+    console.print("=信息:");
+    console.print("=7.Demo信息");
+    console.print("=8.demolist");
+    console.print("=9.listdemo");
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_demo");
+    command.exec("alias 1 scmd_demo_pause");
+    command.exec("alias +1 scmd_h_202");
+    command.exec("alias 2 scmd_i_demo_pause");
+    command.exec("alias +2 scmd_h_203");
+    command.exec("alias 3 scmd_i_demo_resume");
+    command.exec("alias +3 scmd_h_204");
+    command.exec("alias 4 scmd_i_demo_step");
+    command.exec("alias +4 scmd_h_205");
+    command.exec("alias 5 scmd_i_demo_ui");
+    command.exec("alias +5 scmd_h_206");
+    command.exec("alias 6 scmd_i_demo_speed");
+    command.exec("alias +6 scmd_h_207");
+    command.exec("alias 7 scmd_i_demo_info");
+    command.exec("alias +7 scmd_h_208");
+    command.exec("alias 8 scmd_i_demo_list");
+    command.exec("alias +8 scmd_h_209");
+    command.exec("alias 9 scmd_i_demo_list2");
+    command.exec("alias +9 scmd_h_210");
+}
+
+export function scmd_map()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\地图与会话");
+    console.print("================================");
+    console.print("=1.列出地图");
+    console.print("=2.加载地图说明");
+    console.print("=3.Workshop地图列表");
+    console.print("=4.连接服务器说明");
+    console.print("=5.断开服务器");
+    console.print("=6.比赛剩余时间");
+    console.print("=7.暂停");
+    console.print("=8.继续");
+    console.print("=9.交换双方");
+    console.print("=10.打乱队伍");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_map");
+    command.exec("alias 1 scmd_i_maps");
+    command.exec("alias +1 scmd_h_211");
+    command.exec("alias 2 scmd_map_help");
+    command.exec("alias +2 scmd_h_212");
+    command.exec("alias 3 scmd_i_workshop");
+    command.exec("alias +3 scmd_h_213");
+    command.exec("alias 4 scmd_connect_help");
+    command.exec("alias +4 scmd_h_214");
+    command.exec("alias 5 scmd_disconnect");
+    command.exec("alias +5 scmd_h_215");
+    command.exec("alias 6 scmd_i_timeleft");
+    command.exec("alias +6 scmd_h_216");
+    command.exec("alias 7 scmd_i_pause");
+    command.exec("alias +7 scmd_h_217");
+    command.exec("alias 8 scmd_i_unpause");
+    command.exec("alias +8 scmd_h_218");
+    command.exec("alias 9 scmd_i_swapteams");
+    command.exec("alias +9 scmd_h_219");
+    command.exec("alias 10 scmd_i_scramble");
+    command.exec("alias +10 scmd_h_220");
+}
+
+export function scmd_map_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\地图与会话\\加载地图");
+    console.print("================================");
+    console.print("=控制台用法:");
+    console.print("=map <mapname>");
+    console.print("=changelevel <mapname>");
+    console.print("");
+    console.print("=先使用 maps 查看可用地图");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_map");
+    command.exec("alias 00 scmd_map_help");
+}
+
+export function scmd_connect_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\地图与会话\\连接服务器");
+    console.print("================================");
+    console.print("=控制台用法:");
+    console.print("=connect <address>");
+    console.print("");
+    console.print("=SCMD 不保存服务器IP，也不会自动连接陌生服务器");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_map");
+    command.exec("alias 00 scmd_connect_help");
+}
+
+export function scmd_display()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\显示与HUD");
+    console.print("================================");
+    row_display_fps();
+    row_display_hud();
+    row_display_showpos();
+    row_display_impacts();
+    row_display_trajectory();
+    console.print("=6.网络状态");
+    console.print("=7.第一人称");
+    console.print("=8.第三人称 [CHEATS]");
+    console.print("=9.切换雷达缩放");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_display");
+    command.exec("alias 1 scmd_i_display_fps");
+    command.exec("alias +1 scmd_h_221");
+    command.exec("alias 2 scmd_i_display_hud");
+    command.exec("alias +2 scmd_h_222");
+    command.exec("alias 3 scmd_i_display_showpos");
+    command.exec("alias +3 scmd_h_223");
+    command.exec("alias 4 scmd_i_display_impacts");
+    command.exec("alias +4 scmd_h_224");
+    command.exec("alias 5 scmd_i_display_trajectory");
+    command.exec("alias +5 scmd_h_225");
+    command.exec("alias 6 scmd_display_net");
+    command.exec("alias +6 scmd_h_226");
+    command.exec("alias 7 scmd_i_firstperson");
+    command.exec("alias +7 scmd_h_227");
+    command.exec("alias 8 scmd_i_thirdperson");
+    command.exec("alias +8 scmd_h_228");
+    command.exec("alias 9 scmd_i_radar");
+    command.exec("alias +9 scmd_h_229");
+}
+
+export function scmd_display_net()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\显示与HUD\\网络状态");
+    console.print("================================");
+    console.print("=1.net_status");
+    console.print("=2.net_channels");
+    console.print("=3.status");
+    console.print("=4.cl_ticktiming");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_display");
+    command.exec("alias 00 scmd_display_net");
+    command.exec("alias 1 scmd_i_net_status");
+    command.exec("alias +1 scmd_h_230");
+    command.exec("alias 2 scmd_i_net_channels");
+    command.exec("alias +2 scmd_h_231");
+    command.exec("alias 3 scmd_i_status");
+    command.exec("alias +3 scmd_h_232");
+    command.exec("alias 4 scmd_i_ticktiming");
+    command.exec("alias +4 scmd_h_233");
+}
+
+export function scmd_crosshair_menu()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\准星与视角");
+    console.print("================================");
+    row_cross_main();
+    row_cross_style();
+    row_cross_size();
+    row_cross_thick();
+    row_cross_gap();
+    row_cross_color();
+    console.print("=7.额外开关");
+    row_cross_sniper();
+    console.print("=9.Viewmodel");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_crosshair_menu");
+    command.exec("alias 1 scmd_i_crosshair_toggle");
+    command.exec("alias +1 scmd_h_234");
+    command.exec("alias 2 scmd_i_cross_style");
+    command.exec("alias +2 scmd_h_235");
+    command.exec("alias 3 scmd_i_cross_size");
+    command.exec("alias +3 scmd_h_236");
+    command.exec("alias 4 scmd_i_cross_thick");
+    command.exec("alias +4 scmd_h_237");
+    command.exec("alias 5 scmd_i_cross_gap");
+    command.exec("alias +5 scmd_h_238");
+    command.exec("alias 6 scmd_i_cross_color");
+    command.exec("alias +6 scmd_h_239");
+    command.exec("alias 7 scmd_crosshair_extras");
+    command.exec("alias +7 scmd_h_240");
+    command.exec("alias 8 scmd_i_cross_sniper");
+    command.exec("alias +8 scmd_h_241");
+    command.exec("alias 9 scmd_viewmodel");
+    command.exec("alias +9 scmd_h_242");
+}
+
+export function scmd_crosshair_extras()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\准星与视角\\额外开关");
+    console.print("================================");
+    row_cross_dot();
+    row_cross_outline();
+    row_cross_t();
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_crosshair_menu");
+    command.exec("alias 00 scmd_crosshair_extras");
+    command.exec("alias 1 scmd_i_cross_dot");
+    command.exec("alias +1 scmd_h_243");
+    command.exec("alias 2 scmd_i_cross_outline");
+    command.exec("alias +2 scmd_h_244");
+    command.exec("alias 3 scmd_i_cross_t");
+    command.exec("alias +3 scmd_h_245");
+}
+
+export function scmd_viewmodel()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\准星与视角\\Viewmodel");
+    console.print("================================");
+    row_view_fov();
+    row_view_preset();
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_crosshair_menu");
+    command.exec("alias 00 scmd_viewmodel");
+    command.exec("alias 1 scmd_i_view_fov");
+    command.exec("alias +1 scmd_h_246");
+    command.exec("alias 2 scmd_i_view_preset");
+    command.exec("alias +2 scmd_h_247");
+}
+
+export function scmd_sound()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\声音与语音");
+    console.print("================================");
+    row_sound_volume();
+    row_sound_menu_music();
+    row_sound_mvp();
+    row_sound_tensec();
+    row_sound_voice();
+    row_sound_loopback();
+    row_sound_mute();
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_sound");
+    command.exec("alias 1 scmd_i_sound_volume");
+    command.exec("alias +1 scmd_h_248");
+    command.exec("alias 2 scmd_i_sound_menu_music");
+    command.exec("alias +2 scmd_h_249");
+    command.exec("alias 3 scmd_i_sound_mvp");
+    command.exec("alias +3 scmd_h_250");
+    command.exec("alias 4 scmd_i_sound_tensec");
+    command.exec("alias +4 scmd_h_251");
+    command.exec("alias 5 scmd_i_sound_voice");
+    command.exec("alias +5 scmd_h_252");
+    command.exec("alias 6 scmd_i_sound_loopback");
+    command.exec("alias +6 scmd_h_253");
+    command.exec("alias 7 scmd_i_sound_mute");
+    command.exec("alias +7 scmd_h_254");
+}
+
+export function scmd_cfg()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\CFG与控制台");
+    console.print("================================");
+    console.print("=SCMD:");
+    console.print("=1.重新加载SCMD");
+    console.print("=2.重新加载Custom.cfg");
+    console.print("=3.打开主菜单");
+    console.print("");
+    console.print("=CFG:");
+    console.print("=4.执行CFG说明");
+    console.print("=5.保存当前用户配置");
+    console.print("=6.保存当前按键绑定");
+    console.print("");
+    console.print("=控制台:");
+    console.print("=7.清空控制台");
+    console.print("=8.查找命令说明");
+    console.print("=9.命令帮助说明");
+    console.print("=10.显示非默认ConVar");
+    console.print("=11.显示已修改ConVar");
+    console.print("=12.查看当前按键绑定");
+    console.print("=13.导出完整命令表");
+    console.print("");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_cfg");
+    command.exec("alias 1 scmd_reload");
+    command.exec("alias +1 scmd_h_255");
+    command.exec("alias 2 scmd_i_reload_custom2");
+    command.exec("alias +2 scmd_h_256");
+    command.exec("alias 3 scmd_menu");
+    command.exec("alias +3 scmd_h_257");
+    command.exec("alias 4 scmd_exec_help");
+    command.exec("alias +4 scmd_h_258");
+    command.exec("alias 5 scmd_i_write_config");
+    command.exec("alias +5 scmd_h_259");
+    command.exec("alias 6 scmd_i_write_keys");
+    command.exec("alias +6 scmd_h_260");
+    command.exec("alias 7 scmd_clear");
+    command.exec("alias +7 scmd_h_261");
+    command.exec("alias 8 scmd_find_help");
+    command.exec("alias +8 scmd_h_262");
+    command.exec("alias 9 scmd_help_help");
+    command.exec("alias +9 scmd_h_263");
+    command.exec("alias 10 scmd_i_differences");
+    command.exec("alias +10 scmd_h_264");
+    command.exec("alias 11 scmd_i_changed");
+    command.exec("alias +11 scmd_h_265");
+    command.exec("alias 12 scmd_i_key_list");
+    command.exec("alias +12 scmd_h_266");
+    command.exec("alias 13 scmd_i_export");
+    command.exec("alias +13 scmd_h_267");
+}
+
+export function scmd_exec_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\执行CFG");
+    console.print("================================");
+    console.print("=控制台用法:");
+    console.print("=exec <name>");
+    console.print("=execifexists <name>");
+    console.print("");
+    console.print("=例如: exec autoexec");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_cfg");
+    command.exec("alias 00 scmd_exec_help");
+}
+
+export function scmd_find_help()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\CFG与控制台\\查找命令");
+    console.print("================================");
+    console.print("=控制台用法:");
+    console.print("=find <keyword>");
+    console.print("");
+    console.print("=例如: find crosshair");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_cfg");
+    command.exec("alias 00 scmd_find_help");
+}
+
+export function scmd_preferences()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\首选项");
+    console.print("================================");
+    row_pref_clear();
+    row_pref_tips();
+    console.print("=3.恢复默认首选项");
+    console.print("=默认使用软清屏，避免 CS2 原生 clear 时序导致菜单缺字");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_preferences");
+    command.exec("alias 1 scmd_pref_clear");
+    command.exec("alias +1 scmd_h_268");
+    command.exec("alias 2 scmd_pref_tips");
+    command.exec("alias +2 scmd_h_269");
+    command.exec("alias 3 scmd_pref_reset");
+    command.exec("alias +3 scmd_h_270");
+}
+
+export function scmd_about()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\关于SCMD");
+    console.print("================================");
+    console.print("=SCMD - Shortcut Command");
+    console.print("=");
+    console.print("=Started in 2022");
+    console.print("=Rebuilt for CS2 in 2026");
+    console.print("=");
+    console.print("=SCMD 2.0 Beta 3");
+    console.print("=Compiler: scmdc 0.13.0");
+    console.print("=Simulator: scmdsim");
+    console.print("=");
+    console.print("=scmd.cc");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_about");
+}
+
+export function scmd_bind()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\菜单\\按键与快捷键");
+    console.print("================================");
+    console.print("=1.绑定预设命令");
+    console.print("=2.绑定自定义指令");
+    console.print("=3.查看当前绑定");
+    console.print("=4.保存当前按键绑定");
+    console.print("=5.手动绑定说明");
+    console.print("=SCMD 永远不会在安装或跑图时自动绑定按键");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_menu");
+    command.exec("alias 00 scmd_bind");
+    command.exec("alias 1 scmd_bind_preset");
+    command.exec("alias +1 scmd_h_271");
+    command.exec("alias 2 scmd_bind_custom");
+    command.exec("alias +2 scmd_h_272");
+    command.exec("alias 3 scmd_i_key_list");
+    command.exec("alias +3 scmd_h_273");
+    command.exec("alias 4 scmd_i_write_keys");
+    command.exec("alias +4 scmd_h_274");
+    command.exec("alias 5 scmd_bind_manual");
+    command.exec("alias +5 scmd_h_275");
+}
+
+export function scmd_bind_preset()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\绑定预设命令");
+    console.print("================================");
+    console.print("=1.打开SCMD菜单");
+    console.print("=2.打开快捷指令");
+    console.print("=3.打开快速跑图");
+    console.print("=4.打开练习工具");
+    console.print("=5.打开人机控制");
+    console.print("=6.打开武器菜单");
+    console.print("=7.切换飞行");
+    console.print("=8.重新投掷");
+    console.print("=9.放置人机");
+    console.print("=10.冻结/解除人机");
+    console.print("=11.人机模仿");
+    console.print("=12.清除人机");
+    console.print("=13.切换FPS显示");
+    console.print("=14.切换弹着点");
+    console.print("=15.切换投掷轨迹");
+    console.print("=16.切换位置显示");
+    console.print("=17.循环无限弹药");
+    console.print("=18.切换无敌");
+    console.print("=19.清除烟雾");
+    console.print("=20.重新开始回合");
+    console.print("=21.结束热身");
+    console.print("=22.Demo暂停/继续");
+    console.print("=23.切换准星显示");
+    console.print("=24.切换语音接收");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_bind");
+    command.exec("alias 00 scmd_bind_preset");
+    command.exec("alias 1 scmd_i_bind_target_1");
+    command.exec("alias +1 scmd_h_276");
+    command.exec("alias 2 scmd_i_bind_target_2");
+    command.exec("alias +2 scmd_h_277");
+    command.exec("alias 3 scmd_i_bind_target_3");
+    command.exec("alias +3 scmd_h_278");
+    command.exec("alias 4 scmd_i_bind_target_4");
+    command.exec("alias +4 scmd_h_279");
+    command.exec("alias 5 scmd_i_bind_target_5");
+    command.exec("alias +5 scmd_h_280");
+    command.exec("alias 6 scmd_i_bind_target_6");
+    command.exec("alias +6 scmd_h_281");
+    command.exec("alias 7 scmd_i_bind_target_7");
+    command.exec("alias +7 scmd_h_282");
+    command.exec("alias 8 scmd_i_bind_target_8");
+    command.exec("alias +8 scmd_h_283");
+    command.exec("alias 9 scmd_i_bind_target_9");
+    command.exec("alias +9 scmd_h_284");
+    command.exec("alias 10 scmd_i_bind_target_10");
+    command.exec("alias +10 scmd_h_285");
+    command.exec("alias 11 scmd_i_bind_target_11");
+    command.exec("alias +11 scmd_h_286");
+    command.exec("alias 12 scmd_i_bind_target_12");
+    command.exec("alias +12 scmd_h_287");
+    command.exec("alias 13 scmd_i_bind_target_13");
+    command.exec("alias +13 scmd_h_288");
+    command.exec("alias 14 scmd_i_bind_target_14");
+    command.exec("alias +14 scmd_h_289");
+    command.exec("alias 15 scmd_i_bind_target_15");
+    command.exec("alias +15 scmd_h_290");
+    command.exec("alias 16 scmd_i_bind_target_16");
+    command.exec("alias +16 scmd_h_291");
+    command.exec("alias 17 scmd_i_bind_target_17");
+    command.exec("alias +17 scmd_h_292");
+    command.exec("alias 18 scmd_i_bind_target_18");
+    command.exec("alias +18 scmd_h_293");
+    command.exec("alias 19 scmd_i_bind_target_19");
+    command.exec("alias +19 scmd_h_294");
+    command.exec("alias 20 scmd_i_bind_target_20");
+    command.exec("alias +20 scmd_h_295");
+    command.exec("alias 21 scmd_i_bind_target_21");
+    command.exec("alias +21 scmd_h_296");
+    command.exec("alias 22 scmd_i_bind_target_22");
+    command.exec("alias +22 scmd_h_297");
+    command.exec("alias 23 scmd_i_bind_target_23");
+    command.exec("alias +23 scmd_h_298");
+    command.exec("alias 24 scmd_i_bind_target_24");
+    command.exec("alias +24 scmd_h_299");
+}
+
+export function scmd_bind_custom()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\绑定自定义指令");
+    console.print("================================");
+    console.print("=1.自定义指令1");
+    console.print("=2.自定义指令2");
+    console.print("=3.自定义指令3");
+    console.print("=4.自定义指令4");
+    console.print("=5.自定义指令5");
+    console.print("=6.自定义指令6");
+    console.print("=7.自定义指令7");
+    console.print("=8.自定义指令8");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_bind");
+    command.exec("alias 00 scmd_bind_custom");
+    command.exec("alias 1 scmd_i_bind_target_25");
+    command.exec("alias +1 scmd_h_300");
+    command.exec("alias 2 scmd_i_bind_target_26");
+    command.exec("alias +2 scmd_h_301");
+    command.exec("alias 3 scmd_i_bind_target_27");
+    command.exec("alias +3 scmd_h_302");
+    command.exec("alias 4 scmd_i_bind_target_28");
+    command.exec("alias +4 scmd_h_303");
+    command.exec("alias 5 scmd_i_bind_target_29");
+    command.exec("alias +5 scmd_h_304");
+    command.exec("alias 6 scmd_i_bind_target_30");
+    command.exec("alias +6 scmd_h_305");
+    command.exec("alias 7 scmd_i_bind_target_31");
+    command.exec("alias +7 scmd_h_306");
+    command.exec("alias 8 scmd_i_bind_target_32");
+    command.exec("alias +8 scmd_h_307");
+}
+
+export function scmd_bind_manual()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\手动绑定");
+    console.print("================================");
+    console.print("=格式: bind <key> <SCMD命令>");
+    console.print("=例如:");
+    console.print("=bind f6 scmd_noclip");
+    console.print("=bind mouse5 scmd_rethrow");
+    console.print("=bind f7 scmd_bot_place");
+    console.print("");
+    console.print("=绑定系统只使用公开 scmd_* ABI");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_bind");
+    command.exec("alias 00 scmd_bind_manual");
+}
+
+export function scmd_bind_key()
+{
+    screen_begin();
+    reset_slots();
+    console.print("================================");
+    console.print("=|SCMD 2.0:\\按键与快捷键\\选择按键");
+    console.print("================================");
+    console.print("=1.F1");
+    console.print("=2.F2");
+    console.print("=3.F3");
+    console.print("=4.F4");
+    console.print("=5.F5");
+    console.print("=6.F6");
+    console.print("=7.F7");
+    console.print("=8.F8");
+    console.print("=9.F9");
+    console.print("=10.F10");
+    console.print("=11.F11");
+    console.print("=12.F12");
+    console.print("=13.Insert");
+    console.print("=14.Delete");
+    console.print("=15.Home");
+    console.print("=16.End");
+    console.print("=17.PageUp");
+    console.print("=18.PageDown");
+    console.print("=19.Mouse3");
+    console.print("=20.Mouse4");
+    console.print("=21.Mouse5");
+    if(bind_target == 1)
+    {
+        console.print("=目标: 打开SCMD菜单");
+    }
+    else if(bind_target == 2)
+    {
+        console.print("=目标: 打开快捷指令");
+    }
+    else if(bind_target == 3)
+    {
+        console.print("=目标: 打开快速跑图");
+    }
+    else if(bind_target == 4)
+    {
+        console.print("=目标: 打开练习工具");
+    }
+    else if(bind_target == 5)
+    {
+        console.print("=目标: 打开人机控制");
+    }
+    else if(bind_target == 6)
+    {
+        console.print("=目标: 打开武器菜单");
+    }
+    else if(bind_target == 7)
+    {
+        console.print("=目标: 切换飞行");
+    }
+    else if(bind_target == 8)
+    {
+        console.print("=目标: 重新投掷");
+    }
+    else if(bind_target == 9)
+    {
+        console.print("=目标: 放置人机");
+    }
+    else if(bind_target == 10)
+    {
+        console.print("=目标: 冻结/解除人机");
+    }
+    else if(bind_target == 11)
+    {
+        console.print("=目标: 人机模仿");
+    }
+    else if(bind_target == 12)
+    {
+        console.print("=目标: 清除人机");
+    }
+    else if(bind_target == 13)
+    {
+        console.print("=目标: 切换FPS显示");
+    }
+    else if(bind_target == 14)
+    {
+        console.print("=目标: 切换弹着点");
+    }
+    else if(bind_target == 15)
+    {
+        console.print("=目标: 切换投掷轨迹");
+    }
+    else if(bind_target == 16)
+    {
+        console.print("=目标: 切换位置显示");
+    }
+    else if(bind_target == 17)
+    {
+        console.print("=目标: 循环无限弹药");
+    }
+    else if(bind_target == 18)
+    {
+        console.print("=目标: 切换无敌");
+    }
+    else if(bind_target == 19)
+    {
+        console.print("=目标: 清除烟雾");
+    }
+    else if(bind_target == 20)
+    {
+        console.print("=目标: 重新开始回合");
+    }
+    else if(bind_target == 21)
+    {
+        console.print("=目标: 结束热身");
+    }
+    else if(bind_target == 22)
+    {
+        console.print("=目标: Demo暂停/继续");
+    }
+    else if(bind_target == 23)
+    {
+        console.print("=目标: 切换准星显示");
+    }
+    else if(bind_target == 24)
+    {
+        console.print("=目标: 切换语音接收");
+    }
+    else if(bind_target == 25)
+    {
+        console.print("=目标: 自定义指令1");
+    }
+    else if(bind_target == 26)
+    {
+        console.print("=目标: 自定义指令2");
+    }
+    else if(bind_target == 27)
+    {
+        console.print("=目标: 自定义指令3");
+    }
+    else if(bind_target == 28)
+    {
+        console.print("=目标: 自定义指令4");
+    }
+    else if(bind_target == 29)
+    {
+        console.print("=目标: 自定义指令5");
+    }
+    else if(bind_target == 30)
+    {
+        console.print("=目标: 自定义指令6");
+    }
+    else if(bind_target == 31)
+    {
+        console.print("=目标: 自定义指令7");
+    }
+    else if(bind_target == 32)
+    {
+        console.print("=目标: 自定义指令8");
+    }
+    else
+    {
+        console.print("=目标: 未选择");
+    }
+    console.print("=选择按键会覆盖该键原有绑定");
+    console.print("=SCMD 不会自动恢复被覆盖的旧绑定");
+    console.print("================================");
+    console.print("=0.返回");
+    console.print("=00.刷新");
+    console.print("=+序号.查看指令/用法");
+    console.print("================================");
+    command.exec("alias 0 scmd_bind");
+    command.exec("alias 00 scmd_bind_key");
+    command.exec("alias 1 scmd_i_bind_key_1");
+    command.exec("alias +1 scmd_h_308");
+    command.exec("alias 2 scmd_i_bind_key_2");
+    command.exec("alias +2 scmd_h_309");
+    command.exec("alias 3 scmd_i_bind_key_3");
+    command.exec("alias +3 scmd_h_310");
+    command.exec("alias 4 scmd_i_bind_key_4");
+    command.exec("alias +4 scmd_h_311");
+    command.exec("alias 5 scmd_i_bind_key_5");
+    command.exec("alias +5 scmd_h_312");
+    command.exec("alias 6 scmd_i_bind_key_6");
+    command.exec("alias +6 scmd_h_313");
+    command.exec("alias 7 scmd_i_bind_key_7");
+    command.exec("alias +7 scmd_h_314");
+    command.exec("alias 8 scmd_i_bind_key_8");
+    command.exec("alias +8 scmd_h_315");
+    command.exec("alias 9 scmd_i_bind_key_9");
+    command.exec("alias +9 scmd_h_316");
+    command.exec("alias 10 scmd_i_bind_key_10");
+    command.exec("alias +10 scmd_h_317");
+    command.exec("alias 11 scmd_i_bind_key_11");
+    command.exec("alias +11 scmd_h_318");
+    command.exec("alias 12 scmd_i_bind_key_12");
+    command.exec("alias +12 scmd_h_319");
+    command.exec("alias 13 scmd_i_bind_key_13");
+    command.exec("alias +13 scmd_h_320");
+    command.exec("alias 14 scmd_i_bind_key_14");
+    command.exec("alias +14 scmd_h_321");
+    command.exec("alias 15 scmd_i_bind_key_15");
+    command.exec("alias +15 scmd_h_322");
+    command.exec("alias 16 scmd_i_bind_key_16");
+    command.exec("alias +16 scmd_h_323");
+    command.exec("alias 17 scmd_i_bind_key_17");
+    command.exec("alias +17 scmd_h_324");
+    command.exec("alias 18 scmd_i_bind_key_18");
+    command.exec("alias +18 scmd_h_325");
+    command.exec("alias 19 scmd_i_bind_key_19");
+    command.exec("alias +19 scmd_h_326");
+    command.exec("alias 20 scmd_i_bind_key_20");
+    command.exec("alias +20 scmd_h_327");
+    command.exec("alias 21 scmd_i_bind_key_21");
+    command.exec("alias +21 scmd_h_328");
+}
